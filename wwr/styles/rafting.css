@@ -1,0 +1,61 @@
+/* Reset box-model properties for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables in the document root */
+:root {
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Style the entire document body */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* Limit page width and center content */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Style header with CSS variables */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+/* Style headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Basic margin and padding declarations */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Remove underlines from social media image links */
+.socialmedia a {
+    text-decoration: none;
+}
