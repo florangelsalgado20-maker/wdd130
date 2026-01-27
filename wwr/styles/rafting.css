@@ -183,16 +183,16 @@ footer p {
     margin: 0;
 }
 
-/* Social Media Links */
-.sociallinks {
+/* Social Media Links - IMPORTANTE: usa .socialmedia como se requiere */
+.socialmedia {
     display: flex;
     gap: 15px;
 }
 
-.sociallinks a {
+.socialmedia a {
     text-decoration: none;
 }
 
-.sociallinks img {
+.socialmedia img {
     filter: brightness(0) invert(1);
 }
