@@ -1,16 +1,17 @@
 /* rafting.css - White Water Rafting Company */
 
-/* CSS Variables in :root - COLORES AJUSTADOS PARA MEJOR CONTRASTE */
+/* CSS Variables in :root - TODOS LOS COLORES OPTIMIZADOS PARA CONTRASTE */
 :root {
-    --primary-color: #034203;       /* Verde más oscuro para mejor contraste */
-    --secondary-color: #f4a261;
-    --accent1-color: #ffffff;       /* Cambiado a blanco para usar en header */
-    --accent2-color: #e9c46a;
+    --primary-color: #034203;       /* Verde oscuro para fondo */
+    --secondary-color: #d4893a;     /* Naranja más oscuro para mejor contraste */
+    --accent1-color: #ffffff;       /* Blanco puro */
+    --accent2-color: #e9c46a;       /* Amarillo claro */
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
     --white-color: #ffffff;
     --gray-light: #f5f5f5;
-    --text-dark: #1a1a1a;           /* Añadido: texto oscuro para contraste */
+    --text-dark: #1a1a1a;           /* Casi negro para texto */
+    --text-light: #ffffff;          /* Blanco para texto sobre fondos oscuros */
 }
 
 /* Reset CSS */
@@ -35,7 +36,7 @@ body {
     padding: 0;
 }
 
-/* Header Styles - CORREGIDO: texto blanco sobre verde oscuro */
+/* Header Styles - CORREGIDO: TODO el texto en blanco */
 header {
     background-color: var(--primary-color);
     padding: 20px;
@@ -46,16 +47,17 @@ header {
 
 .logo {
     height: 60px;
+    filter: brightness(0) invert(1); /* Hace el logo blanco para mejor contraste */
 }
 
-/* Navigation Styles - CORREGIDO: siempre texto blanco en header */
+/* Navigation Styles - CORREGIDO: Enlaces activos con mejor contraste */
 nav {
     display: flex;
     gap: 20px;
 }
 
 nav a {
-    color: var(--accent1-color);    /* Usa blanco en lugar del azul oscuro */
+    color: var(--text-light);      /* Texto siempre blanco en header */
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
@@ -63,10 +65,15 @@ nav a {
     transition: all 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--text-light);
+}
+
+nav a.active {
+    background-color: var(--accent2-color); /* Amarillo en lugar de naranja */
+    color: var(--primary-color);           /* Verde oscuro para buen contraste */
+    border: 2px solid var(--white-color);
 }
 
 /* Heading Styles */
@@ -87,12 +94,12 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Hero Section - CORREGIDO: asegurar que h1 sea visible */
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
     margin: 0;
-    background-color: #1a3d1a; /* Fondo de respaldo para la imagen */
+    background-color: #1a3d1a;
 }
 
 .hero-image {
@@ -109,10 +116,10 @@ h2 {
     right: 0;
     text-align: center;
     color: var(--white-color);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
     margin: 0;
-    padding: 10px;
-    background-color: rgba(5, 90, 5, 0.7); /* Fondo semitransparente para legibilidad */
+    padding: 15px;
+    background-color: rgba(3, 66, 3, 0.8);
     z-index: 2;
 }
 
@@ -120,11 +127,12 @@ h2 {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background-color: rgba(5, 90, 5, 0.9);
+    background-color: rgba(3, 66, 3, 0.9);
     color: var(--white-color);
     padding: 20px;
     max-width: 400px;
     border-radius: 8px;
+    border: 2px solid var(--accent2-color);
 }
 
 .hero article img {
