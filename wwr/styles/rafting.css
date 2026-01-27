@@ -1,31 +1,25 @@
 /* rafting.css - White Water Rafting Company */
 
-/* Variables CSS */
+/* CSS Variables */
 :root {
-    --primary-color: #055a05;
-    /* forest green */
-    --secondary-color: #f4a261;
-    /* warm sand */
-    --accent1-color: #264653;
-    /* dark slate blue */
-    --accent2-color: #e9c46a;
-    /* light golden yellow */
-    --heading-font: "Times New Roman", "Georgia", serif;
+    --primary-color: #055a05;      /* forest green */
+    --secondary-color: #f4a261;    /* warm sand */
+    --accent1-color: #264653;      /* dark slate blue */
+    --accent2-color: #e9c46a;      /* light golden yellow */
+    --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
     --white-color: #ffffff;
     --gray-light: #f5f5f5;
 }
 
 /* Reset CSS */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos del Body */
+/* Body Styles */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -33,14 +27,14 @@ body {
     background-color: var(--white-color);
 }
 
-/* Contenedores principales */
+/* Main Containers */
 .container {
     max-width: 840px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilos del Header */
+/* Header Styles */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
@@ -57,7 +51,7 @@ header {
     width: auto;
 }
 
-/* Estilos de navegación */
+/* Navigation Styles */
 .vertical-nav {
     display: flex;
     gap: 20px;
@@ -77,9 +71,8 @@ header {
     color: var(--accent1-color);
 }
 
-/* Estilos de los encabezados */
-h1,
-h2 {
+/* Heading Styles */
+h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -242,12 +235,12 @@ footer p {
         text-align: center;
         gap: 20px;
     }
-
+    
     .vertical-nav {
         flex-direction: column;
         width: 100%;
     }
-
+    
     .hero h1 {
         font-size: 2rem;
         position: relative;
@@ -256,7 +249,7 @@ footer p {
         color: var(--primary-color);
         text-shadow: none;
     }
-
+    
     .hero article {
         position: relative;
         bottom: auto;
@@ -265,13 +258,13 @@ footer p {
         margin: 20px;
         max-width: none;
     }
-
+    
     footer {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-
+    
     .adventure-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -281,11 +274,11 @@ footer p {
     .adventure-gallery {
         grid-template-columns: 1fr;
     }
-
+    
     h1 {
         font-size: 2rem;
     }
-
+    
     h2 {
         font-size: 1.5rem;
     }
