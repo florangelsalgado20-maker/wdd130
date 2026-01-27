@@ -1,16 +1,16 @@
 /* rafting.css - White Water Rafting Company */
 
-/* CSS Variables in :root */
+/* CSS Variables in :root - COLORES AJUSTADOS PARA MEJOR CONTRASTE */
 :root {
-    --primary-color: #055a05;
+    --primary-color: #034203;       /* Verde más oscuro para mejor contraste */
     --secondary-color: #f4a261;
-    --accent1-color: #264653;
+    --accent1-color: #ffffff;       /* Cambiado a blanco para usar en header */
     --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
     --white-color: #ffffff;
     --gray-light: #f5f5f5;
-    --light-green: #e8f5e8;
+    --text-dark: #1a1a1a;           /* Añadido: texto oscuro para contraste */
 }
 
 /* Reset CSS */
@@ -23,7 +23,7 @@
 /* Body Styles */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--white-color);
 }
@@ -35,7 +35,7 @@ body {
     padding: 0;
 }
 
-/* Header Styles - CORREGIDO: mejor contraste */
+/* Header Styles - CORREGIDO: texto blanco sobre verde oscuro */
 header {
     background-color: var(--primary-color);
     padding: 20px;
@@ -48,17 +48,19 @@ header {
     height: 60px;
 }
 
-/* Navigation Styles - CORREGIDO: texto blanco para mejor contraste */
+/* Navigation Styles - CORREGIDO: siempre texto blanco en header */
 nav {
     display: flex;
     gap: 20px;
 }
 
 nav a {
-    color: var(--white-color);
+    color: var(--accent1-color);    /* Usa blanco en lugar del azul oscuro */
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover,
@@ -85,11 +87,12 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Hero Section */
+/* Hero Section - CORREGIDO: asegurar que h1 sea visible */
 .hero {
     position: relative;
     width: 100%;
     margin: 0;
+    background-color: #1a3d1a; /* Fondo de respaldo para la imagen */
 }
 
 .hero-image {
@@ -106,18 +109,22 @@ h2 {
     right: 0;
     text-align: center;
     color: var(--white-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     margin: 0;
+    padding: 10px;
+    background-color: rgba(5, 90, 5, 0.7); /* Fondo semitransparente para legibilidad */
+    z-index: 2;
 }
 
 .hero article {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background-color: rgba(5, 90, 5, 0.85);
+    background-color: rgba(5, 90, 5, 0.9);
     color: var(--white-color);
     padding: 20px;
     max-width: 400px;
+    border-radius: 8px;
 }
 
 .hero article img {
@@ -133,6 +140,7 @@ h2 {
 .hero article p {
     margin: 0;
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Main Sections */
@@ -144,17 +152,21 @@ main {
     margin: 30px 0;
     padding: 20px;
     background-color: var(--gray-light);
+    border-radius: 8px;
 }
 
 .history p {
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--text-dark);
 }
 
 .adventure {
     margin: 30px 0;
     padding: 20px;
-    background-color: var(--light-green);
+    background-color: var(--white-color);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 /* Adventure Gallery */
@@ -177,6 +189,7 @@ main {
     height: 100px;
     object-fit: cover;
     border: 2px solid var(--primary-color);
+    border-radius: 4px;
 }
 
 .adventure-gallery figcaption {
@@ -193,6 +206,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0 0 8px 8px;
 }
 
 footer p {
@@ -208,8 +222,22 @@ footer p {
 
 .socialmedia a {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.socialmedia a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .socialmedia img {
     filter: brightness(0) invert(1);
+    width: 24px;
+    height: 24px;
 }
