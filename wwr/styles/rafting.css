@@ -1,289 +1,295 @@
-/* rafting.css - VERSIÓN FINAL GARANTIZADA WCAG AA */
+/* rafting.css - TEXTOS BLANCOS, ICONOS EN COLOR NATURAL */
 
-/* PALETA CORREGIDA - TODAS LAS COMBINACIONES ≥ 4.5:1 */
+/* CONFIGURACIÓN PRINCIPAL */
 :root {
-    /* FONDOS OSCUROS - Para texto CLARO */
-    --background-dark-blue: #000080;      /* Azul marino (#000080) */
-    --background-dark-red: #cc0000;       /* Rojo oscuro (#cc0000) - MANTENIDO */
-    --background-dark-green: #006400;     /* Verde oscuro (#006400) */
+    /* COLORES - SOLO BLANCO Y NEGRO */
+    --color-text: #ffffff;      /* TODOS los textos en BLANCO */
+    --color-background: #000000; /* TODOS los fondos en NEGRO */
+    --color-border: #333333;     /* Bordes gris oscuro */
     
-    /* FONDOS CLAROS/BRILLANTES - Para texto OSCURO */
-    --background-hot-pink: #ff3399;       /* Rosado Barbie (#ff3399) */
-    --background-bright-yellow: #ffcc00;  /* Amarillo brillante (#ffcc00) */
-    --background-white: #ffffff;          /* Blanco puro (#ffffff) */
-    
-    /* COLOR AJUSTADO - Azul más oscuro para texto blanco */
-    --background-bright-blue: #0000c8;    /* Azul brillante OSCURECIDO (#0000c8) */
-    
-    /* COLORES DE TEXTO */
-    --text-black: #000000;                /* Negro puro (#000000) */
-    --text-white: #ffffff;                /* Blanco puro (#ffffff) */
-    --text-yellow: #ffcc00;               /* Amarillo (#ffcc00) - SOLO para verde oscuro */
-    
-    /* FUENTES */
-    --heading-font: "Times New Roman", Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    /* FUENTES DIVERTIDAS */
+    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+    --font-title: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+    --font-fun: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+    --font-elegant: 'Georgia', 'Times New Roman', serif;
 }
 
-/* Reset CSS */
+/* =============================== */
+/* RESET Y CONFIGURACIÓN GENERAL */
+/* =============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =============================== */
-/* REGLA ORO: Fondo OSCURO → Texto CLARO */
-/*           Fondo CLARO → Texto OSCURO */
-/* =============================== */
+html {
+    background-color: var(--color-background);
+}
 
-/* Body Styles */
 body {
-    font-family: var(--body-font);
-    color: var(--text-black);             /* NEGRO sobre blanco (21:1) */
+    font-family: var(--font-main);
+    color: var(--color-text);        /* TODOS los textos en BLANCO */
     line-height: 1.6;
-    background-color: var(--background-white);
-}
-
-/* Main Container */
-.container {
-    width: 840px;
-    margin: 0 auto;
-    padding: 0;
+    background-color: var(--color-background); /* Fondo NEGRO */
+    min-height: 100vh;
 }
 
 /* =============================== */
-/* HEADER - AZUL MARINO con TEXTO BLANCO */
-/* #000080 con #ffffff = 16.01:1 ✅ PASS */
+/* CONTENEDOR PRINCIPAL */
+/* =============================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-background);
+}
+
+/* =============================== */
+/* HEADER - NEGRO con texto BLANCO */
 /* =============================== */
 header {
-    background-color: var(--background-dark-blue);
-    padding: 20px;
+    background-color: var(--color-background);
+    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 3px solid var(--color-text);
+    margin-bottom: 30px;
 }
 
 .logo {
-    height: 60px;
-    filter: brightness(0) invert(1);
+    height: 70px;
+    filter: brightness(0) invert(1); /* Logo blanco */
 }
 
+/* NAVEGACIÓN - Texto siempre BLANCO */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
-    color: var(--text-white);              /* BLANCO sobre azul marino */
+    color: var(--color-text);           /* BLANCO */
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 4px;
+    letter-spacing: 1px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* =============================== */
-/* LINK ACTIVO - ROSADO BARBIE con TEXTO NEGRO */
-/* #ff3399 con #000000 = 6.40:1 ✅ PASS */
-/* (NO usar blanco sobre rosado = 3.40:1 ❌) */
-/* =============================== */
-nav a.active {
-    background-color: var(--background-hot-pink); /* Rosado Barbie */
-    color: var(--text-black);                     /* NEGRO sobre rosado */
-    border: 2px solid var(--text-white);
-}
-
-nav a:hover:not(.active) {
+nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid var(--color-text);
+    font-family: var(--font-fun);
 }
 
 /* =============================== */
-/* HERO SECTION - ROJO OSCURO con TEXTO BLANCO */
-/* #cc0000 con #ffffff = 4.82:1 ✅ PASS */
+/* HERO SECTION - NEGRO con texto BLANCO */
 /* =============================== */
 .hero {
     position: relative;
     width: 100%;
-    margin: 0;
-    background-color: var(--background-dark-red); /* Rojo oscuro */
+    margin: 0 0 40px 0;
+    background-color: var(--color-background);
+    border: 3px solid var(--color-text);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     display: block;
+    filter: brightness(0.6) contrast(1.2); /* Oscurecer imagen para mejor contraste */
 }
 
 .hero h1 {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--text-white);              /* BLANCO sobre rojo */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: var(--color-text);           /* BLANCO */
     margin: 0;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);  /* Negro semitransparente */
+    padding: 25px;
+    font-family: var(--font-title);
+    font-size: 3rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
-    border-radius: 8px;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 2.2rem;
+    letter-spacing: 2px;
 }
 
-/* =============================== */
-/* ARTÍCULO HERO - AMARILLO con TEXTO NEGRO */
-/* #ffcc00 con #000000 = 11.40:1 ✅ PASS */
-/* =============================== */
 .hero article {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    background-color: var(--background-bright-yellow); /* Amarillo brillante */
-    color: var(--text-black);                         /* NEGRO sobre amarillo */
-    padding: 20px;
-    max-width: 400px;
-    border-radius: 8px;
-    border: 3px solid var(--text-white);
-    font-weight: bold;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: var(--color-text);           /* BLANCO */
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--color-text);
+    font-family: var(--font-elegant);
+    backdrop-filter: blur(5px);
 }
 
 .hero article img {
     float: right;
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 100px;
     object-fit: cover;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    border: 2px solid var(--text-black);
-    border-radius: 4px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-text);
+    border-radius: 8px;
 }
 
 .hero article p {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-text);           /* BLANCO */
 }
 
 /* =============================== */
-/* HEADINGS - NEGRO sobre BLANCO */
-/* #000000 con #ffffff = 21:1 ✅ PASS */
-/* =============================== */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--text-black);
-}
-
-h1 {
-    font-size: 2rem;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin: 30px 0 15px 0;
-    border-bottom: 2px solid var(--background-dark-blue);
-    padding-bottom: 10px;
-}
-
-/* =============================== */
-/* HISTORY SECTION - VERDE OSCURO con TEXTO AMARILLO */
-/* #006400 con #ffcc00 = 4.92:1 ✅ PASS */
-/* (NO usar negro sobre verde = 2.82:1 ❌) */
+/* HISTORY SECTION - NEGRO con texto BLANCO */
 /* =============================== */
 .history {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: var(--background-dark-green); /* Verde oscuro */
-    color: var(--text-yellow);                     /* AMARILLO sobre verde */
-    border-radius: 8px;
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--color-text);           /* BLANCO */
+    border-radius: 12px;
+    border: 2px solid var(--color-text);
+    font-family: var(--font-main);
+}
+
+.history h2 {
+    color: var(--color-text);           /* BLANCO */
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
 }
 
 .history p {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: bold; /* Mejora legibilidad amarillo sobre verde */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);           /* BLANCO */
+    text-align: justify;
+    font-family: var(--font-elegant);
 }
 
 /* =============================== */
-/* ADVENTURE SECTION - AZUL BRILLANTE OSCURECIDO con TEXTO BLANCO */
-/* #0000c8 con #ffffff = 10.46:1 ✅ PASS */
-/* (Azul original #0066ff con blanco = 4.34:1 ❌) */
+/* ADVENTURE SECTION - NEGRO con texto BLANCO */
 /* =============================== */
 .adventure {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: var(--background-bright-blue); /* Azul oscurecido */
-    color: var(--text-white);                       /* BLANCO sobre azul */
-    border-radius: 8px;
-    border: 3px solid var(--background-dark-blue);
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--color-text);           /* BLANCO */
+    border-radius: 12px;
+    border: 2px solid var(--color-text);
 }
 
-/* =============================== */
-/* GALLERY - NEGRO sobre BLANCO */
-/* #000000 con #ffffff = 21:1 ✅ PASS */
-/* =============================== */
+.adventure h2 {
+    color: var(--color-text);           /* BLANCO */
+    font-family: var(--font-fun);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* GALERÍA - Texto BLANCO sobre fondos NEGROS */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     margin-top: 20px;
 }
 
 .adventure-gallery figure {
     flex: 1;
-    min-width: 150px;
+    min-width: 180px;
     text-align: center;
-    background-color: var(--background-white); /* Fondo BLANCO */
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid var(--background-dark-green);
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-text);
+    transition: transform 0.3s ease;
+}
+
+.adventure-gallery figure:hover {
+    transform: translateY(-10px);
+    border-color: #fff;
 }
 
 .adventure-gallery img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     object-fit: cover;
-    border: 2px solid var(--background-dark-blue);
-    border-radius: 4px;
+    border: 2px solid var(--color-text);
+    border-radius: 6px;
+    filter: brightness(0.8) contrast(1.1);
 }
 
 .adventure-gallery figcaption {
-    margin-top: 8px;
+    margin-top: 12px;
     font-weight: bold;
-    color: var(--text-black); /* NEGRO sobre blanco */
-    padding: 5px;
+    color: var(--color-text);           /* BLANCO */
+    padding: 8px;
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 }
 
 /* =============================== */
-/* FOOTER - AZUL MARINO con TEXTO BLANCO */
-/* #000080 con #ffffff = 16.01:1 ✅ PASS */
+/* FOOTER - NEGRO con texto BLANCO */
 /* =============================== */
 footer {
-    background-color: var(--background-dark-blue);
-    color: var(--text-white);
-    padding: 20px;
+    background-color: var(--color-background);
+    color: var(--color-text);           /* BLANCO */
+    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0 0 8px 8px;
+    border-top: 3px solid var(--color-text);
+    margin-top: 40px;
 }
 
 footer p {
     margin: 0;
     font-weight: bold;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: var(--color-text);           /* BLANCO */
 }
 
 /* =============================== */
-/* SOCIAL MEDIA - BLANCO sobre AZUL MARINO */
+/* ICONOS DE REDES SOCIALES - COLOR NATURAL */
 /* =============================== */
 .socialmedia {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .socialmedia a {
@@ -291,19 +297,119 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.15);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .socialmedia a:hover {
-    background-color: var(--background-hot-pink); /* Rosado en hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
+/* ICONOS EN SU COLOR NATURAL - SIN FILTROS */
 .socialmedia img {
-    filter: brightness(0) invert(1);
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+    /* SIN filter: brightness(0) invert(1); */
+    /* Los iconos SVG mantienen sus colores originales */
+}
+
+/* Estilos específicos para cada icono si es necesario */
+.socialmedia a[href*="facebook"] img {
+    /* Facebook blue se mantiene natural */
+}
+
+.socialmedia a[href*="linkedin"] img {
+    /* LinkedIn blue se mantiene natural */
+}
+
+.socialmedia a[href*="instagram"] img {
+    /* Instagram gradient se mantiene natural */
+}
+
+/* =============================== */
+/* TIPOGRAFÍA GLOBAL - TODOS LOS TEXTOS BLANCOS */
+/* =============================== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);           /* BLANCO */
+}
+
+p, span, div, li, td, th, label, input, textarea, select, button {
+    color: var(--color-text);           /* BLANCO */
+}
+
+a {
+    color: var(--color-text);           /* BLANCO */
+}
+
+strong, b, em, i, u, mark {
+    color: var(--color-text);           /* BLANCO */
+}
+
+/* =============================== */
+/* EFECTOS ESPECIALES */
+/* =============================== */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #fff; }
+    50% { text-shadow: 0 0 20px #fff, 0 0 30px #fff; }
+    100% { text-shadow: 0 0 5px #fff; }
+}
+
+.glow-text {
+    animation: glow 2s infinite;
+}
+
+/* =============================== */
+/* RESPONSIVE */
+/* =============================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+    
+    .hero article {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: 20px;
+    }
+    
+    .adventure-gallery figure {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .adventure-gallery figure {
+        min-width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
 }
