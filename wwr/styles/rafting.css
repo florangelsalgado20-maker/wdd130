@@ -1,157 +1,409 @@
-/* rafting.css - PRIMERA PARTE CORREGIDA: texto BLANCO sobre fondo NEGRO */
+/* rafting.css - GARANTIZADO: CERO TEXTOS NEGROS */
 
-/* CONFIGURACIÓN PRINCIPAL */
+/* CONFIGURACIÓN PRINCIPAL - FORZAR BLANCO */
 :root {
-    /* COLORES PRINCIPALES */
-    --color-text: #ffffff;            /* TODOS los textos en BLANCO */
-    --color-background: #000000;      /* TODOS los fondos en NEGRO */
-    --color-accent: #ff69b4;          /* FUCSIA BARBIE (#ff69b4) */
-    --color-border: #ff69b4;          /* Bordes FUCSIA BARBIE */
-    
-    /* FUENTES DIVERTIDAS */
-    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
-    --font-title: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
-    --font-fun: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
-    --font-elegant: 'Georgia', 'Times New Roman', serif;
+    --color-text: #ffffff !important;      /* FORZAR TODO TEXTO BLANCO */
+    --color-background: #000000;
+    --color-accent: #ff69b4;
 }
 
-/* =============================== */
-/* RESET Y PRIMERA PARTE: todo BLANCO sobre NEGRO */
-/* =============================== */
+/* ==================== */
+/* RESET COMPLETO */
+/* ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--color-text) !important; /* FORZAR BLANCO en TODO */
 }
 
-/* FONDO GENERAL - NEGRO */
+/* ==================== */
+/* FORZAR BLANCO EN ABSOLUTAMENTE TODO */
+/* ==================== */
+html, body,
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, textarea, select, button {
+    color: var(--color-text) !important; /* BLANCO ABSOLUTO */
+    background-color: transparent !important;
+}
+
+/* ==================== */
+/* FONDOS NEGROS */
+/* ==================== */
 html, body {
-    background-color: var(--color-background) !important; /* Fondo NEGRO */
-    color: var(--color-text) !important;                  /* Texto BLANCO */
+    background-color: var(--color-background) !important;
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--color-text);        /* Texto BLANCO */
+    font-family: 'Calibri', sans-serif;
     line-height: 1.6;
-    background-color: var(--color-background); /* Fondo NEGRO */
     min-height: 100vh;
 }
 
-/* =============================== */
-/* CONTENEDOR PRINCIPAL - NEGRO con texto BLANCO */
-/* =============================== */
+/* ==================== */
+/* CONTENEDOR */
+/* ==================== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--color-background) !important; /* Fondo NEGRO */
-    color: var(--color-text) !important;                  /* Texto BLANCO */
+    background-color: var(--color-background) !important;
 }
 
-/* =============================== */
-/* HEADER - NEGRO con texto BLANCO, bordes FUCSIA */
-/* =============================== */
+/* ==================== */
+/* HEADER - BLANCO sobre NEGRO */
+/* ==================== */
 header {
-    background-color: var(--color-background) !important; /* Fondo NEGRO */
-    color: var(--color-text) !important;                  /* Texto BLANCO */
+    background-color: var(--color-background) !important;
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--color-accent); /* Borde FUCSIA */
+    border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
 }
 
 .logo {
     height: 70px;
-    filter: brightness(0) invert(1) !important; /* Logo BLANCO */
+    filter: brightness(0) invert(1) !important; /* BLANCO */
 }
 
-/* =============================== */
-/* NAVEGACIÓN - LINKS en BLANCO sobre fondo NEGRO */
-/* =============================== */
+/* ==================== */
+/* NAVEGACIÓN - LINKS BLANCOS */
+/* ==================== */
 nav {
     display: flex;
     gap: 25px;
 }
 
-/* LINKS PRINCIPALES - Texto BLANCO */
 nav a {
-    color: var(--color-text) !important;         /* BLANCO */
-    text-decoration: none;
+    color: var(--color-text) !important; /* BLANCO */
+    text-decoration: none !important;
     padding: 12px 20px;
-    font-family: var(--font-title);
+    font-family: 'Impact', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(255, 105, 180, 0.1); /* Fondo FUCSIA BARBIE tenue */
+    background-color: rgba(255, 105, 180, 0.1);
     border: 2px solid transparent;
 }
 
-/* HOVER - Mantener texto BLANCO */
 nav a:hover {
-    color: var(--color-text) !important;         /* BLANCO */
-    background-color: rgba(255, 105, 180, 0.2); /* Fondo FUCSIA más intenso */
-    border: 2px solid var(--color-accent);      /* Borde FUCSIA */
+    background-color: rgba(255, 105, 180, 0.2);
+    border: 2px solid var(--color-accent);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
 }
 
-/* LINK ACTIVO - Texto BLANCO */
 nav a.active {
-    color: var(--color-text) !important;         /* BLANCO */
-    background-color: rgba(255, 105, 180, 0.25); /* Fondo FUCSIA */
-    border: 2px solid var(--color-accent);      /* Borde FUCSIA */
-    font-family: var(--font-fun);
+    background-color: rgba(255, 105, 180, 0.25);
+    border: 2px solid var(--color-accent);
+    font-family: 'Comic Sans MS', sans-serif;
     text-shadow: 0 0 10px var(--color-accent);
 }
 
-/* =============================== */
-/* FORZAR TEXTO BLANCO en TODOS los elementos de la primera parte */
-/* =============================== */
+/* ==================== */
+/* HERO SECTION - TODO BLANCO */
+/* ==================== */
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0 0 40px 0;
+    background-color: var(--color-background);
+    border: 3px solid var(--color-accent);
+    border-radius: 15px;
+    overflow: hidden;
+}
 
-/* Todos los textos visibles en BLANCO */
-h1, h2, h3, h4, h5, h6,
-p, span, div,
-li, td, th, 
-label, input, textarea, select, button,
-strong, b, em, i, u, mark, small, cite, blockquote,
-footer p,
-.adventure-gallery figcaption,
-.history h2,
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--color-text) !important; /* BLANCO */
+    margin: 0;
+    padding: 25px;
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0 0 10px var(--color-accent), 2px 2px 8px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    letter-spacing: 2px;
+    border: 3px solid var(--color-accent);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--color-text) !important; /* BLANCO */
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    font-family: 'Georgia', serif;
+    backdrop-filter: blur(5px);
+}
+
+.hero article img {
+    float: right;
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-accent);
+    border-radius: 8px;
+}
+
+.hero article p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-text) !important; /* BLANCO */
+}
+
+/* ==================== */
+/* HISTORY SECTION - BLANCO */
+/* ==================== */
+.history {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text) !important; /* BLANCO */
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    font-family: 'Calibri', sans-serif;
+}
+
+.history h2 {
+    color: var(--color-text) !important; /* BLANCO */
+    font-family: 'Impact', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-shadow: 0 0 10px var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 10px;
+}
+
+.history p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text) !important; /* BLANCO */
+    text-align: justify;
+    font-family: 'Georgia', serif;
+}
+
+/* ==================== */
+/* ADVENTURE SECTION - BLANCO */
+/* ==================== */
+.adventure {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text) !important; /* BLANCO */
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
 .adventure h2 {
-    color: var(--color-text) !important; /* BLANCO FORZADO */
-    background-color: transparent !important; /* Fondo transparente sobre NEGRO */
+    color: var(--color-text) !important; /* BLANCO */
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 15px var(--color-accent);
+    background: linear-gradient(to right, 
+        transparent 10%, 
+        rgba(255, 105, 180, 0.3) 50%, 
+        transparent 90%
+    );
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-accent);
 }
 
-/* Inputs y textareas - texto BLANCO sobre fondo NEGRO */
-input, textarea, select {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* Fondo negro semitransparente */
-    color: var(--color-text) !important;             /* Texto BLANCO */
-    border: 1px solid var(--color-accent) !important;
+/* GALERÍA - TODO BLANCO */
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/* Botones - texto BLANCO sobre fondo FUCSIA */
-button {
-    background-color: var(--color-accent) !important; /* Fondo FUCSIA */
-    color: var(--color-text) !important;             /* Texto BLANCO */
-    border: 2px solid var(--color-text) !important;
+.adventure-gallery figure {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-accent);
+    transition: all 0.3s ease;
 }
 
-/* =============================== */
-/* GARANTIZAR que el fondo sea NEGRO en toda la primera parte */
-/* =============================== */
-.container > *:not(.hero):not(.history):not(.adventure):not(footer) {
-    background-color: var(--color-background) !important; /* Fondo NEGRO */
+.adventure-gallery figure:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
 }
 
-/* =============================== */
-/* Las otras secciones mantienen sus estilos... */
-/* (Hero, History, Adventure, Footer siguen igual) */
-/* =============================== */
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    filter: brightness(0.9) contrast(1.1);
+}
 
-/* CONTINÚA CON EL RESTO DEL CSS QUE YA TENÍAS... */
+.adventure-gallery figcaption {
+    margin-top: 12px;
+    font-weight: bold;
+    color: var(--color-text) !important; /* BLANCO */
+    padding: 8px;
+    font-family: 'Impact', sans-serif;
+    font-size: 1.1rem;
+    background-color: rgba(255, 105, 180, 0.2);
+    border-radius: 5px;
+    border: 1px solid var(--color-accent);
+}
+
+/* ==================== */
+/* FOOTER - BLANCO */
+/* ==================== */
+footer {
+    background-color: var(--color-background);
+    color: var(--color-text) !important; /* BLANCO */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--color-accent);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-text) !important; /* BLANCO */
+}
+
+/* ==================== */
+/* ICONOS - COLOR NATURAL */
+/* ==================== */
+.socialmedia {
+    display: flex;
+    gap: 20px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 105, 180, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid var(--color-accent);
+}
+
+.socialmedia a:hover {
+    background-color: rgba(255, 105, 180, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    /* Color natural - sin filtros */
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+    
+    .hero article {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: 20px;
+    }
+    
+    .adventure-gallery figure {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .adventure-gallery figure {
+        min-width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
