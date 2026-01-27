@@ -1,15 +1,23 @@
-/* rafting.css - White Water Rafting Company - VERSIÓN CON CONTRASTE OPTIMIZADO */
+/* rafting.css - VERSIÓN CON PALETA GARANTIZADA DE ALTO CONTRASTE */
 
-/* CSS Variables in :root - COMBO DE ALTO CONTRASTE */
+/* PALETA DE COLORES GARANTIZADOS PARA CONTRASTE WCAG AA */
 :root {
-    --primary-dark: #034203;       /* Verde muy oscuro para fondo (AA Pass) */
-    --primary-light: #e6f7e6;      /* Verde muy claro para texto sobre oscuro (AA Pass) */
-    --text-on-light: #1a1a1a;      /* Casi negro para texto sobre claros (AA Pass) */
-    --accent-warning: #b45309;     /* Ámbar/naranja oscuro (AA Pass con texto claro) */
-    --secondary-color: #d17d2a;    /* Naranja más oscuro y saturado (AA Pass) */
-    --accent2-color: #ca8a04;      /* Amarillo dorado oscuro, no claro (AA Pass) */
-    --white-color: #ffffff;
-    --gray-light: #f5f5f5;
+    /* FONDOS PRINCIPALES - Colores fuertes y oscuros */
+    --background-dark-blue: #000080;      /* AZUL MARINO */
+    --background-bright-red: #cc0000;     /* ROJO BRILLANTE */
+    --background-orange: #ff6600;         /* NARANJA INTENSO */
+    --background-hot-pink: #ff3399;       /* ROSADO BARBIE */
+    --background-dark-green: #006400;     /* VERDE OSCURO */
+    
+    /* TEXTOS - Solo dos opciones garantizadas */
+    --text-black: #000000;                /* NEGRO PURO (máximo contraste) */
+    --text-white: #ffffff;                /* BLANCO PURO (máximo contraste) */
+    
+    /* COLORES DE ACENTO BRILLANTES */
+    --accent-yellow: #ffcc00;             /* AMARILLO DORADO */
+    --accent-bright-blue: #0066ff;        /* AZUL BRILLANTE */
+    
+    /* FUENTES */
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -21,12 +29,12 @@
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body Styles - FONDO BLANCO, TEXTO NEGRO */
 body {
     font-family: var(--body-font);
-    color: var(--text-on-light);
+    color: var(--text-black);
     line-height: 1.6;
-    background-color: var(--white-color);
+    background-color: var(--text-white);
 }
 
 /* Main Container */
@@ -37,11 +45,11 @@ body {
 }
 
 /* =============================== */
-/* PROBLEMA 1 SOLUCIONADO: HEADER */
-/* Texto rgb(26 26 26) sobre rgb(3 66 3): 1.48:1 → 11.77:1 */
+/* HEADER - AZUL MARINO CON TEXTO BLANCO */
+/* Contraste: 16:1 (Excelente) */
 /* =============================== */
 header {
-    background-color: var(--primary-dark);
+    background-color: var(--background-dark-blue);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -50,17 +58,17 @@ header {
 
 .logo {
     height: 60px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* Logo blanco */
 }
 
+/* NAVIGATION - Texto blanco sobre azul */
 nav {
     display: flex;
     gap: 20px;
 }
 
-/* SOLUCIÓN: Verde claro sobre verde oscuro (11.77:1) */
 nav a {
-    color: var(--primary-light);      /* Texto claro sobre fondo oscuro */
+    color: var(--text-white);           /* BLANCO sobre AZUL */
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
@@ -69,48 +77,27 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(230, 247, 230, 0.2);
-    color: var(--white-color);
+    background-color: var(--accent-yellow); /* Amarillo en hover */
+    color: var(--text-black);               /* Negro sobre amarillo */
 }
 
-/* =============================== */
-/* PROBLEMA 2 SOLUCIONADO: a.active */
-/* Texto rgb(255 255 255) sobre rgb(233 196 106): 1.67:1 → 5.5:1 */
-/* =============================== */
+/* LINK ACTIVO - ROSADO BARBIE CON TEXTO NEGRO */
+/* Contraste: ~4.6:1 (Aceptable) */
 nav a.active {
-    background-color: var(--accent2-color);  /* Amarillo dorado oscuro */
-    color: var(--primary-dark);              /* Texto verde oscuro sobre amarillo */
-    border: 2px solid var(--white-color);
-    font-weight: 700;
-}
-
-/* Heading Styles */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-dark);
-}
-
-h1 {
-    font-size: 2rem;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin: 30px 0 15px 0;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
+    background-color: var(--background-hot-pink); /* Rosado Barbie */
+    color: var(--text-black);                     /* Negro sobre rosado */
+    border: 2px solid var(--text-white);
 }
 
 /* =============================== */
-/* PROBLEMA 3 SOLUCIONADO: div.hero */
-/* Texto rgb(26 26 26) sobre rgb(26 61 26): 1.43:1 → 9.25:1 */
+/* HERO SECTION - ROJO BRILLANTE CON TEXTO BLANCO */
+/* Contraste: ~4:1 para texto grande */
 /* =============================== */
 .hero {
     position: relative;
     width: 100%;
     margin: 0;
-    background-color: #1a3d1a; /* Fondo de respaldo más oscuro */
+    background-color: var(--background-bright-red); /* Fondo rojo */
 }
 
 .hero-image {
@@ -120,36 +107,38 @@ h2 {
     display: block;
 }
 
-/* SOLUCIÓN: Texto claro sobre fondo oscuro (11.77:1) */
+/* TÍTULO HERO - Blanco con fondo semi-transparente */
 .hero h1 {
     position: absolute;
     top: 30px;
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--primary-light);        /* Verde claro sobre fondo */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    color: var(--text-white);           /* BLANCO sobre rojo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     margin: 0;
     padding: 15px;
-    background-color: rgba(3, 66, 3, 0.85); /* Verde oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7); /* Negro semi-transparente */
     z-index: 2;
     border-radius: 8px;
     width: 80%;
     margin: 0 auto;
-    font-weight: 700;
+    font-size: 2.2rem;
 }
 
-/* SOLUCIÓN: Contraste optimizado en el artículo */
+/* ARTÍCULO HERO - NARANJA con texto negro */
+/* Contraste: ~8:1 (Excelente) */
 .hero article {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background-color: rgba(230, 247, 230, 0.95); /* Fondo verde muy claro */
-    color: var(--text-on-light);                 /* Texto oscuro sobre claro */
+    background-color: var(--background-orange); /* Naranja intenso */
+    color: var(--text-black);                  /* Negro sobre naranja */
     padding: 20px;
     max-width: 400px;
     border-radius: 8px;
-    border: 2px solid var(--primary-dark);
+    border: 3px solid var(--text-white);
+    font-weight: bold;
 }
 
 .hero article img {
@@ -159,7 +148,7 @@ h2 {
     object-fit: cover;
     margin-left: 15px;
     margin-bottom: 10px;
-    border: 2px solid var(--primary-dark);
+    border: 2px solid var(--text-black);
     border-radius: 4px;
 }
 
@@ -167,38 +156,50 @@ h2 {
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
-    font-weight: 500;
 }
 
-/* Main Sections */
-main {
-    padding: 20px;
-}
-
+/* =============================== */
+/* HISTORY SECTION - VERDE OSCURO CON TEXTO BLANCO */
+/* Contraste: ~9:1 (Excelente) */
+/* =============================== */
 .history {
     margin: 30px 0;
     padding: 20px;
-    background-color: var(--gray-light);
+    background-color: var(--background-dark-green); /* Verde oscuro */
+    color: var(--text-white);                       /* Blanco sobre verde */
     border-radius: 8px;
-    border: 1px solid #ddd;
+}
+
+.history h2 {
+    color: var(--accent-yellow); /* Amarillo para el título */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 .history p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--text-on-light);
-    font-weight: 500;
 }
 
+/* =============================== */
+/* ADVENTURE SECTION - AZUL BRILLANTE con texto blanco */
+/* =============================== */
 .adventure {
     margin: 30px 0;
     padding: 20px;
-    background-color: var(--white-color);
+    background-color: var(--accent-bright-blue); /* Azul brillante */
+    color: var(--text-white);                    /* Blanco sobre azul */
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 3px solid var(--background-dark-blue);
 }
 
-/* Adventure Gallery */
+.adventure h2 {
+    color: var(--accent-yellow); /* Amarillo para el título */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* GALLERY - Fondo blanco con bordes de color */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -211,32 +212,33 @@ main {
     flex: 1;
     min-width: 150px;
     text-align: center;
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: var(--text-white); /* Fondo blanco */
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 2px solid var(--background-hot-pink); /* Borde rosado */
 }
 
 .adventure-gallery img {
     width: 100%;
     height: 100px;
     object-fit: cover;
-    border: 2px solid var(--primary-dark);
+    border: 2px solid var(--background-dark-blue); /* Borde azul */
     border-radius: 4px;
 }
 
 .adventure-gallery figcaption {
     margin-top: 8px;
     font-weight: bold;
-    color: var(--primary-dark);
+    color: var(--text-black); /* Negro sobre blanco */
     padding: 5px;
-    border-radius: 4px;
 }
 
-/* Footer */
+/* =============================== */
+/* FOOTER - AZUL MARINO CON TEXTO BLANCO */
+/* =============================== */
 footer {
-    background-color: var(--primary-dark);
-    color: var(--white-color);
+    background-color: var(--background-dark-blue);
+    color: var(--text-white);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -249,7 +251,7 @@ footer p {
     font-weight: bold;
 }
 
-/* Social Media Links */
+/* SOCIAL MEDIA - Iconos blancos sobre azul */
 .socialmedia {
     display: flex;
     gap: 15px;
@@ -262,13 +264,13 @@ footer p {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .socialmedia a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--background-hot-pink); /* Rosado en hover */
 }
 
 .socialmedia img {
