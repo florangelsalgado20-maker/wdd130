@@ -1,21 +1,16 @@
-/* rafting.css - CORREGIDO: Cumple todos los requisitos técnicos */
+/* rafting.css - TEXTO BLANCO SOBRE FONDO NEGRO */
 
 /* ==================== */
 /* VARIABLES CSS en :root */
 /* ==================== */
 :root {
-    --color-text: #ffffff;
-    --color-background: #000000;
-    --color-accent: #ff69b4;
-    --color-border: #ff69b4; /* USADA en borders */
-    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
-    --font-title: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
-    --font-fun: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
-    --font-elegant: 'Georgia', 'Times New Roman', serif; /* USADA en .hero article */
+    --color-text: #ffffff;            /* BLANCO - TEXTO */
+    --color-background: #000000;      /* NEGRO - FONDO */
+    --color-accent: #ff69b4;          /* FUCSIA BARBIE */
 }
 
 /* ==================== */
-/* RESET UNIVERSAL CORREGIDO */
+/* RESET UNIVERSAL */
 /* ==================== */
 * {
     margin: 0;
@@ -24,38 +19,19 @@
 }
 
 /* ==================== */
-/* FORZAR BLANCO EN TODO TEXTO */
-/* ==================== */
-html, body,
-div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video,
-input, textarea, select, button {
-    color: var(--color-text);
-    background-color: transparent;
-}
-
-/* ==================== */
-/* FONDOS NEGROS */
+/* FORZAR TEXTO BLANCO EN TODO */
 /* ==================== */
 html, body {
-    background-color: var(--color-background);
+    color: var(--color-text) !important;        /* BLANCO */
+    background-color: var(--color-background) !important; /* NEGRO */
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
+    color: var(--color-text);                   /* BLANCO */
+    background-color: var(--color-background);  /* NEGRO */
 }
 
 /* ==================== */
@@ -65,29 +41,47 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--color-background);
+    color: var(--color-text);                   /* BLANCO */
+    background-color: var(--color-background);  /* NEGRO */
+}
+
+/* ==================== */
+/* TODOS LOS TEXTOS BLANCOS */
+/* ==================== */
+h1, h2, h3, h4, h5, h6,
+p, span, div, 
+a, strong, b, em, i, 
+blockquote, cite, 
+figcaption, caption,
+footer p,
+.history h2,
+.adventure h2,
+.adventure-gallery figcaption,
+.hero article p,
+.hero h1 {
+    color: var(--color-text) !important;        /* BLANCO */
 }
 
 /* ==================== */
 /* HEADER */
 /* ==================== */
 header {
-    background-color: var(--color-background);
+    background-color: var(--color-background);  /* NEGRO */
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--color-border); /* USA --color-border */
+    border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
 }
 
 .logo {
     height: 70px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);            /* Logo BLANCO */
 }
 
 /* ==================== */
-/* NAVEGACIÓN - text-decoration CORREGIDO */
+/* NAVEGACIÓN */
 /* ==================== */
 nav {
     display: flex;
@@ -95,10 +89,10 @@ nav {
 }
 
 nav a {
-    color: var(--color-text);
-    text-decoration: none; /* CORRECCIÓN: text-decoration agregado */
+    color: var(--color-text);                   /* BLANCO */
+    text-decoration: none;
     padding: 12px 20px;
-    font-family: var(--font-title);
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -119,19 +113,19 @@ nav a:hover {
 nav a.active {
     background-color: rgba(255, 105, 180, 0.25);
     border: 2px solid var(--color-accent);
-    font-family: var(--font-fun);
+    font-family: 'Comic Sans MS', sans-serif;
     text-shadow: 0 0 10px var(--color-accent);
 }
 
 /* ==================== */
-/* HERO SECTION - POSITIONING CORREGIDO */
+/* HERO SECTION */
 /* ==================== */
 .hero {
-    position: relative; /* CORRECCIÓN: position: relative agregado */
+    position: relative;
     width: 100%;
     margin: 0 0 40px 0;
-    background-color: var(--color-background);
-    border: 3px solid var(--color-border); /* USA --color-border */
+    background-color: var(--color-background);  /* NEGRO */
+    border: 3px solid var(--color-accent);
     border-radius: 15px;
     overflow: hidden;
 }
@@ -145,42 +139,42 @@ nav a.active {
 }
 
 .hero h1 {
-    position: absolute; /* CORRECCIÓN: position: absolute agregado */
+    position: absolute;
     top: 50px;
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-text);                   /* BLANCO */
     margin: 0;
     padding: 25px;
-    font-family: var(--font-title);
+    font-family: 'Impact', sans-serif;
     font-size: 3rem;
     text-shadow: 0 0 10px var(--color-accent), 2px 2px 8px rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);       /* Fondo semitransparente NEGRO */
     z-index: 2;
     letter-spacing: 2px;
-    border: 3px solid var(--color-border); /* USA --color-border */
+    border: 3px solid var(--color-accent);
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
 }
 
 .hero article {
-    position: absolute; /* CORRECCIÓN: position: absolute agregado */
+    position: absolute;
     bottom: 40px;
     left: 40px;
     right: 40px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.9);       /* Fondo semitransparente NEGRO */
+    color: var(--color-text);                   /* BLANCO */
     padding: 25px;
     border-radius: 12px;
-    border: 2px solid var(--color-border); /* USA --color-border */
-    font-family: var(--font-elegant); /* USA --font-elegant */
+    border: 2px solid var(--color-accent);
+    font-family: 'Georgia', 'Times New Roman', serif;
     backdrop-filter: blur(5px);
 }
 
 .hero article img {
-    float: right; /* CORRECCIÓN: float: right agregado */
+    float: right;
     width: 140px;
     height: 100px;
     object-fit: cover;
@@ -194,7 +188,7 @@ nav a.active {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.7;
-    color: var(--color-text);
+    color: var(--color-text);                   /* BLANCO */
 }
 
 /* ==================== */
@@ -203,16 +197,16 @@ nav a.active {
 .history {
     margin: 40px 0;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.95);      /* Fondo semitransparente NEGRO */
+    color: var(--color-text);                   /* BLANCO */
     border-radius: 12px;
-    border: 2px solid var(--color-border); /* USA --color-border */
-    font-family: var(--font-main);
+    border: 2px solid var(--color-accent);
+    font-family: 'Calibri', sans-serif;
 }
 
 .history h2 {
-    color: var(--color-text);
-    font-family: var(--font-title);
+    color: var(--color-text);                   /* BLANCO */
+    font-family: 'Impact', sans-serif;
     font-size: 2.2rem;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -226,9 +220,9 @@ nav a.active {
 .history p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text);
+    color: var(--color-text);                   /* BLANCO */
     text-align: justify;
-    font-family: var(--font-elegant); /* USA --font-elegant */
+    font-family: 'Georgia', serif;
 }
 
 /* ==================== */
@@ -237,15 +231,15 @@ nav a.active {
 .adventure {
     margin: 40px 0;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.95);      /* Fondo semitransparente NEGRO */
+    color: var(--color-text);                   /* BLANCO */
     border-radius: 12px;
-    border: 2px solid var(--color-border); /* USA --color-border */
+    border: 2px solid var(--color-accent);
 }
 
 .adventure h2 {
-    color: var(--color-text);
-    font-family: var(--font-fun);
+    color: var(--color-text);                   /* BLANCO */
+    font-family: 'Comic Sans MS', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
@@ -273,10 +267,10 @@ nav a.active {
     flex: 1;
     min-width: 180px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);       /* Fondo semitransparente NEGRO */
     padding: 15px;
     border-radius: 10px;
-    border: 2px solid var(--color-border); /* USA --color-border */
+    border: 2px solid var(--color-accent);
     transition: all 0.3s ease;
 }
 
@@ -298,9 +292,9 @@ nav a.active {
 .adventure-gallery figcaption {
     margin-top: 12px;
     font-weight: bold;
-    color: var(--color-text);
+    color: var(--color-text);                   /* BLANCO */
     padding: 8px;
-    font-family: var(--font-title);
+    font-family: 'Impact', sans-serif;
     font-size: 1.1rem;
     background-color: rgba(255, 105, 180, 0.2);
     border-radius: 5px;
@@ -311,26 +305,26 @@ nav a.active {
 /* FOOTER */
 /* ==================== */
 footer {
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: var(--color-background);  /* NEGRO */
+    color: var(--color-text);                   /* BLANCO */
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 3px solid var(--color-border); /* USA --color-border */
+    border-top: 3px solid var(--color-accent);
     margin-top: 40px;
 }
 
 footer p {
     margin: 0;
     font-weight: bold;
-    font-family: var(--font-main);
+    font-family: 'Calibri', sans-serif;
     font-size: 1.1rem;
-    color: var(--color-text);
+    color: var(--color-text);                   /* BLANCO */
 }
 
 /* ==================== */
-/* SOCIAL MEDIA - text-decoration CORREGIDO */
+/* SOCIAL MEDIA */
 /* ==================== */
 .socialmedia {
     display: flex;
@@ -338,7 +332,7 @@ footer p {
 }
 
 .socialmedia a {
-    text-decoration: none; /* CORRECCIÓN: text-decoration agregado */
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
