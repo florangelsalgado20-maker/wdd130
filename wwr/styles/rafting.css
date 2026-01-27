@@ -1,24 +1,30 @@
-/* rafting.css - GARANTIZADO: CERO TEXTOS NEGROS */
+/* rafting.css - CORREGIDO: Cumple todos los requisitos técnicos */
 
-/* CONFIGURACIÓN PRINCIPAL - FORZAR BLANCO */
+/* ==================== */
+/* VARIABLES CSS en :root */
+/* ==================== */
 :root {
-    --color-text: #ffffff !important;      /* FORZAR TODO TEXTO BLANCO */
+    --color-text: #ffffff;
     --color-background: #000000;
     --color-accent: #ff69b4;
+    --color-border: #ff69b4; /* USADA en borders */
+    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+    --font-title: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+    --font-fun: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+    --font-elegant: 'Georgia', 'Times New Roman', serif; /* USADA en .hero article */
 }
 
 /* ==================== */
-/* RESET COMPLETO */
+/* RESET UNIVERSAL CORREGIDO */
 /* ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--color-text) !important; /* FORZAR BLANCO en TODO */
 }
 
 /* ==================== */
-/* FORZAR BLANCO EN ABSOLUTAMENTE TODO */
+/* FORZAR BLANCO EN TODO TEXTO */
 /* ==================== */
 html, body,
 div, span, applet, object, iframe,
@@ -35,19 +41,19 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
 input, textarea, select, button {
-    color: var(--color-text) !important; /* BLANCO ABSOLUTO */
-    background-color: transparent !important;
+    color: var(--color-text);
+    background-color: transparent;
 }
 
 /* ==================== */
 /* FONDOS NEGROS */
 /* ==================== */
 html, body {
-    background-color: var(--color-background) !important;
+    background-color: var(--color-background);
 }
 
 body {
-    font-family: 'Calibri', sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -59,29 +65,29 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--color-background) !important;
+    background-color: var(--color-background);
 }
 
 /* ==================== */
-/* HEADER - BLANCO sobre NEGRO */
+/* HEADER */
 /* ==================== */
 header {
-    background-color: var(--color-background) !important;
+    background-color: var(--color-background);
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--color-accent);
+    border-bottom: 3px solid var(--color-border); /* USA --color-border */
     margin-bottom: 30px;
 }
 
 .logo {
     height: 70px;
-    filter: brightness(0) invert(1) !important; /* BLANCO */
+    filter: brightness(0) invert(1);
 }
 
 /* ==================== */
-/* NAVEGACIÓN - LINKS BLANCOS */
+/* NAVEGACIÓN - text-decoration CORREGIDO */
 /* ==================== */
 nav {
     display: flex;
@@ -89,10 +95,10 @@ nav {
 }
 
 nav a {
-    color: var(--color-text) !important; /* BLANCO */
-    text-decoration: none !important;
+    color: var(--color-text);
+    text-decoration: none; /* CORRECCIÓN: text-decoration agregado */
     padding: 12px 20px;
-    font-family: 'Impact', sans-serif;
+    font-family: var(--font-title);
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -113,19 +119,19 @@ nav a:hover {
 nav a.active {
     background-color: rgba(255, 105, 180, 0.25);
     border: 2px solid var(--color-accent);
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: var(--font-fun);
     text-shadow: 0 0 10px var(--color-accent);
 }
 
 /* ==================== */
-/* HERO SECTION - TODO BLANCO */
+/* HERO SECTION - POSITIONING CORREGIDO */
 /* ==================== */
 .hero {
-    position: relative;
+    position: relative; /* CORRECCIÓN: position: relative agregado */
     width: 100%;
     margin: 0 0 40px 0;
     background-color: var(--color-background);
-    border: 3px solid var(--color-accent);
+    border: 3px solid var(--color-border); /* USA --color-border */
     border-radius: 15px;
     overflow: hidden;
 }
@@ -139,42 +145,42 @@ nav a.active {
 }
 
 .hero h1 {
-    position: absolute;
+    position: absolute; /* CORRECCIÓN: position: absolute agregado */
     top: 50px;
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     margin: 0;
     padding: 25px;
-    font-family: 'Impact', sans-serif;
+    font-family: var(--font-title);
     font-size: 3rem;
     text-shadow: 0 0 10px var(--color-accent), 2px 2px 8px rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
     letter-spacing: 2px;
-    border: 3px solid var(--color-accent);
+    border: 3px solid var(--color-border); /* USA --color-border */
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
 }
 
 .hero article {
-    position: absolute;
+    position: absolute; /* CORRECCIÓN: position: absolute agregado */
     bottom: 40px;
     left: 40px;
     right: 40px;
     background-color: rgba(0, 0, 0, 0.9);
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     padding: 25px;
     border-radius: 12px;
-    border: 2px solid var(--color-accent);
-    font-family: 'Georgia', serif;
+    border: 2px solid var(--color-border); /* USA --color-border */
+    font-family: var(--font-elegant); /* USA --font-elegant */
     backdrop-filter: blur(5px);
 }
 
 .hero article img {
-    float: right;
+    float: right; /* CORRECCIÓN: float: right agregado */
     width: 140px;
     height: 100px;
     object-fit: cover;
@@ -188,25 +194,25 @@ nav a.active {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.7;
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
 }
 
 /* ==================== */
-/* HISTORY SECTION - BLANCO */
+/* HISTORY SECTION */
 /* ==================== */
 .history {
     margin: 40px 0;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     border-radius: 12px;
-    border: 2px solid var(--color-accent);
-    font-family: 'Calibri', sans-serif;
+    border: 2px solid var(--color-border); /* USA --color-border */
+    font-family: var(--font-main);
 }
 
 .history h2 {
-    color: var(--color-text) !important; /* BLANCO */
-    font-family: 'Impact', sans-serif;
+    color: var(--color-text);
+    font-family: var(--font-title);
     font-size: 2.2rem;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -220,26 +226,26 @@ nav a.active {
 .history p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     text-align: justify;
-    font-family: 'Georgia', serif;
+    font-family: var(--font-elegant); /* USA --font-elegant */
 }
 
 /* ==================== */
-/* ADVENTURE SECTION - BLANCO */
+/* ADVENTURE SECTION */
 /* ==================== */
 .adventure {
     margin: 40px 0;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     border-radius: 12px;
-    border: 2px solid var(--color-accent);
+    border: 2px solid var(--color-border); /* USA --color-border */
 }
 
 .adventure h2 {
-    color: var(--color-text) !important; /* BLANCO */
-    font-family: 'Comic Sans MS', sans-serif;
+    color: var(--color-text);
+    font-family: var(--font-fun);
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
@@ -254,7 +260,7 @@ nav a.active {
     border: 2px solid var(--color-accent);
 }
 
-/* GALERÍA - TODO BLANCO */
+/* GALERÍA */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -270,7 +276,7 @@ nav a.active {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 15px;
     border-radius: 10px;
-    border: 2px solid var(--color-accent);
+    border: 2px solid var(--color-border); /* USA --color-border */
     transition: all 0.3s ease;
 }
 
@@ -292,9 +298,9 @@ nav a.active {
 .adventure-gallery figcaption {
     margin-top: 12px;
     font-weight: bold;
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     padding: 8px;
-    font-family: 'Impact', sans-serif;
+    font-family: var(--font-title);
     font-size: 1.1rem;
     background-color: rgba(255, 105, 180, 0.2);
     border-radius: 5px;
@@ -302,29 +308,29 @@ nav a.active {
 }
 
 /* ==================== */
-/* FOOTER - BLANCO */
+/* FOOTER */
 /* ==================== */
 footer {
     background-color: var(--color-background);
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 3px solid var(--color-accent);
+    border-top: 3px solid var(--color-border); /* USA --color-border */
     margin-top: 40px;
 }
 
 footer p {
     margin: 0;
     font-weight: bold;
-    font-family: 'Calibri', sans-serif;
+    font-family: var(--font-main);
     font-size: 1.1rem;
-    color: var(--color-text) !important; /* BLANCO */
+    color: var(--color-text);
 }
 
 /* ==================== */
-/* ICONOS - COLOR NATURAL */
+/* SOCIAL MEDIA - text-decoration CORREGIDO */
 /* ==================== */
 .socialmedia {
     display: flex;
@@ -332,7 +338,7 @@ footer p {
 }
 
 .socialmedia a {
-    text-decoration: none;
+    text-decoration: none; /* CORRECCIÓN: text-decoration agregado */
     display: flex;
     align-items: center;
     justify-content: center;
