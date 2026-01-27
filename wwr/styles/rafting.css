@@ -1,4 +1,4 @@
-/* rafting.css - TEXTO BLANCO, FONDO NEGRO, ROSADO FUERTE 80% */
+/* rafting.css - TEXTO BLANCO, FONDO NEGRO, ROSADO 90% */
 
 /* ==================== */
 /* VARIABLES CSS en :root */
@@ -6,7 +6,7 @@
 :root {
     --color-text: #ffffff;            /* BLANCO - TEXTO */
     --color-background: #000000;      /* NEGRO - FONDO */
-    --color-accent: #ff1493;          /* ROSADO FUERTE #ff1493 - Deep Pink */
+    --color-accent: #ff1493;          /* ROSADO #ff1493 - Deep Pink */
 }
 
 /* ==================== */
@@ -64,7 +64,7 @@ header {
 }
 
 /* ==================== */
-/* NAVEGACIÓN - Rosado fuerte 80% con texto blanco */
+/* NAVEGACIÓN - TODOS 90% */
 /* ==================== */
 nav {
     display: flex;
@@ -82,24 +82,24 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(255, 20, 147, 0.8);    /* ROSADO FUERTE 80% */
+    background-color: rgba(255, 20, 147, 0.9);    /* ROSADO 90% */
     border: 2px solid var(--color-accent);
 }
 
 nav a:hover {
-    background-color: rgba(255, 20, 147, 0.9);    /* ROSADO FUERTE 90% */
+    background-color: rgba(255, 20, 147, 1);      /* ROSADO 100% */
     border: 2px solid #ffffff;
     transform: translateY(-3px);
 }
 
 nav a.active {
-    background-color: rgba(255, 20, 147, 1);      /* ROSADO FUERTE 100% */
+    background-color: rgba(255, 20, 147, 1);      /* ROSADO 100% */
     border: 2px solid #ffffff;
     font-family: 'Comic Sans MS', sans-serif;
 }
 
 /* ==================== */
-/* HERO SECTION - Texto blanco sobre fondo negro */
+/* HERO SECTION */
 /* ==================== */
 .hero {
     position: relative;
@@ -226,7 +226,7 @@ nav a.active {
     border: 2px solid var(--color-accent);
 }
 
-/* GALERÍA - Texto blanco sobre fondo negro */
+/* GALERÍA */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -267,7 +267,7 @@ nav a.active {
     padding: 8px;
     font-family: 'Impact', sans-serif;
     font-size: 1.1rem;
-    background-color: rgba(255, 20, 147, 0.8);    /* ROSADO FUERTE 80% */
+    background-color: rgba(255, 20, 147, 0.9);    /* ROSADO 90% */
     border-radius: 5px;
     border: 1px solid var(--color-accent);
 }
@@ -295,7 +295,7 @@ footer p {
 }
 
 /* ==================== */
-/* SOCIAL MEDIA - Rosado fuerte 80% */
+/* SOCIAL MEDIA - ROSADO 90% */
 /* ==================== */
 .socialmedia {
     display: flex;
@@ -309,7 +309,7 @@ footer p {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 20, 147, 0.8);    /* ROSADO FUERTE 80% */
+    background-color: rgba(255, 20, 147, 0.9);    /* ROSADO 90% */
     border-radius: 50%;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -317,7 +317,7 @@ footer p {
 }
 
 .socialmedia a:hover {
-    background-color: rgba(255, 20, 147, 0.9);    /* ROSADO FUERTE 90% */
+    background-color: rgba(255, 20, 147, 1);      /* ROSADO 100% */
     transform: scale(1.1);
     border: 1px solid #ffffff;
 }
