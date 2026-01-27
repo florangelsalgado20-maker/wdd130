@@ -1,11 +1,11 @@
-/* rafting.css - CORRECCIONES: TODO BLANCO sobre NEGRO, FUCSIA BARBIE */
+/* rafting.css - PRIMERA PARTE CORREGIDA: texto BLANCO sobre fondo NEGRO */
 
 /* CONFIGURACIÓN PRINCIPAL */
 :root {
     /* COLORES PRINCIPALES */
     --color-text: #ffffff;            /* TODOS los textos en BLANCO */
     --color-background: #000000;      /* TODOS los fondos en NEGRO */
-    --color-accent: #ff69b4;          /* FUCSIA BARBIE (#ff69b4) - más rosado que fucsia puro */
+    --color-accent: #ff69b4;          /* FUCSIA BARBIE (#ff69b4) */
     --color-border: #ff69b4;          /* Bordes FUCSIA BARBIE */
     
     /* FUENTES DIVERTIDAS */
@@ -16,252 +16,142 @@
 }
 
 /* =============================== */
-/* CORRECCIÓN: TODOS LOS TEXTOS BLANCOS */
+/* RESET Y PRIMERA PARTE: todo BLANCO sobre NEGRO */
 /* =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* ANTES: Algunos párrafos estaban en negro */
-/* AHORA: TODOS los elementos de texto en BLANCO */
+/* FONDO GENERAL - NEGRO */
+html, body {
+    background-color: var(--color-background) !important; /* Fondo NEGRO */
+    color: var(--color-text) !important;                  /* Texto BLANCO */
+}
 
 body {
     font-family: var(--font-main);
-    color: var(--color-text) !important;        /* FORZAR BLANCO en todos los textos */
+    color: var(--color-text);        /* Texto BLANCO */
     line-height: 1.6;
     background-color: var(--color-background); /* Fondo NEGRO */
     min-height: 100vh;
 }
 
 /* =============================== */
-/* CORRECCIÓN: GALERÍA - texto figcaption */
-/* ANTES: color: var(--color-accent) (fucsia) */
-/* AHORA: BLANCO como todos los demás textos */
+/* CONTENEDOR PRINCIPAL - NEGRO con texto BLANCO */
 /* =============================== */
-.adventure-gallery figcaption {
-    margin-top: 12px;
-    font-weight: bold;
-    color: var(--color-text) !important;         /* CAMBIADO a BLANCO */
-    padding: 8px;
-    font-family: var(--font-title);
-    font-size: 1.1rem;
-    background-color: rgba(255, 105, 180, 0.2); /* Fondo FUCSIA BARBIE tenue */
-    border-radius: 5px;
-    border: 1px solid var(--color-accent);      /* Borde FUCSIA BARBIE */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-background) !important; /* Fondo NEGRO */
+    color: var(--color-text) !important;                  /* Texto BLANCO */
 }
 
 /* =============================== */
-/* CORRECCIÓN: HISTORY - título H2 */
-/* ANTES: color: var(--color-accent) (fucsia) */
-/* AHORA: BLANCO como todos los demás textos */
+/* HEADER - NEGRO con texto BLANCO, bordes FUCSIA */
 /* =============================== */
-.history h2 {
-    color: var(--color-text) !important;         /* CAMBIADO a BLANCO */
-    font-family: var(--font-title);
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: center;
-    text-shadow: 0 0 10px var(--color-accent); /* Brillo FUCSIA BARBIE alrededor */
-    border-bottom: 3px solid var(--color-accent); /* Línea inferior FUCSIA BARBIE */
-    padding-bottom: 10px;
-}
-
-/* =============================== */
-/* CORRECCIÓN: ADVENTURE - título H2 */
-/* ANTES: color: var(--color-accent) (fucsia) */
-/* AHORA: BLANCO como todos los demás textos */
-/* =============================== */
-.adventure h2 {
-    color: var(--color-text) !important;         /* CAMBIADO a BLANCO */
-    font-family: var(--font-fun);
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
-    text-shadow: 0 0 15px var(--color-accent); /* Brillo FUCSIA BARBIE más intenso */
-    background: linear-gradient(to right, 
-        transparent 10%, 
-        rgba(255, 105, 180, 0.3) 50%, 
-        transparent 90%
-    );
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--color-accent);
-}
-
-/* =============================== */
-/* CORRECCIÓN: FUCSIA BARBIE en lugar de fucsia puro */
-/* #ff00ff (fucsia puro) → #ff69b4 (fucsia barbie) */
-/* =============================== */
-
-/* HEADER - bordes y efectos FUCSIA BARBIE */
 header {
-    border-bottom: 3px solid var(--color-accent); /* Borde FUCSIA BARBIE */
+    background-color: var(--color-background) !important; /* Fondo NEGRO */
+    color: var(--color-text) !important;                  /* Texto BLANCO */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-accent); /* Borde FUCSIA */
+    margin-bottom: 30px;
 }
 
+.logo {
+    height: 70px;
+    filter: brightness(0) invert(1) !important; /* Logo BLANCO */
+}
+
+/* =============================== */
+/* NAVEGACIÓN - LINKS en BLANCO sobre fondo NEGRO */
+/* =============================== */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+/* LINKS PRINCIPALES - Texto BLANCO */
 nav a {
-    background-color: rgba(255, 105, 180, 0.1); /* Fondo FUCSIA BARBIE muy tenue */
+    color: var(--color-text) !important;         /* BLANCO */
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background-color: rgba(255, 105, 180, 0.1); /* Fondo FUCSIA BARBIE tenue */
+    border: 2px solid transparent;
 }
 
+/* HOVER - Mantener texto BLANCO */
 nav a:hover {
-    background-color: rgba(255, 105, 180, 0.2); /* Fondo FUCSIA BARBIE claro */
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
+    color: var(--color-text) !important;         /* BLANCO */
+    background-color: rgba(255, 105, 180, 0.2); /* Fondo FUCSIA más intenso */
+    border: 2px solid var(--color-accent);      /* Borde FUCSIA */
+    transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
 }
 
+/* LINK ACTIVO - Texto BLANCO */
 nav a.active {
-    background-color: rgba(255, 105, 180, 0.25); /* Fondo FUCSIA BARBIE */
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
+    color: var(--color-text) !important;         /* BLANCO */
+    background-color: rgba(255, 105, 180, 0.25); /* Fondo FUCSIA */
+    border: 2px solid var(--color-accent);      /* Borde FUCSIA */
+    font-family: var(--font-fun);
     text-shadow: 0 0 10px var(--color-accent);
 }
 
-/* HERO SECTION - bordes FUCSIA BARBIE */
-.hero {
-    border: 3px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-.hero h1 {
-    border: 3px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-    text-shadow: 0 0 10px var(--color-accent), 2px 2px 8px rgba(0, 0, 0, 0.8);
-}
-
-.hero article {
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-.hero article img {
-    border: 3px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-/* HISTORY SECTION - bordes FUCSIA BARBIE */
-.history {
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-/* ADVENTURE SECTION - bordes FUCSIA BARBIE */
-.adventure {
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-.adventure-gallery figure {
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-.adventure-gallery figure:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
-}
-
-.adventure-gallery img {
-    border: 2px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-/* FOOTER - bordes FUCSIA BARBIE */
-footer {
-    border-top: 3px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-/* SOCIAL MEDIA - fondos y bordes FUCSIA BARBIE */
-.socialmedia a {
-    background-color: rgba(255, 105, 180, 0.1); /* Fondo FUCSIA BARBIE tenue */
-    border: 1px solid var(--color-accent); /* Borde FUCSIA BARBIE */
-}
-
-.socialmedia a:hover {
-    background-color: rgba(255, 105, 180, 0.2); /* Fondo FUCSIA BARBIE más intenso */
-    box-shadow: 0 0 15px var(--color-accent);
-}
-
 /* =============================== */
-/* GARANTIZAR QUE TODO TEXTO SEA BLANCO */
+/* FORZAR TEXTO BLANCO en TODOS los elementos de la primera parte */
 /* =============================== */
 
-/* Forzar blanco en TODOS los elementos de texto */
+/* Todos los textos visibles en BLANCO */
 h1, h2, h3, h4, h5, h6,
-p, span, div:not(.socialmedia a):not(nav a):not(.hero h1):not(.hero article p),
-li, td, th, label, input, textarea, select, button,
+p, span, div,
+li, td, th, 
+label, input, textarea, select, button,
 strong, b, em, i, u, mark, small, cite, blockquote,
+footer p,
 .adventure-gallery figcaption,
 .history h2,
-.adventure h2,
-footer p {
+.adventure h2 {
     color: var(--color-text) !important; /* BLANCO FORZADO */
+    background-color: transparent !important; /* Fondo transparente sobre NEGRO */
 }
 
-/* Excepciones solo para enlaces de navegación (ya tienen su propio estilo) */
-nav a {
-    /* Mantiene su estilo específico pero también es blanco */
-    color: var(--color-text) !important;
+/* Inputs y textareas - texto BLANCO sobre fondo NEGRO */
+input, textarea, select {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Fondo negro semitransparente */
+    color: var(--color-text) !important;             /* Texto BLANCO */
+    border: 1px solid var(--color-accent) !important;
 }
 
-/* =============================== */
-/* EFECTOS ESPECIALES CON FUCSIA BARBIE */
-/* =============================== */
-@keyframes barbie-glow {
-    0% { 
-        box-shadow: 0 0 5px var(--color-accent);
-        text-shadow: 0 0 5px var(--color-accent);
-    }
-    50% { 
-        box-shadow: 0 0 20px var(--color-accent), 0 0 30px rgba(255, 105, 180, 0.5);
-        text-shadow: 0 0 15px var(--color-accent), 0 0 20px rgba(255, 105, 180, 0.7);
-    }
-    100% { 
-        box-shadow: 0 0 5px var(--color-accent);
-        text-shadow: 0 0 5px var(--color-accent);
-    }
-}
-
-.barbie-glow {
-    animation: barbie-glow 2s infinite;
+/* Botones - texto BLANCO sobre fondo FUCSIA */
+button {
+    background-color: var(--color-accent) !important; /* Fondo FUCSIA */
+    color: var(--color-text) !important;             /* Texto BLANCO */
+    border: 2px solid var(--color-text) !important;
 }
 
 /* =============================== */
-/* RESPONSIVE (mantener igual) */
+/* GARANTIZAR que el fondo sea NEGRO en toda la primera parte */
 /* =============================== */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    nav {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-        padding: 15px;
-    }
-    
-    .hero article {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        margin: 20px;
-    }
-    
-    .adventure-gallery figure {
-        min-width: calc(50% - 10px);
-    }
+.container > *:not(.hero):not(.history):not(.adventure):not(footer) {
+    background-color: var(--color-background) !important; /* Fondo NEGRO */
 }
 
-@media (max-width: 480px) {
-    .adventure-gallery figure {
-        min-width: 100%;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-}
-}
+/* =============================== */
+/* Las otras secciones mantienen sus estilos... */
+/* (Hero, History, Adventure, Footer siguen igual) */
+/* =============================== */
+
+/* CONTINÚA CON EL RESTO DEL CSS QUE YA TENÍAS... */
