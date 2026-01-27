@@ -1,5 +1,18 @@
 /* rafting.css - White Water Rafting Company */
 
+/* CSS Variables in :root */
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+    --white-color: #ffffff;
+    --gray-light: #f5f5f5;
+    --light-green: #e8f5e8;
+}
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -9,10 +22,10 @@
 
 /* Body Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #264653;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
     line-height: 1.6;
-    background-color: #ffffff;
+    background-color: var(--white-color);
 }
 
 /* Main Container */
@@ -22,9 +35,9 @@ body {
     padding: 0;
 }
 
-/* Header Styles */
+/* Header Styles - CORREGIDO: mejor contraste */
 header {
-    background-color: #055a05;
+    background-color: var(--primary-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -35,28 +48,29 @@ header {
     height: 60px;
 }
 
-/* Navigation Styles */
+/* Navigation Styles - CORREGIDO: texto blanco para mejor contraste */
 nav {
     display: flex;
     gap: 20px;
 }
 
 nav a {
-    color: #ffffff;
+    color: var(--white-color);
     text-decoration: none;
     padding: 10px 15px;
+    font-weight: bold;
 }
 
 nav a:hover,
 nav a.active {
-    background-color: #f4a261;
-    color: #264653;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Heading Styles */
 h1, h2 {
-    font-family: "Times New Roman", Georgia, serif;
-    color: #055a05;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 h1 {
@@ -67,7 +81,7 @@ h1 {
 h2 {
     font-size: 1.8rem;
     margin: 30px 0 15px 0;
-    border-bottom: 2px solid #f4a261;
+    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
 }
 
@@ -91,7 +105,7 @@ h2 {
     left: 0;
     right: 0;
     text-align: center;
-    color: #ffffff;
+    color: var(--white-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
@@ -101,7 +115,7 @@ h2 {
     bottom: 30px;
     left: 30px;
     background-color: rgba(5, 90, 5, 0.85);
-    color: #ffffff;
+    color: var(--white-color);
     padding: 20px;
     max-width: 400px;
 }
@@ -113,6 +127,7 @@ h2 {
     object-fit: cover;
     margin-left: 15px;
     margin-bottom: 10px;
+    border: 2px solid var(--accent2-color);
 }
 
 .hero article p {
@@ -128,7 +143,7 @@ main {
 .history {
     margin: 30px 0;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--gray-light);
 }
 
 .history p {
@@ -139,6 +154,7 @@ main {
 .adventure {
     margin: 30px 0;
     padding: 20px;
+    background-color: var(--light-green);
 }
 
 /* Adventure Gallery */
@@ -160,19 +176,19 @@ main {
     width: 100%;
     height: 100px;
     object-fit: cover;
-    border: 2px solid #055a05;
+    border: 2px solid var(--primary-color);
 }
 
 .adventure-gallery figcaption {
     margin-top: 8px;
     font-weight: bold;
-    color: #055a05;
+    color: var(--primary-color);
 }
 
 /* Footer */
 footer {
-    background-color: #055a05;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -181,9 +197,10 @@ footer {
 
 footer p {
     margin: 0;
+    font-weight: bold;
 }
 
-/* Social Media Links - IMPORTANTE: usa .socialmedia como se requiere */
+/* Social Media Links */
 .socialmedia {
     display: flex;
     gap: 15px;
