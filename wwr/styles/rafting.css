@@ -1,4 +1,4 @@
-/* rafting.css - TEXTO BLANCO SOBRE FONDO NEGRO */
+/* rafting.css - TEXTO BLANCO, FONDO NEGRO, COLOR FUCSIA */
 
 /* ==================== */
 /* VARIABLES CSS en :root */
@@ -6,7 +6,7 @@
 :root {
     --color-text: #ffffff;            /* BLANCO - TEXTO */
     --color-background: #000000;      /* NEGRO - FONDO */
-    --color-accent: #ff69b4;          /* FUCSIA BARBIE */
+    --color-accent: #ff00ff;          /* FUCSIA (#ff00ff) */
 }
 
 /* ==================== */
@@ -19,19 +19,19 @@
 }
 
 /* ==================== */
-/* FORZAR TEXTO BLANCO EN TODO */
+/* CONFIGURACIÓN BASE */
 /* ==================== */
 html, body {
-    color: var(--color-text) !important;        /* BLANCO */
-    background-color: var(--color-background) !important; /* NEGRO */
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 body {
     font-family: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    color: var(--color-text);                   /* BLANCO */
-    background-color: var(--color-background);  /* NEGRO */
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 /* ==================== */
@@ -41,32 +41,15 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    color: var(--color-text);                   /* BLANCO */
-    background-color: var(--color-background);  /* NEGRO */
-}
-
-/* ==================== */
-/* TODOS LOS TEXTOS BLANCOS */
-/* ==================== */
-h1, h2, h3, h4, h5, h6,
-p, span, div, 
-a, strong, b, em, i, 
-blockquote, cite, 
-figcaption, caption,
-footer p,
-.history h2,
-.adventure h2,
-.adventure-gallery figcaption,
-.hero article p,
-.hero h1 {
-    color: var(--color-text) !important;        /* BLANCO */
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 /* ==================== */
 /* HEADER */
 /* ==================== */
 header {
-    background-color: var(--color-background);  /* NEGRO */
+    background-color: var(--color-background);
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
@@ -77,7 +60,7 @@ header {
 
 .logo {
     height: 70px;
-    filter: brightness(0) invert(1);            /* Logo BLANCO */
+    filter: brightness(0) invert(1);
 }
 
 /* ==================== */
@@ -89,7 +72,7 @@ nav {
 }
 
 nav a {
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     text-decoration: none;
     padding: 12px 20px;
     font-family: 'Impact', 'Arial Black', sans-serif;
@@ -99,22 +82,20 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(255, 105, 180, 0.1);
+    background-color: rgba(255, 0, 255, 0.1);
     border: 2px solid transparent;
 }
 
 nav a:hover {
-    background-color: rgba(255, 105, 180, 0.2);
+    background-color: rgba(255, 0, 255, 0.2);
     border: 2px solid var(--color-accent);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
 }
 
 nav a.active {
-    background-color: rgba(255, 105, 180, 0.25);
+    background-color: rgba(255, 0, 255, 0.25);
     border: 2px solid var(--color-accent);
     font-family: 'Comic Sans MS', sans-serif;
-    text-shadow: 0 0 10px var(--color-accent);
 }
 
 /* ==================== */
@@ -124,7 +105,7 @@ nav a.active {
     position: relative;
     width: 100%;
     margin: 0 0 40px 0;
-    background-color: var(--color-background);  /* NEGRO */
+    background-color: var(--color-background);
     border: 3px solid var(--color-accent);
     border-radius: 15px;
     overflow: hidden;
@@ -144,13 +125,12 @@ nav a.active {
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     margin: 0;
     padding: 25px;
     font-family: 'Impact', sans-serif;
     font-size: 3rem;
-    text-shadow: 0 0 10px var(--color-accent), 2px 2px 8px rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.8);       /* Fondo semitransparente NEGRO */
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
     letter-spacing: 2px;
     border: 3px solid var(--color-accent);
@@ -164,13 +144,12 @@ nav a.active {
     bottom: 40px;
     left: 40px;
     right: 40px;
-    background-color: rgba(0, 0, 0, 0.9);       /* Fondo semitransparente NEGRO */
-    color: var(--color-text);                   /* BLANCO */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--color-text);
     padding: 25px;
     border-radius: 12px;
     border: 2px solid var(--color-accent);
     font-family: 'Georgia', 'Times New Roman', serif;
-    backdrop-filter: blur(5px);
 }
 
 .hero article img {
@@ -188,7 +167,7 @@ nav a.active {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.7;
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
 }
 
 /* ==================== */
@@ -197,22 +176,21 @@ nav a.active {
 .history {
     margin: 40px 0;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.95);      /* Fondo semitransparente NEGRO */
-    color: var(--color-text);                   /* BLANCO */
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
     border-radius: 12px;
     border: 2px solid var(--color-accent);
     font-family: 'Calibri', sans-serif;
 }
 
 .history h2 {
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     font-family: 'Impact', sans-serif;
     font-size: 2.2rem;
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-align: center;
-    text-shadow: 0 0 10px var(--color-accent);
     border-bottom: 3px solid var(--color-accent);
     padding-bottom: 10px;
 }
@@ -220,7 +198,7 @@ nav a.active {
 .history p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     text-align: justify;
     font-family: 'Georgia', serif;
 }
@@ -231,24 +209,18 @@ nav a.active {
 .adventure {
     margin: 40px 0;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.95);      /* Fondo semitransparente NEGRO */
-    color: var(--color-text);                   /* BLANCO */
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
     border-radius: 12px;
     border: 2px solid var(--color-accent);
 }
 
 .adventure h2 {
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     font-family: 'Comic Sans MS', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
-    text-shadow: 0 0 15px var(--color-accent);
-    background: linear-gradient(to right, 
-        transparent 10%, 
-        rgba(255, 105, 180, 0.3) 50%, 
-        transparent 90%
-    );
     padding: 15px;
     border-radius: 10px;
     border: 2px solid var(--color-accent);
@@ -267,7 +239,7 @@ nav a.active {
     flex: 1;
     min-width: 180px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);       /* Fondo semitransparente NEGRO */
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 15px;
     border-radius: 10px;
     border: 2px solid var(--color-accent);
@@ -277,7 +249,6 @@ nav a.active {
 .adventure-gallery figure:hover {
     transform: translateY(-10px);
     border-color: var(--color-accent);
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
 }
 
 .adventure-gallery img {
@@ -292,11 +263,11 @@ nav a.active {
 .adventure-gallery figcaption {
     margin-top: 12px;
     font-weight: bold;
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
     padding: 8px;
     font-family: 'Impact', sans-serif;
     font-size: 1.1rem;
-    background-color: rgba(255, 105, 180, 0.2);
+    background-color: rgba(255, 0, 255, 0.2);
     border-radius: 5px;
     border: 1px solid var(--color-accent);
 }
@@ -305,8 +276,8 @@ nav a.active {
 /* FOOTER */
 /* ==================== */
 footer {
-    background-color: var(--color-background);  /* NEGRO */
-    color: var(--color-text);                   /* BLANCO */
+    background-color: var(--color-background);
+    color: var(--color-text);
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
@@ -320,7 +291,7 @@ footer p {
     font-weight: bold;
     font-family: 'Calibri', sans-serif;
     font-size: 1.1rem;
-    color: var(--color-text);                   /* BLANCO */
+    color: var(--color-text);
 }
 
 /* ==================== */
@@ -338,7 +309,7 @@ footer p {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 105, 180, 0.1);
+    background-color: rgba(255, 0, 255, 0.1);
     border-radius: 50%;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -346,15 +317,13 @@ footer p {
 }
 
 .socialmedia a:hover {
-    background-color: rgba(255, 105, 180, 0.2);
+    background-color: rgba(255, 0, 255, 0.2);
     transform: scale(1.1);
-    box-shadow: 0 0 15px var(--color-accent);
 }
 
 .socialmedia img {
     width: 30px;
     height: 30px;
-    /* Color natural - sin filtros */
 }
 
 /* ==================== */
