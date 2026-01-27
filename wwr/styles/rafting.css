@@ -1,4 +1,4 @@
-/* rafting.css - TEXTO BLANCO, FONDO NEGRO, ROSADO 90% */
+/* rafting.css - TEXTO BLANCO, FONDO NEGRO, ROSADO 90% - LOGO NORMAL */
 
 /* ==================== */
 /* VARIABLES CSS en :root */
@@ -46,7 +46,7 @@ body {
 }
 
 /* ==================== */
-/* HEADER */
+/* HEADER - LOGO NORMAL */
 /* ==================== */
 header {
     background-color: var(--color-background);
@@ -60,7 +60,7 @@ header {
 
 .logo {
     height: 70px;
-    filter: brightness(0) invert(1);
+    /* SIN filter: brightness(0) invert(1); - LOGO NORMAL */
 }
 
 /* ==================== */
