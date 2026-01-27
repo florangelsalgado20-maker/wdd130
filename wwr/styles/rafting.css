@@ -1,11 +1,6 @@
-/* Reset box-model properties for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* rafting.css - White Water Rafting Company */
 
-/* Define CSS variables in the document root */
+/* Variables CSS */
 :root {
     --primary-color: #055a05;
     /* forest green */
@@ -19,13 +14,20 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Style the entire document body */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del Body */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
 
-/* Limit page width and center content */
+/* Contenedores principales */
 header,
 main,
 footer {
@@ -33,20 +35,20 @@ footer {
     margin: 0 auto;
 }
 
-/* Style header with CSS variables */
+/* Estilos del Header */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
 }
 
-/* Style headings */
+/* Estilos de los encabezados */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* Basic margin and padding declarations */
+/* Estilos de elementos comunes */
 nav,
 p,
 section,
@@ -55,7 +57,7 @@ article {
     padding: 8px;
 }
 
-/* Remove underlines from social media image links */
+/* Estilos de enlaces de redes sociales */
 .socialmedia a {
     text-decoration: none;
 }
