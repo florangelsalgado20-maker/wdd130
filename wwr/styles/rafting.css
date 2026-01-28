@@ -102,94 +102,83 @@ nav a.active {
 }
 
 /* ==================== */
-/* HERO SECTION - ACTUALIZADO */
+/* HERO SECTION - RECTÁNGULO 1 GRANDE */
 /* ==================== */
-.hero {
-    position: relative;
-    width: 100%;
-    margin: 0 0 40px 0;
+.hero-section {
     background-color: var(--color-background);
     border: 3px solid var(--color-accent);
     border-radius: 15px;
-    overflow: hidden;
-    min-height: 500px;
+    padding: 30px;
+    margin-bottom: 40px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.hero-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.7) contrast(1.2);
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: var(--color-text);
-    margin: 0 auto;
-    padding: 20px 40px;
-    font-family: var(--nav-font);
-    font-size: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    letter-spacing: 2px;
-    border: 3px solid var(--color-accent);
-    border-radius: 10px;
-    width: auto;
-    white-space: nowrap;
-}
-
-/* Contenedor del artículo dentro del hero */
-.hero-content {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+/* RECTÁNGULO 2 - CON TÍTULO */
+.title-rectangle {
     background-color: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 25px;
+    text-align: center;
 }
 
-/* Artículo dentro del hero */
-.hero-article {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--color-accent);
-}
-
-.hero-article p {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
+.title-rectangle h1 {
     color: var(--color-text);
-    text-align: left;
-    padding-right: 160px; /* Espacio para la imagen */
-    min-height: 120px;
+    font-family: var(--nav-font);
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Imagen dentro del artículo del hero */
-.hero-article .article-image {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 140px;
-    height: 100px;
+/* RECTÁNGULO 3 - CONTENIDO CON TEXTO E IMAGEN */
+.content-rectangle {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 2px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    min-height: 250px;
+}
+
+/* Texto a la izquierda */
+.text-content {
+    flex: 1;
+    color: var(--color-text);
+    font-family: var(--nav-font);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+.text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Imagen a la derecha */
+.image-content {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.image-content img {
+    width: 100%;
+    height: 150px;
     object-fit: cover;
     border: 2px solid var(--color-accent);
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 /* ==================== */
-/* HISTORY SECTION - ACTUALIZADO */
+/* HISTORY SECTION */
 /* ==================== */
 .history {
     margin: 40px 0;
@@ -382,40 +371,23 @@ footer p {
         text-align: center;
     }
     
-    .hero h1 {
-        font-size: 1.8rem;
-        padding: 15px 25px;
-        top: 15px;
-        white-space: normal;
+    .title-rectangle h1 {
+        font-size: 2rem;
     }
     
-    .hero-content {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
+    .content-rectangle {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .image-content {
         width: 100%;
-        margin-top: 20px;
+        text-align: center;
     }
     
-    .hero-article {
-        padding: 15px;
-    }
-    
-    .hero-article p {
-        padding-right: 0;
-        min-height: auto;
-        margin-bottom: 15px;
-    }
-    
-    .hero-article .article-image {
-        position: static;
-        transform: none;
-        float: right;
-        margin-left: 15px;
-        margin-bottom: 10px;
-        width: 120px;
-        height: 90px;
+    .image-content img {
+        width: 200px;
+        height: 150px;
     }
     
     .history-image {
@@ -448,9 +420,9 @@ footer p {
         min-width: 100%;
     }
     
-    .hero h1 {
-        font-size: 1.5rem;
-        padding: 10px 15px;
+    .title-rectangle h1 {
+        font-size: 1.8rem;
+        padding: 15px;
     }
     
     h2 {
