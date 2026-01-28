@@ -1,89 +1,464 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About FLOWER EXPEDITIONS - Venezuela's premier whitewater rafting company since 2026. Family-friendly adventures for all ages in the capital region.">
-    <meta name="author" content="Florangel Salgado">
-    <title>About Us - FLOWER EXPEDITIONS</title>
-    <link rel="stylesheet" href="styles/rafting.css">
-</head>
+/* rafting.css - MENÚ CON MISMA FUENTE */
 
-<body>
-    <div class="container">
-        <header>
-            <img src="images/logo.jpg" alt="FLOWER EXPEDITIONS Rafting Logo" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
+/* ==================== */
+/* VARIABLES CSS en :root */
+/* ==================== */
+:root {
+    --color-text: #ffffff;
+    --color-background: #000000;
+    --color-accent: #d40073;
+    --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+}
 
-        <main>
-            <div class="hero">
-                <img src="images/hero-rafting.jpg" alt="Group whitewater rafting adventure on a river" class="hero-image">
-                <h1>White Water Rafting</h1>
-                <div class="hero-content">
-                    <div class="hero-article">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit facilisis pretium sit amet nisl magna. Aenean velit enim elementum in tempus id vehicula au</p>
-                        <img src="images/client-rafting.jpg" alt="Happy client enjoying a rafting adventure" class="article-image">
-                    </div>
-                </div>
-            </div>
+/* ==================== */
+/* RESET UNIVERSAL */
+/* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <section class="history">
-                <h2>History</h2>
-                <div class="history-content">
-                    <img src="images/history-rafting.jpg" alt="Historical rafting expedition" class="history-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec.</p>
-                </div>
-            </section>
+/* ==================== */
+/* CONFIGURACIÓN BASE */
+/* ==================== */
+html, body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
 
-            <section class="adventure">
-                <h2>Adventure Awaits You!</h2>
-                <div class="adventure-gallery">
-                    <figure>
-                        <img src="images/rafting1.jpg" alt="Exciting rafting River rapids">
-                        <figcaption>Caracas River</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/rafting2.jpg" alt="Team working together during rafting adventure">
-                        <figcaption>Team Adventure</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/rafting3.jpg" alt="Scenic river tour with beautiful landscapes">
-                        <figcaption>Scenic Tour</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/rafting4.jpg" alt="Expert guide demonstrating rafting techniques">
-                        <figcaption>Expert Guides</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/rafting5.jpg" alt="Family having fun together on rafting trip">
-                        <figcaption>Family Fun</figcaption>
-                    </figure>
-                </div>
-            </section>
-        </main>
+body {
+    font-family: var(--nav-font);
+    line-height: 1.6;
+    min-height: 100vh;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
 
-        <footer>
-            <p>&copy; 2026 FLOWER EXPEDITIONS | Florangel Salgado</p>
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.svg" alt="Visit our Facebook page" width="30" height="30">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.svg" alt="Follow us on Instagram" width="30" height="30">
-                </a>
-                <a href="https://linkedin.com" target="_blank">
-                    <img src="images/linkedin.svg" alt="Connect with us on LinkedIn" width="30" height="30">
-                </a>
-            </nav>
-        </footer>
-    </div>
-</body>
-</html>
+/* ==================== */
+/* CONTENEDOR */
+/* ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/* ==================== */
+/* HEADER - LOGO NORMAL */
+/* ==================== */
+header {
+    background-color: var(--color-background);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-accent);
+    margin-bottom: 30px;
+}
+
+/* LOGO - FORZAR COLORES NATURALES */
+.logo {
+    height: 70px;
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* ==================== */
+/* NAVEGACIÓN */
+/* ==================== */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: var(--nav-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background-color: rgba(212, 0, 115, 0.9);
+    border: 2px solid var(--color-accent);
+}
+
+nav a:hover {
+    background-color: rgba(212, 0, 115, 1);
+    border: 2px solid #ffffff;
+    transform: translateY(-3px);
+}
+
+nav a.active {
+    background-color: rgba(212, 0, 115, 1);
+    border: 2px solid #ffffff;
+    font-family: var(--nav-font);
+}
+
+/* ==================== */
+/* HERO SECTION - ACTUALIZADO */
+/* ==================== */
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0 0 40px 0;
+    background-color: var(--color-background);
+    border: 3px solid var(--color-accent);
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--color-text);
+    margin: 0 auto;
+    padding: 20px 40px;
+    font-family: var(--nav-font);
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    letter-spacing: 2px;
+    border: 3px solid var(--color-accent);
+    border-radius: 10px;
+    width: auto;
+    white-space: nowrap;
+}
+
+/* Contenedor del artículo dentro del hero */
+.hero-content {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 2px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+/* Artículo dentro del hero */
+.hero-article {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-accent);
+}
+
+.hero-article p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    text-align: left;
+    padding-right: 160px; /* Espacio para la imagen */
+    min-height: 120px;
+}
+
+/* Imagen dentro del artículo del hero */
+.hero-article .article-image {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+}
+
+/* ==================== */
+/* HISTORY SECTION - ACTUALIZADO */
+/* ==================== */
+.history {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    font-family: var(--nav-font);
+}
+
+.history h2 {
+    color: var(--color-text);
+    font-family: var(--nav-font);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Contenedor del contenido de history */
+.history-content {
+    position: relative;
+    padding: 20px;
+}
+
+/* Imagen centrada en history */
+.history-image {
+    display: block;
+    margin: 0 auto 25px auto;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+    border-radius: 8px;
+    float: none;
+}
+
+.history-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    text-align: justify;
+    font-family: var(--nav-font);
+    margin-bottom: 15px;
+}
+
+/* ==================== */
+/* ADVENTURE SECTION */
+/* ==================== */
+.adventure {
+    margin: 40px 0;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
+.adventure h2 {
+    color: var(--color-text);
+    font-family: var(--nav-font);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* GALERÍA */
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.adventure-gallery figure {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--color-accent);
+    transition: all 0.3s ease;
+}
+
+.adventure-gallery figure:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: var(--color-text);
+    padding: 6px;
+    font-family: var(--nav-font);
+    font-size: 1rem;
+    background-color: rgba(212, 0, 115, 0.9);
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+}
+
+/* ==================== */
+/* FOOTER */
+/* ==================== */
+footer {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--color-accent);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+    font-family: var(--nav-font);
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* ==================== */
+/* SOCIAL MEDIA */
+/* ==================== */
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(212, 0, 115, 0.9);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid var(--color-accent);
+}
+
+.socialmedia a:hover {
+    background-color: rgba(212, 0, 115, 1);
+    transform: scale(1.1);
+    border: 1px solid #ffffff;
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 15px 25px;
+        top: 15px;
+        white-space: normal;
+    }
+    
+    .hero-content {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .hero-article {
+        padding: 15px;
+    }
+    
+    .hero-article p {
+        padding-right: 0;
+        min-height: auto;
+        margin-bottom: 15px;
+    }
+    
+    .hero-article .article-image {
+        position: static;
+        transform: none;
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        width: 120px;
+        height: 90px;
+    }
+    
+    .history-image {
+        width: 200px;
+        height: 140px;
+    }
+    
+    .adventure-gallery {
+        flex-wrap: wrap;
+    }
+    
+    .adventure-gallery figure {
+        min-width: calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .adventure-gallery figure {
+        min-width: calc(50% - 10px);
+    }
+    
+    .history-image {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventure-gallery figure {
+        min-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .history-image {
+        width: 150px;
+        height: 100px;
+    }
+}
