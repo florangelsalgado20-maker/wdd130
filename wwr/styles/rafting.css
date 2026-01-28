@@ -6,7 +6,7 @@
 :root {
     --color-text: #ffffff;
     --color-background: #000000;
-    --color-accent: #ff1493;
+    --color-accent: #d40073; /* Cambiado a rosa más oscuro para mejor contraste */
     --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif; /* MISMA FUENTE PARA TODO EL MENÚ */
 }
 
@@ -86,25 +86,25 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(255, 20, 147, 0.9);
+    background-color: rgba(212, 0, 115, 0.9);
     border: 2px solid var(--color-accent);
 }
 
 nav a:hover {
-    background-color: rgba(255, 20, 147, 1);
+    background-color: rgba(212, 0, 115, 1);
     border: 2px solid #ffffff;
     transform: translateY(-3px);
 }
 
 /* ABOUT US ACTIVO - MISMA FUENTE QUE LAS DEMÁS */
 nav a.active {
-    background-color: rgba(255, 20, 147, 1);
+    background-color: rgba(212, 0, 115, 1);
     border: 2px solid #ffffff;
     font-family: var(--nav-font); /* MISMA FUENTE, NO 'Comic Sans MS' */
 }
 
 /* ==================== */
-/* HERO SECTION - ACTUALIZADO */
+/* HERO SECTION */
 /* ==================== */
 .hero {
     position: relative;
@@ -131,7 +131,7 @@ nav a.active {
     right: 0;
     text-align: center;
     color: var(--color-text);
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
     font-family: var(--nav-font);
     font-size: 2.5rem;
@@ -140,7 +140,6 @@ nav a.active {
     letter-spacing: 2px;
     border: 3px solid var(--color-accent);
     width: 90%;
-    margin: 0 auto;
     border-radius: 10px;
 }
 
@@ -157,17 +156,27 @@ nav a.active {
     font-family: var(--nav-font);
 }
 
-/* ELIMINADO: La imagen flotante dentro del artículo */
+/* IMAGEN DENTRO DEL ARTÍCULO CON FLOAT: RIGHT */
+.hero article img {
+    float: right;
+    width: 140px;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+}
+
 .hero article p {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--color-text);
-    text-align: center;
+    text-align: left;
 }
 
 /* ==================== */
-/* HISTORY SECTION - ACTUALIZADO */
+/* HISTORY SECTION */
 /* ==================== */
 .history {
     margin: 40px 0;
@@ -199,7 +208,7 @@ nav a.active {
 }
 
 /* ==================== */
-/* ADVENTURE SECTION - ACTUALIZADO */
+/* ADVENTURE SECTION */
 /* ==================== */
 .adventure {
     margin: 40px 0;
@@ -220,7 +229,7 @@ nav a.active {
     letter-spacing: 1.5px;
 }
 
-/* GALERÍA - ACTUALIZADO */
+/* GALERÍA */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -261,7 +270,7 @@ nav a.active {
     padding: 6px;
     font-family: var(--nav-font);
     font-size: 1rem;
-    background-color: rgba(255, 20, 147, 0.9);
+    background-color: rgba(212, 0, 115, 0.9);
     border-radius: 4px;
     border: 1px solid var(--color-accent);
 }
@@ -303,7 +312,7 @@ footer p {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 20, 147, 0.9);
+    background-color: rgba(212, 0, 115, 0.9);
     border-radius: 50%;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -311,7 +320,7 @@ footer p {
 }
 
 .socialmedia a:hover {
-    background-color: rgba(255, 20, 147, 1);
+    background-color: rgba(212, 0, 115, 1);
     transform: scale(1.1);
     border: 1px solid #ffffff;
 }
@@ -352,6 +361,14 @@ footer p {
         left: auto;
         right: auto;
         margin: 20px;
+    }
+    
+    .hero article img {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 15px;
     }
     
     .adventure-gallery {
