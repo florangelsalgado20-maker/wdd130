@@ -104,7 +104,7 @@ nav a.active {
 }
 
 /* ==================== */
-/* HERO SECTION */
+/* HERO SECTION - ACTUALIZADO */
 /* ==================== */
 .hero {
     position: relative;
@@ -126,94 +126,84 @@ nav a.active {
 
 .hero h1 {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 0;
     right: 0;
     text-align: center;
     color: var(--color-text);
     margin: 0;
-    padding: 25px;
-    font-family: var(--nav-font); /* MISMA FUENTE */
-    font-size: 3rem;
+    padding: 20px;
+    font-family: var(--nav-font);
+    font-size: 2.5rem;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2;
     letter-spacing: 2px;
     border: 3px solid var(--color-accent);
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 10px;
 }
 
 .hero article {
     position: absolute;
-    bottom: 40px;
-    left: 40px;
-    right: 40px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background-color: rgba(0, 0, 0, 0.95);
     color: var(--color-text);
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
     border: 2px solid var(--color-accent);
-    font-family: var(--nav-font); /* MISMA FUENTE */
+    font-family: var(--nav-font);
 }
 
-.hero article img {
-    float: right;
-    width: 140px;
-    height: 100px;
-    object-fit: cover;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    border: 3px solid var(--color-accent);
-    border-radius: 8px;
-}
-
+/* ELIMINADO: La imagen flotante dentro del artículo */
 .hero article p {
     margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: var(--color-text);
+    text-align: center;
 }
 
 /* ==================== */
-/* HISTORY SECTION */
+/* HISTORY SECTION - ACTUALIZADO */
 /* ==================== */
 .history {
     margin: 40px 0;
-    padding: 30px;
+    padding: 25px;
     background-color: rgba(0, 0, 0, 0.95);
     color: var(--color-text);
     border-radius: 12px;
     border: 2px solid var(--color-accent);
-    font-family: var(--nav-font); /* MISMA FUENTE */
+    font-family: var(--nav-font);
 }
 
 .history h2 {
     color: var(--color-text);
-    font-family: var(--nav-font); /* MISMA FUENTE */
-    font-size: 2.2rem;
-    margin-bottom: 25px;
+    font-family: var(--nav-font);
+    font-size: 2rem;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-align: center;
-    border-bottom: 3px solid var(--color-accent);
     padding-bottom: 10px;
 }
 
 .history p {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.6;
     color: var(--color-text);
     text-align: justify;
-    font-family: var(--nav-font); /* MISMA FUENTE */
+    font-family: var(--nav-font);
 }
 
 /* ==================== */
-/* ADVENTURE SECTION */
+/* ADVENTURE SECTION - ACTUALIZADO */
 /* ==================== */
 .adventure {
     margin: 40px 0;
-    padding: 30px;
+    padding: 25px;
     background-color: rgba(0, 0, 0, 0.95);
     color: var(--color-text);
     border-radius: 12px;
@@ -222,43 +212,42 @@ nav a.active {
 
 .adventure h2 {
     color: var(--color-text);
-    font-family: var(--nav-font); /* MISMA FUENTE */
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-family: var(--nav-font);
+    font-size: 2rem;
+    margin-bottom: 25px;
     text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-/* GALERÍA */
+/* GALERÍA - ACTUALIZADO */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .adventure-gallery figure {
     flex: 1;
-    min-width: 180px;
+    min-width: 0;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: 2px solid var(--color-accent);
     transition: all 0.3s ease;
 }
 
 .adventure-gallery figure:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--color-accent);
 }
 
 .adventure-gallery img {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: cover;
     border: 2px solid var(--color-accent);
     border-radius: 6px;
@@ -266,14 +255,14 @@ nav a.active {
 }
 
 .adventure-gallery figcaption {
-    margin-top: 12px;
+    margin-top: 8px;
     font-weight: bold;
     color: var(--color-text);
-    padding: 8px;
-    font-family: var(--nav-font); /* MISMA FUENTE */
-    font-size: 1.1rem;
+    padding: 6px;
+    font-family: var(--nav-font);
+    font-size: 1rem;
     background-color: rgba(255, 20, 147, 0.9);
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid var(--color-accent);
 }
 
@@ -283,7 +272,7 @@ nav a.active {
 footer {
     background-color: var(--color-background);
     color: var(--color-text);
-    padding: 30px 20px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -294,8 +283,8 @@ footer {
 footer p {
     margin: 0;
     font-weight: bold;
-    font-family: var(--nav-font); /* MISMA FUENTE */
-    font-size: 1.1rem;
+    font-family: var(--nav-font);
+    font-size: 1rem;
     color: var(--color-text);
 }
 
@@ -304,7 +293,7 @@ footer p {
 /* ==================== */
 .socialmedia {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .socialmedia a {
@@ -312,8 +301,8 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 20, 147, 0.9);
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -328,8 +317,8 @@ footer p {
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 }
 
 /* ==================== */
@@ -352,8 +341,9 @@ footer p {
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 15px;
+        top: 15px;
     }
     
     .hero article {
@@ -364,6 +354,16 @@ footer p {
         margin: 20px;
     }
     
+    .adventure-gallery {
+        flex-wrap: wrap;
+    }
+    
+    .adventure-gallery figure {
+        min-width: calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
     .adventure-gallery figure {
         min-width: calc(50% - 10px);
     }
@@ -374,11 +374,12 @@ footer p {
         min-width: 100%;
     }
     
-    h1 {
-        font-size: 1.8rem;
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 10px;
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
