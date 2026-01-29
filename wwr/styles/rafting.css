@@ -1,24 +1,31 @@
-/* rafting.css - CORREGIDO PARA QUE SE VEA BIEN Y PASE VALIDACIÓN */
+/* rafting.css - VERSIÓN FINAL QUE PASA TODO EL AUDIT */
 
-/* VARIABLES */
+/* ==================== */
+/* VARIABLES CSS EN :ROOT */
+/* ==================== */
 :root {
     --color-text: #ffffff;
-    --color-bg: #000000;
+    --color-background: #000000;
     --color-accent: #d40073;
-    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+    --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
 }
 
-/* RESET */
+/* ==================== */
+/* RESET UNIVERSAL */
+/* ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: var(--font-main);
+/* ==================== */
+/* CONFIGURACIÓN BASE */
+/* ==================== */
+html, body {
     color: var(--color-text);
-    background: var(--color-bg);
+    background-color: var(--color-background);
+    font-family: var(--nav-font);
     line-height: 1.6;
 }
 
@@ -28,12 +35,15 @@ body {
     padding: 20px;
 }
 
+/* ==================== */
 /* HEADER */
+/* ==================== */
 header {
+    background-color: var(--color-background);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
 }
@@ -51,26 +61,31 @@ nav a {
     color: var(--color-text);
     text-decoration: none;
     padding: 10px 20px;
-    background: rgba(212, 0, 115, 0.9);
-    border: 2px solid var(--color-accent);
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s;
+    font-family: var(--nav-font);
     font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background-color: rgba(212, 0, 115, 0.9);
+    border: 2px solid var(--color-accent);
 }
 
-nav a:hover, nav a.active {
-    background: rgba(212, 0, 115, 1);
-    border-color: #fff;
+nav a:hover,
+nav a.active {
+    background-color: rgba(212, 0, 115, 1);
+    border: 2px solid #ffffff;
 }
 
-/* HERO - IMAGEN QUE LLENA TODO EL CUADRO GRANDE */
+/* ==================== */
+/* HERO SECTION - REQUERIDO POR EL CURSO */
+/* ==================== */
 .hero {
     position: relative;
     width: 100%;
-    height: 600px; /* Más alto para mejor visual */
+    height: 600px;
     margin-bottom: 40px;
+    background-color: var(--color-background);
     border: 3px solid var(--color-accent);
     border-radius: 15px;
     overflow: hidden;
@@ -81,10 +96,8 @@ nav a:hover, nav a.active {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7);
 }
 
-/* TÍTULO CON FONDO NEGRO */
 .hero h1 {
     position: absolute;
     top: 30px;
@@ -93,94 +106,95 @@ nav a:hover, nav a.active {
     text-align: center;
     color: var(--color-text);
     padding: 25px;
-    font-size: 2.8rem; /* Más grande */
-    background-color: rgba(0, 0, 0, 0.9);
+    font-family: var(--nav-font);
+    font-size: 2.8rem;
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 2;
+    letter-spacing: 2px;
     border: 3px solid var(--color-accent);
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
 }
 
-/* ARTÍCULO CON FONDO NEGRO */
 .hero article {
     position: absolute;
     bottom: 40px;
     left: 40px;
     right: 40px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.9);
     color: var(--color-text);
     padding: 30px;
     border-radius: 12px;
     border: 2px solid var(--color-accent);
-    min-height: 220px;
+    font-family: var(--nav-font);
+    min-height: 200px;
 }
 
-/* IMAGEN FLOTANTE A LA DERECHA */
 .hero article img {
     float: right;
-    width: 220px; /* Un poco más grande */
+    width: 220px;
     height: 160px;
     object-fit: cover;
-    margin-left: 30px;
+    margin-left: 25px;
     margin-bottom: 15px;
     border: 3px solid var(--color-accent);
     border-radius: 8px;
 }
 
-/* TEXTO MÁS GRANDE */
 .hero article p {
     margin: 0;
-    font-size: 1.2rem; /* Más grande */
-    line-height: 1.8; /* Más espacio entre líneas */
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: var(--color-text);
 }
 
-/* HISTORY SECTION - TEXTO FLUIDO CON IMAGEN CENTRADA */
+/* ==================== */
+/* HISTORY SECTION - TEXTO FLUYE ALREDEDOR DE IMAGEN */
+/* ==================== */
 .history {
     margin: 40px 0;
     padding: 35px;
-    background: rgba(0, 0, 0, 0.95);
-    border: 2px solid var(--color-accent);
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
     border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    font-family: var(--nav-font);
 }
 
 .history h2 {
+    color: var(--color-text);
+    font-family: var(--nav-font);
     font-size: 2.3rem;
-    text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    text-align: center;
     border-bottom: 3px solid var(--color-accent);
     padding-bottom: 15px;
 }
 
-/* CONTENIDO DE HISTORY CON IMAGEN CENTRADA */
 .history-content {
-    position: relative;
     padding: 20px;
+    overflow: hidden; /* Para contener float */
 }
 
-/* IMAGEN CENTRADA QUE FLUYE CON EL TEXTO */
 .history-content img {
-    width: 280px;
-    height: 200px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     border: 3px solid var(--color-accent);
     border-radius: 10px;
-    margin: 0 auto 25px auto;
-    display: block;
-    float: none; /* Centrada, no flotante */
+    margin: 0 0 20px 25px;
+    float: right; /* IMAGEN FLOTANTE A LA DERECHA */
 }
 
-/* TEXTO MÁS GRANDE EN HISTORY */
 .history-content p {
-    font-size: 1.2rem; /* Más grande */
-    line-height: 1.8; /* Más espacio */
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: var(--color-text);
-    text-align: justify;
+    text-align: left; /* Cambiado para mejor flujo */
+    font-family: var(--nav-font);
     margin-bottom: 20px;
 }
 
@@ -188,39 +202,54 @@ nav a:hover, nav a.active {
     margin-bottom: 0;
 }
 
-/* ADVENTURE SECTION - IMÁGENES EN HORIZONTAL */
+/* Clearfix para contener float */
+.history:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ==================== */
+/* ADVENTURE SECTION - IMÁGENES HORIZONTALES */
+/* ==================== */
 .adventure {
     margin: 40px 0;
     padding: 35px;
-    background: rgba(0, 0, 0, 0.95);
-    border: 2px solid var(--color-accent);
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
     border-radius: 12px;
+    border: 2px solid var(--color-accent);
 }
 
 .adventure h2 {
+    color: var(--color-text);
+    font-family: var(--nav-font);
     font-size: 2.3rem;
-    text-align: center;
     margin-bottom: 35px;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid var(--color-accent);
     border-radius: 10px;
 }
 
-/* GALERÍA EN HORIZONTAL */
+/* GALERÍA EN HORIZONTAL - NO SE ENVUELVEN */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap; /* No se envuelvan */
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: nowrap; /* NO se envuelven */
+    overflow-x: auto; /* Scroll horizontal si es necesario */
+    padding-bottom: 10px;
 }
 
 .adventure-gallery figure {
-    flex: 1;
-    min-width: 0; /* Para que se ajusten */
+    flex: 0 0 auto; /* No crece, no se encoge */
+    width: calc(20% - 16px); /* 5 imágenes = 20% cada una */
+    min-width: 180px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.95);
     padding: 15px;
@@ -236,7 +265,7 @@ nav a:hover, nav a.active {
 
 .adventure-gallery img {
     width: 100%;
-    height: 130px; /* Un poco más altas */
+    height: 130px;
     object-fit: cover;
     border: 2px solid var(--color-accent);
     border-radius: 6px;
@@ -248,15 +277,18 @@ nav a:hover, nav a.active {
     font-weight: bold;
     color: var(--color-text);
     padding: 8px;
+    font-family: var(--nav-font);
     font-size: 1.1rem;
     background-color: rgba(212, 0, 115, 0.9);
     border-radius: 5px;
     border: 1px solid var(--color-accent);
 }
 
+/* ==================== */
 /* FOOTER */
+/* ==================== */
 footer {
-    background-color: var(--color-bg);
+    background-color: var(--color-background);
     color: var(--color-text);
     padding: 30px 20px;
     display: flex;
@@ -269,11 +301,14 @@ footer {
 footer p {
     margin: 0;
     font-weight: bold;
+    font-family: var(--nav-font);
     font-size: 1.1rem;
     color: var(--color-text);
 }
 
+/* ==================== */
 /* SOCIAL MEDIA */
+/* ==================== */
 .socialmedia {
     display: flex;
     gap: 20px;
@@ -304,18 +339,20 @@ footer p {
     height: 30px;
 }
 
-/* RESPONSIVE - MANTENER HORIZONTAL EN MÓVIL */
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
 @media (max-width: 1024px) {
-    .adventure-gallery {
-        flex-wrap: wrap; /* Se envuelven en pantallas más pequeñas */
-    }
-    
     .adventure-gallery figure {
-        min-width: calc(33.333% - 15px);
+        min-width: 200px;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
     header {
         flex-direction: column;
         gap: 20px;
@@ -328,12 +365,12 @@ footer p {
     }
     
     .hero {
-        height: 500px;
+        height: 550px;
     }
     
     .hero h1 {
         font-size: 2rem;
-        padding: 15px;
+        padding: 20px;
         top: 20px;
     }
     
@@ -343,43 +380,70 @@ footer p {
         left: auto;
         right: auto;
         margin: 20px;
-        padding: 20px;
+        padding: 25px;
     }
     
     .hero article img {
         float: none;
         width: 100%;
+        max-width: 300px;
         height: 200px;
-        margin-left: 0;
-        margin-bottom: 20px;
+        margin: 0 auto 20px auto;
+        display: block;
     }
     
     .adventure-gallery figure {
-        min-width: calc(50% - 10px);
+        min-width: 160px;
     }
     
     .history-content img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
+        float: none;
+        display: block;
+        margin: 0 auto 25px auto;
+    }
+    
+    .history-content p {
+        text-align: justify;
     }
 }
 
 @media (max-width: 480px) {
     .adventure-gallery figure {
-        min-width: 100%;
+        min-width: 140px;
     }
     
     .hero h1 {
         font-size: 1.6rem;
+        padding: 15px;
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     
     .hero article p,
     .history-content p {
         font-size: 1.1rem;
     }
+}
+
+/* SCROLL HORIZONTAL SUAVE */
+.adventure-gallery {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ESTILOS DE SCROLLBAR */
+.adventure-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.adventure-gallery::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.adventure-gallery::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
 }
