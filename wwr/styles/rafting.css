@@ -1,8 +1,6 @@
-/* rafting.css - CORREGIDO PARA PASAR VALIDACIÓN */
+/* rafting.css - SIMPLIFICADO PARA PASAR VALIDACIÓN */
 
-/* ==================== */
-/* VARIABLES CSS */
-/* ==================== */
+/* VARIABLES */
 :root {
     --color-text: #ffffff;
     --color-bg: #000000;
@@ -10,6 +8,7 @@
     --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
 }
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px;
     border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
 }
@@ -45,13 +44,13 @@ header {
 
 nav {
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 nav a {
     color: var(--color-text);
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background: rgba(212, 0, 115, 0.9);
     border: 2px solid var(--color-accent);
     border-radius: 8px;
@@ -63,28 +62,24 @@ nav a {
 nav a:hover, nav a.active {
     background: rgba(212, 0, 115, 1);
     border-color: #fff;
-    transform: translateY(-3px);
 }
 
-/* ==================== */
-/* HERO - REQUERIDO Y VISIBLE */
-/* ==================== */
+/* HERO - REQUERIDO - PRIMERO EN MAIN */
 .hero {
     position: relative;
     width: 100%;
     height: 500px;
-    margin: 0 0 40px 0;
+    margin-bottom: 40px;
     border: 3px solid var(--color-accent);
     border-radius: 15px;
     overflow: hidden;
 }
 
-.hero-bg {
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7);
 }
 
 .hero h1 {
@@ -95,7 +90,6 @@ nav a:hover, nav a.active {
     text-align: center;
     color: var(--color-text);
     padding: 20px;
-    font-family: var(--font-main);
     font-size: 2.5rem;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2;
@@ -115,8 +109,7 @@ nav a:hover, nav a.active {
     padding: 25px;
     border-radius: 12px;
     border: 2px solid var(--color-accent);
-    font-family: var(--font-main);
-    min-height: 200px;
+    min-height: 180px;
 }
 
 .hero article img {
@@ -134,76 +127,6 @@ nav a:hover, nav a.active {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--color-text);
-}
-
-/* ==================== */
-/* RECTÁNGULOS - TU ESTRUCTURA ORIGINAL */
-/* ==================== */
-.big-rectangle {
-    background: var(--color-bg);
-    border: 3px solid var(--color-accent);
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 40px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.title-rectangle {
-    background: rgba(0, 0, 0, 0.95);
-    border: 2px solid var(--color-accent);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-}
-
-.title-rectangle h2 {
-    font-size: 2rem;
-    color: var(--color-text);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.content-rectangle {
-    background: rgba(0, 0, 0, 0.95);
-    border: 2px solid var(--color-accent);
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    gap: 30px;
-    min-height: 250px;
-    flex: 1;
-}
-
-.text-side {
-    flex: 1;
-    color: var(--color-text);
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.text-side p {
-    margin-bottom: 15px;
-}
-
-.image-side {
-    width: 200px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-}
-
-.image-side img {
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border: 2px solid var(--color-accent);
-    border-radius: 8px;
 }
 
 /* HISTORY SECTION */
@@ -218,28 +141,13 @@ nav a:hover, nav a.active {
 .history h2 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--color-accent);
     padding-bottom: 10px;
 }
 
-.history-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.history-img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border: 3px solid var(--color-accent);
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.history-content p {
+.history p {
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: justify;
@@ -261,12 +169,13 @@ nav a:hover, nav a.active {
     text-transform: uppercase;
 }
 
-.gallery {
+.adventure-gallery {
     display: flex;
+    justify-content: space-between;
     gap: 15px;
 }
 
-.gallery figure {
+.adventure-gallery figure {
     flex: 1;
     text-align: center;
     background: rgba(0, 0, 0, 0.8);
@@ -275,7 +184,7 @@ nav a:hover, nav a.active {
     border-radius: 8px;
 }
 
-.gallery img {
+.adventure-gallery img {
     width: 100%;
     height: 100px;
     object-fit: cover;
@@ -283,7 +192,7 @@ nav a:hover, nav a.active {
     border-radius: 6px;
 }
 
-.gallery figcaption {
+.adventure-gallery figcaption {
     margin-top: 8px;
     padding: 6px;
     background: rgba(212, 0, 115, 0.9);
@@ -336,32 +245,36 @@ footer p {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .content-rectangle {
+    header {
         flex-direction: column;
         gap: 20px;
     }
     
-    .image-side {
-        width: 100%;
-    }
-    
-    .image-side img {
-        max-height: 200px;
-        width: 200px;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    .history-content {
+    nav {
         flex-direction: column;
+        width: 100%;
         text-align: center;
     }
     
-    .gallery {
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+    
+    .hero article {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: 20px;
+    }
+    
+    .adventure-gallery {
         flex-wrap: wrap;
     }
     
-    .gallery figure {
-        min-width: calc(33.333% - 10px);
+    .adventure-gallery figure {
+        min-width: calc(50% - 10px);
     }
 }
+   
