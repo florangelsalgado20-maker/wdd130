@@ -1,4 +1,4 @@
-/* rafting.css - SE AGREGÓ SOLO LO NECESARIO PARA PASAR EL CURSO */
+/* rafting.css - CORREGIDO PARA PASAR VALIDACIÓN */
 
 /* ==================== */
 /* VARIABLES CSS */
@@ -29,7 +29,7 @@ body {
     padding: 20px;
 }
 
-/* HEADER - NO SE MODIFICA */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -66,20 +66,92 @@ nav a:hover, nav a.active {
     transform: translateY(-3px);
 }
 
-/* RECTÁNGULO 1 GRANDE - NO SE MODIFICA */
+/* ==================== */
+/* HERO - REQUERIDO Y VISIBLE */
+/* ==================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 0 40px 0;
+    border: 3px solid var(--color-accent);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+}
+
+.hero h1 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--color-text);
+    padding: 20px;
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    border: 3px solid var(--color-accent);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--color-text);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    font-family: var(--font-main);
+    min-height: 200px;
+}
+
+.hero article img {
+    float: right;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-accent);
+    border-radius: 8px;
+}
+
+.hero article p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+/* ==================== */
+/* RECTÁNGULOS - TU ESTRUCTURA ORIGINAL */
+/* ==================== */
 .big-rectangle {
     background: var(--color-bg);
     border: 3px solid var(--color-accent);
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
-    min-height: 450px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-/* RECTÁNGULO 2 - TÍTULO - NO SE MODIFICA */
 .title-rectangle {
     background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
@@ -88,15 +160,14 @@ nav a:hover, nav a.active {
     text-align: center;
 }
 
-.title-rectangle h1 {
-    font-size: 2.5rem;
+.title-rectangle h2 {
+    font-size: 2rem;
     color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
 }
 
-/* RECTÁNGULO 3 - TEXTO CON IMAGEN - NO SE MODIFICA */
 .content-rectangle {
     background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
@@ -135,7 +206,7 @@ nav a:hover, nav a.active {
     border-radius: 8px;
 }
 
-/* HISTORY SECTION - NO SE MODIFICA */
+/* HISTORY SECTION */
 .history {
     margin: 40px 0;
     padding: 30px;
@@ -174,7 +245,7 @@ nav a:hover, nav a.active {
     text-align: justify;
 }
 
-/* ADVENTURE SECTION - NO SE MODIFICA */
+/* ADVENTURE SECTION */
 .adventure {
     margin: 40px 0;
     padding: 25px;
@@ -220,7 +291,7 @@ nav a:hover, nav a.active {
     border: 1px solid var(--color-accent);
 }
 
-/* FOOTER - NO SE MODIFICA */
+/* FOOTER */
 footer {
     padding: 25px 20px;
     display: flex;
@@ -249,6 +320,7 @@ footer p {
     border-radius: 50%;
     border: 1px solid var(--color-accent);
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .socialmedia a:hover {
@@ -260,76 +332,6 @@ footer p {
 .socialmedia img {
     width: 24px;
     height: 24px;
-}
-
-/* ==================== */
-/* HERO REQUERIDO PARA EL CURSO - SE AGREGA ADICIONAL */
-/* ==================== */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin: 0 0 40px 0;
-    border: 3px solid var(--color-accent);
-    border-radius: 15px;
-    overflow: hidden;
-    display: none; /* OCULTO PERO PRESENTE PARA VALIDACIÓN */
-}
-
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: var(--color-text);
-    padding: 20px;
-    font-family: var(--font-main);
-    font-size: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    border: 3px solid var(--color-accent);
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text);
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid var(--color-accent);
-    font-family: var(--font-main);
-}
-
-.hero article img {
-    float: right;
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    margin-left: 25px;
-    margin-bottom: 15px;
-    border: 3px solid var(--color-accent);
-    border-radius: 8px;
-}
-
-.hero article p {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--color-text);
 }
 
 /* RESPONSIVE */
