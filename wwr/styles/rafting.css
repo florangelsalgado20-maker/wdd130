@@ -1,74 +1,45 @@
-/* rafting.css - MENÚ CON MISMA FUENTE */
+/* rafting.css */
 
-/* ==================== */
-/* VARIABLES CSS en :root */
-/* ==================== */
 :root {
     --color-text: #ffffff;
-    --color-background: #000000;
+    --color-bg: #000000;
     --color-accent: #d40073;
-    --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
+    --font-main: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
 }
 
-/* ==================== */
-/* RESET UNIVERSAL */
-/* ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ==================== */
-/* CONFIGURACIÓN BASE */
-/* ==================== */
-html, body {
-    color: var(--color-text);
-    background-color: var(--color-background);
-}
-
 body {
-    font-family: var(--nav-font);
-    line-height: 1.6;
-    min-height: 100vh;
+    font-family: var(--font-main);
     color: var(--color-text);
-    background-color: var(--color-background);
+    background: var(--color-bg);
+    line-height: 1.6;
 }
 
-/* ==================== */
-/* CONTENEDOR */
-/* ==================== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    color: var(--color-text);
-    background-color: var(--color-background);
 }
 
-/* ==================== */
-/* HEADER - LOGO NORMAL */
-/* ==================== */
+/* HEADER */
 header {
-    background-color: var(--color-background);
-    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 20px;
     border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
 }
 
-/* LOGO - FORZAR COLORES NATURALES */
 .logo {
     height: 70px;
-    filter: none !important;
-    -webkit-filter: none !important;
 }
 
-/* ==================== */
-/* NAVEGACIÓN */
-/* ==================== */
 nav {
     display: flex;
     gap: 25px;
@@ -78,231 +49,182 @@ nav a {
     color: var(--color-text);
     text-decoration: none;
     padding: 12px 20px;
-    font-family: var(--nav-font);
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    background-color: rgba(212, 0, 115, 0.9);
+    background: rgba(212, 0, 115, 0.9);
     border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(212, 0, 115, 1);
-    border: 2px solid #ffffff;
+nav a:hover, nav a.active {
+    background: rgba(212, 0, 115, 1);
+    border-color: #fff;
     transform: translateY(-3px);
 }
 
-nav a.active {
-    background-color: rgba(212, 0, 115, 1);
-    border: 2px solid #ffffff;
-    font-family: var(--nav-font);
-}
-
-/* ==================== */
-/* HERO SECTION - RECTÁNGULO 1 GRANDE */
-/* ==================== */
-.hero-section {
-    background-color: var(--color-background);
+/* RECTÁNGULO 1 GRANDE */
+.big-rectangle {
+    background: var(--color-bg);
     border: 3px solid var(--color-accent);
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
-    min-height: 400px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-/* RECTÁNGULO 2 - CON TÍTULO */
+/* RECTÁNGULO 2 - TÍTULO */
 .title-rectangle {
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
 }
 
 .title-rectangle h1 {
-    color: var(--color-text);
-    font-family: var(--nav-font);
     font-size: 2.5rem;
-    margin: 0;
+    color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 0;
 }
 
-/* RECTÁNGULO 3 - CONTENIDO CON TEXTO E IMAGEN */
+/* RECTÁNGULO 3 - TEXTO CON IMAGEN */
 .content-rectangle {
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     gap: 30px;
-    align-items: flex-start;
     min-height: 250px;
+    flex: 1;
 }
 
 /* Texto a la izquierda */
-.text-content {
+.text-side {
     flex: 1;
     color: var(--color-text);
-    font-family: var(--nav-font);
     font-size: 1.1rem;
     line-height: 1.7;
 }
 
-.text-content p {
+.text-side p {
     margin-bottom: 15px;
 }
 
-.text-content p:last-child {
+.text-side p:last-child {
     margin-bottom: 0;
 }
 
-/* Imagen a la derecha */
-.image-content {
+/* Imagen a la derecha - MISMO ALTO que el rectángulo 3 */
+.image-side {
     width: 200px;
     flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
 }
 
-.image-content img {
+.image-side img {
     width: 100%;
-    height: 150px;
+    height: 100%;
+    max-height: 250px;
     object-fit: cover;
     border: 2px solid var(--color-accent);
     border-radius: 8px;
 }
 
-/* ==================== */
 /* HISTORY SECTION */
-/* ==================== */
 .history {
     margin: 40px 0;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text);
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
-    font-family: var(--nav-font);
+    border-radius: 12px;
 }
 
 .history h2 {
-    color: var(--color-text);
-    font-family: var(--nav-font);
     font-size: 2rem;
+    text-align: center;
     margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: center;
-    padding-bottom: 10px;
     border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
 }
 
-/* Contenedor del contenido de history */
 .history-content {
-    position: relative;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-/* Imagen centrada en history */
-.history-image {
-    display: block;
-    margin: 0 auto 25px auto;
+.history-img {
     width: 250px;
     height: 180px;
     object-fit: cover;
     border: 3px solid var(--color-accent);
     border-radius: 8px;
-    float: none;
+    flex-shrink: 0;
 }
 
 .history-content p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--color-text);
     text-align: justify;
-    font-family: var(--nav-font);
-    margin-bottom: 15px;
 }
 
-/* ==================== */
 /* ADVENTURE SECTION */
-/* ==================== */
 .adventure {
     margin: 40px 0;
     padding: 25px;
-    background-color: rgba(0, 0, 0, 0.95);
-    color: var(--color-text);
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.95);
     border: 2px solid var(--color-accent);
+    border-radius: 12px;
 }
 
 .adventure h2 {
-    color: var(--color-text);
-    font-family: var(--nav-font);
     font-size: 2rem;
+    text-align: center;
     margin-bottom: 25px;
-    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
 }
 
-/* GALERÍA */
-.adventure-gallery {
+.gallery {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
     gap: 15px;
-    margin-top: 20px;
 }
 
-.adventure-gallery figure {
+.gallery figure {
     flex: 1;
-    min-width: 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.8);
     padding: 12px;
-    border-radius: 8px;
     border: 2px solid var(--color-accent);
-    transition: all 0.3s ease;
+    border-radius: 8px;
 }
 
-.adventure-gallery figure:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-accent);
-}
-
-.adventure-gallery img {
+.gallery img {
     width: 100%;
     height: 100px;
     object-fit: cover;
     border: 2px solid var(--color-accent);
     border-radius: 6px;
-    filter: brightness(0.9) contrast(1.1);
 }
 
-.adventure-gallery figcaption {
+.gallery figcaption {
     margin-top: 8px;
-    font-weight: bold;
-    color: var(--color-text);
     padding: 6px;
-    font-family: var(--nav-font);
-    font-size: 1rem;
-    background-color: rgba(212, 0, 115, 0.9);
+    background: rgba(212, 0, 115, 0.9);
     border-radius: 4px;
     border: 1px solid var(--color-accent);
 }
 
-/* ==================== */
 /* FOOTER */
-/* ==================== */
 footer {
-    background-color: var(--color-background);
-    color: var(--color-text);
     padding: 25px 20px;
     display: flex;
     justify-content: space-between;
@@ -312,39 +234,30 @@ footer {
 }
 
 footer p {
-    margin: 0;
     font-weight: bold;
-    font-family: var(--nav-font);
-    font-size: 1rem;
-    color: var(--color-text);
 }
 
-/* ==================== */
-/* SOCIAL MEDIA */
-/* ==================== */
 .socialmedia {
     display: flex;
     gap: 15px;
 }
 
 .socialmedia a {
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(212, 0, 115, 0.9);
+    background: rgba(212, 0, 115, 0.9);
     border-radius: 50%;
-    transition: all 0.3s ease;
-    overflow: hidden;
     border: 1px solid var(--color-accent);
+    transition: all 0.3s;
 }
 
 .socialmedia a:hover {
-    background-color: rgba(212, 0, 115, 1);
+    background: rgba(212, 0, 115, 1);
     transform: scale(1.1);
-    border: 1px solid #ffffff;
+    border-color: #fff;
 }
 
 .socialmedia img {
@@ -352,85 +265,34 @@ footer p {
     height: 24px;
 }
 
-/* ==================== */
 /* RESPONSIVE */
-/* ==================== */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    header {
+    .content-rectangle {
         flex-direction: column;
         gap: 20px;
     }
     
-    nav {
-        flex-direction: column;
+    .image-side {
         width: 100%;
+    }
+    
+    .image-side img {
+        max-height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .history-content {
+        flex-direction: column;
         text-align: center;
     }
     
-    .title-rectangle h1 {
-        font-size: 2rem;
-    }
-    
-    .content-rectangle {
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .image-content {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .image-content img {
-        width: 200px;
-        height: 150px;
-    }
-    
-    .history-image {
-        width: 200px;
-        height: 140px;
-    }
-    
-    .adventure-gallery {
+    .gallery {
         flex-wrap: wrap;
     }
     
-    .adventure-gallery figure {
+    .gallery figure {
         min-width: calc(33.333% - 10px);
-    }
-}
-
-@media (max-width: 600px) {
-    .adventure-gallery figure {
-        min-width: calc(50% - 10px);
-    }
-    
-    .history-image {
-        width: 180px;
-        height: 120px;
-    }
-}
-
-@media (max-width: 480px) {
-    .adventure-gallery figure {
-        min-width: 100%;
-    }
-    
-    .title-rectangle h1 {
-        font-size: 1.8rem;
-        padding: 15px;
-    }
-    
-    h2 {
-        font-size: 1.3rem;
-    }
-    
-    .history-image {
-        width: 150px;
-        height: 100px;
     }
 }
