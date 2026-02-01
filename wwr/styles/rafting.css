@@ -1,4 +1,4 @@
-/* rafting.css - VERSIÓN FINAL QUE PASA TODO EL AUDIT */
+/* rafting.css - VERSIÓN CORREGIDA SIN REGLAS DUPLICADAS */
 
 /* ==================== */
 /* VARIABLES CSS EN :ROOT */
@@ -193,7 +193,7 @@ nav a.active {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--color-text);
-    text-align: left; /* Cambiado para mejor flujo */
+    text-align: left;
     font-family: var(--nav-font);
     margin-bottom: 20px;
 }
@@ -427,13 +427,12 @@ footer p {
     }
 }
 
-/* SCROLL HORIZONTAL SUAVE */
+/* SCROLL HORIZONTAL SUAVE Y ESTILOS DE SCROLLBAR */
 .adventure-gallery {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
 
-/* ESTILOS DE SCROLLBAR */
 .adventure-gallery::-webkit-scrollbar {
     height: 6px;
 }
