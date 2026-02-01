@@ -235,7 +235,7 @@ nav a.active {
     border-radius: 10px;
 }
 
-/* GALERÍA EN HORIZONTAL - NO SE ENVUELVEN */
+/* GALERÍA EN HORIZONTAL - NO SE ENVUELVEN - TODAS LAS PROPIEDADES COMBINADAS */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -244,6 +244,8 @@ nav a.active {
     flex-wrap: nowrap; /* NO se envuelven */
     overflow-x: auto; /* Scroll horizontal si es necesario */
     padding-bottom: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .adventure-gallery figure {
@@ -427,12 +429,7 @@ footer p {
     }
 }
 
-/* SCROLL HORIZONTAL SUAVE Y ESTILOS DE SCROLLBAR */
-.adventure-gallery {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
+/* ESTILOS DE SCROLLBAR - YA NO SE DUPLICA CON .adventure-gallery */
 .adventure-gallery::-webkit-scrollbar {
     height: 6px;
 }
