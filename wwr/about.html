@@ -3,117 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Expeditions | Rafting en Caracas</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Importación de fuente para un toque más moderno -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us | Flower Expeditions</title>
+    <style>
+        /* --- ESTILOS GLOBALES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #333; line-height: 1.4; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* --- HEADER --- */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo-area { text-align: center; font-size: 11px; font-weight: bold; }
+        .logo-circle { width: 90px; height: 90px; border: 1px solid #000; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 5px; background: #fff; }
+        
+        nav ul { display: flex; list-style: none; gap: 12px; }
+        nav ul li a { text-decoration: none; color: #000; font-weight: bold; font-size: 18px; padding: 10px 20px; border: 1px solid #000; border-radius: 12px; transition: 0.3s; }
+        
+        /* Resaltado de la página actual */
+        nav ul li a.active { background-color: #000; color: #fff; }
+        nav ul li a:hover { background-color: #f0f0f0; color: #000; }
+
+        /* --- SECCIÓN HERO (Basada en Rafting2.jpg) --- */
+        .hero { background-color: #8e8e8e; padding: 50px 20px; text-align: center; margin-bottom: 30px; border-radius: 4px; }
+        .hero h1 { font-size: 42px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero .bg-label { font-size: 18px; margin-bottom: 25px; display: block; color: #222; }
+        .hero small { font-style: italic; font-size: 14px; }
+        
+        .hero-box { background-color: rgba(255,255,255,0.85); border: 1px solid #333; display: flex; padding: 30px; gap: 30px; align-items: center; text-align: left; max-width: 900px; margin: 20px auto 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .hero-box p { flex: 2; font-size: 15px; font-weight: 600; color: #1a1a1a; }
+        .hero-img-placeholder { flex: 1; background: #d1d1d1; border: 1px solid #666; height: 180px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+
+        /* --- SECCIÓN HISTORY --- */
+        .history { border: 1px solid #bbb; padding: 40px; margin-bottom: 30px; background-color: #fff; }
+        .history h2 { text-align: center; font-size: 36px; margin-bottom: 30px; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .history-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: start; }
+        .history-text { font-size: 14px; font-weight: 600; text-align: justify; }
+        .history-img-center { text-align: center; }
+        .history-img-center span { font-size: 13px; font-weight: bold; display: block; margin-bottom: 8px; }
+        .img-box { border: 1px solid #000; height: 220px; display: flex; align-items: center; justify-content: center; background: #efefef; font-weight: bold; }
+
+        /* --- SECCIÓN TRIPS (Galería inferior) --- */
+        .trips-container { border: 1px solid #bbb; padding: 25px; margin-bottom: 30px; background: #fff; }
+        .trips-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+        .trip-card { text-align: center; padding: 10px; border: 1px solid #eee; }
+        .trip-photo { border: 1px solid #ddd; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f5f5f5; margin-bottom: 12px; font-size: 11px; }
+        .trip-label { font-size: 11px; margin-bottom: 15px; height: 35px; font-weight: bold; text-transform: lowercase; }
+        .trip-btn { border: 1px solid #000; background: #fff; border-radius: 20px; padding: 8px 5px; width: 100%; font-size: 11px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .trip-btn:hover { background: #000; color: #fff; }
+
+        /* --- FOOTER --- */
+        footer { border-top: 2px solid #000; padding: 25px 0; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+        .copy { font-size: 13px; font-weight: bold; }
+        .socials { display: flex; gap: 12px; }
+        .social-link { border: 1px solid #000; border-radius: 25px; padding: 10px 18px; font-size: 12px; text-decoration: none; color: #000; font-weight: bold; transition: 0.3s; }
+        .social-link:hover { background: #eee; }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .history-grid { grid-template-columns: 1fr; }
+            .trips-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-box { flex-direction: column; }
+            header { flex-direction: column; gap: 20px; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Encabezado / Navegación -->
+<div class="container">
+    <!-- NAVEGACIÓN -->
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="https://via.placeholder.com/100" alt="Logo Flower Expeditions">
-                <span>LOGO.JPG</span>
+        <div class="logo-area">
+            <div class="logo-circle">
+                logo of the company<br>
+                <strong>LOGO.JPG</strong>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Trips</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="#">Trips</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Sección Hero (Fondo Rafting2.jpg) -->
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
     <section class="hero">
-        <div class="container hero-inner">
-            <h1>FLOWER EXPEDITIONS</h1>
-            <p class="subtitle">adventures</p>
-            
-            <div class="hero-description-box">
-                <div class="hero-text">
-                    <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
-                </div>
-                <div class="hero-image-placeholder">
-                    <img src="https://via.placeholder.com/200x150" alt="Rafting 3">
-                    <span>rafting3.jpg</span>
-                </div>
+        <h1>FLOWER EXPEDITIONS</h1>
+        <span class="bg-label">RAFTING2.jpg imagen de fondo</span>
+        <small>adventures</small>
+        
+        <div class="hero-box">
+            <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
+            <div class="hero-img-placeholder">
+                rafting3.jpg
             </div>
         </div>
     </section>
 
-    <!-- Sección Historia -->
-    <section class="history container">
-        <h2 class="section-title">HISTORY</h2>
+    <!-- SECCIÓN HISTORIA (ABOUT CONTENT) -->
+    <section class="history">
+        <h2>HISTORY</h2>
         <div class="history-grid">
-            <div class="history-col">
-                <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.</p>
+            <div class="history-text">
+                Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.
             </div>
-            <div class="history-col img-col">
-                <p class="img-caption">Adventure in the city</p>
-                <div class="placeholder-box">
-                    <span>rafting4.jpg</span>
-                </div>
+            <div class="history-img-center">
+                <span>Adventure in the city</span>
+                <div class="img-box">rafting4.jpg</div>
             </div>
-            <div class="history-col">
-                <p>What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
+            <div class="history-text">
+                What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.
             </div>
         </div>
     </section>
 
-    <!-- Galería de Viajes (Trips) -->
-    <section class="trips container">
+    <!-- GALERÍA DE TRIPS -->
+    <section class="trips-container">
         <div class="trips-grid">
-            <!-- Card 1 -->
             <div class="trip-card">
-                <div class="trip-img">rafting1.jpg</div>
-                <p class="trip-desc">caracas rafting</p>
+                <div class="trip-photo"><strong>rafting1.jpg</strong><br>caracas rafting</div>
+                <p class="trip-label">caracas rafting</p>
                 <button class="trip-btn">CARACAS</button>
             </div>
-            <!-- Card 2 -->
             <div class="trip-card">
-                <div class="trip-img">rafting2.jpg</div>
-                <p class="trip-desc">big mallards</p>
+                <div class="trip-photo"><strong>rafting2.jpg</strong><br>big mallards</div>
+                <p class="trip-label">big mallards</p>
                 <button class="trip-btn">BIG MALLARD FALLS</button>
             </div>
-            <!-- Card 3 -->
             <div class="trip-card">
-                <div class="trip-img">rafting3.jpg</div>
-                <p class="trip-desc">morning rafting</p>
+                <div class="trip-photo"><strong>rafting3.jpg</strong><br>morning rafting</div>
+                <p class="trip-label">morning rafting</p>
                 <button class="trip-btn">MORNING EXPEDITIONS</button>
             </div>
-            <!-- Card 4 -->
             <div class="trip-card">
-                <div class="trip-img">rafting4.jpg</div>
-                <p class="trip-desc">caracas canyon</p>
+                <div class="trip-photo"><strong>rafting4.jpg</strong><br>caracas canyon</div>
+                <p class="trip-label">caracas canyon</p>
                 <button class="trip-btn">CANYON RUN</button>
             </div>
-            <!-- Card 5 -->
             <div class="trip-card">
-                <div class="trip-img">rafting5.jpg</div>
-                <p class="trip-desc">river in caracas</p>
+                <div class="trip-photo"><strong>rafting5.jpg</strong><br>river in caracas</div>
+                <p class="trip-label">river in caracas</p>
                 <button class="trip-btn">RIVER DROP</button>
             </div>
         </div>
     </section>
 
-    <!-- Pie de Página -->
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <div class="container footer-content">
-            <div class="copyright">
-                © 2026 FLOWER EXPEDITIONS | WDD130 | Florangel Salgado
-            </div>
-            <div class="social-icons">
-                <a href="#" class="social-btn">facebook.svg</a>
-                <a href="#" class="social-btn">linkedin.svg</a>
-                <a href="#" class="social-btn">instagram.svg</a>
-            </div>
+        <div class="copy">© 2026 FLOWER EXPEDITIONS | WDD130 | Florangel Salgado</div>
+        <div class="socials">
+            <a href="#" class="social-link">facebook.svg</a>
+            <a href="#" class="social-link">linkedin.svg</a>
+            <a href="#" class="social-link">instagram.svg</a>
         </div>
     </footer>
+</div>
 
 </body>
 </html>
