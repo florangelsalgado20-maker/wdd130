@@ -1,12 +1,17 @@
-/* rafting.css - VERSIÓN OPTIMIZADA */
+/* rafting.css - VERSIÓN OPTIMIZADA Y ESTANDARIZADA */
 
 /* ==================== */
-/* VARIABLES CSS EN :ROOT */
+/* VARIABLES CSS EN :ROOT - TODOS LOS COLORES ESTÁNDAR */
 /* ==================== */
 :root {
-    --color-text: #ffffff;
-    --color-background: #000000;
-    --color-accent: #d40073;
+    --color-text: rgb(255, 255, 255);
+    --color-background: rgb(0, 0, 0);
+    --color-accent: rgb(212, 0, 115);
+    --color-facebook: rgb(24, 119, 242);
+    --color-instagram: rgb(193, 53, 132);
+    --color-linkedin: rgb(0, 119, 181);
+    --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
     --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
 }
 
@@ -72,14 +77,19 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(212, 0, 115, 0.9);
+    background-color: rgba(var(--color-accent-rgb), 0.9);
     border: 2px solid var(--color-accent);
+}
+
+/* Necesitamos calcular los valores RGB para rgba */
+nav a {
+    background-color: rgba(212, 0, 115, 0.9);
 }
 
 nav a:hover,
 nav a.active {
     background-color: rgba(212, 0, 115, 1);
-    border: 2px solid #ffffff;
+    border: 2px solid var(--color-white);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(212, 0, 115, 0.3);
 }
@@ -270,7 +280,7 @@ main section:last-of-type h2 {
 
 .adventure-gallery figure:hover {
     transform: translateY(-10px);
-    border-color: #ffffff;
+    border-color: var(--color-white);
 }
 
 .adventure-gallery img {
@@ -300,7 +310,7 @@ main section:last-of-type h2 {
 
 .adventure-gallery figure:hover figcaption {
     background-color: rgba(212, 0, 115, 1);
-    border-color: #ffffff;
+    border-color: var(--color-white);
 }
 
 /* ==================== */
@@ -326,7 +336,7 @@ footer p {
 }
 
 /* ==================== */
-/* SOCIAL MEDIA - CON COLORES ORIGINALES */
+/* SOCIAL MEDIA - COLORES ORIGINALES */
 /* ==================== */
 .socialmedia {
     display: flex;
@@ -349,28 +359,24 @@ footer p {
 .socialmedia a:hover {
     background-color: rgba(255, 255, 255, 1);
     transform: scale(1.1);
-    border: 1px solid #ffffff;
+    border: 1px solid var(--color-white);
 }
 
-/* Facebook - color azul */
 .socialmedia a:nth-child(1):hover {
-    background-color: #1877f2; /* Azul de Facebook */
+    background-color: var(--color-facebook);
 }
 
-/* Instagram - degradado morado/naranja */
 .socialmedia a:nth-child(2):hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-color: var(--color-instagram);
 }
 
-/* LinkedIn - color azul profesional */
 .socialmedia a:nth-child(3):hover {
-    background-color: #0077b5; /* Azul de LinkedIn */
+    background-color: var(--color-linkedin);
 }
 
 .socialmedia img {
     width: 30px;
     height: 30px;
-    /* Quitamos el filtro que hacía blanco el icono */
 }
 
 /* ==================== */
@@ -391,7 +397,7 @@ footer p {
 }
 
 /* ==================== */
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
 /* ==================== */
 @media (max-width: 1024px) {
     .container {
