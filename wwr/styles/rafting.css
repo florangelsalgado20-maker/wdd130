@@ -1,4 +1,4 @@
-/* rafting.css - VERSIÓN CON TÍTULO ARRIBA DEL TEXTO */
+/* rafting.css - VERSIÓN CON NAVEGACIÓN ROSADA */
 
 /* ==================== */
 /* VARIABLES CSS */
@@ -84,6 +84,9 @@ header {
     transform: scale(1.05);
 }
 
+/* ==================== */
+/* NAVEGACIÓN - ROSADA */
+/* ==================== */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -101,24 +104,30 @@ nav a {
     border-radius: var(--border-radius-sm);
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid transparent;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     position: relative;
+    box-shadow: 0 4px 10px rgba(212, 0, 115, 0.3);
 }
 
 nav a:hover {
-    color: var(--color-primary);
-    transform: translateY(-2px);
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 0, 115, 0.5);
 }
 
 nav a.active {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    border-color: var(--color-primary);
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-text-accent);
+    box-shadow: 0 6px 20px rgba(212, 0, 115, 0.6);
+    color: var(--color-text-accent);
 }
 
 nav a.active:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
+    border-color: var(--color-text-accent);
+    transform: translateY(-4px);
 }
 
 /* ==================== */
@@ -136,7 +145,6 @@ main {
 /* HERO SECTION - TÍTULO ARRIBA DEL TEXTO */
 /* ==================== */
 
-/* CUADRO DEL TÍTULO - SEPARADO Y ARRIBA */
 .hero-title-container {
     width: 100%;
     margin-bottom: var(--space-lg);
@@ -438,21 +446,24 @@ footer p strong {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: transparent;
+    background-color: var(--color-primary);
     border-radius: 50%;
     transition: all 0.3s ease;
     border: 2px solid var(--color-primary);
+    box-shadow: 0 4px 10px rgba(212, 0, 115, 0.3);
 }
 
 .socialmedia a:hover {
-    background-color: transparent;
+    background-color: var(--color-primary-light);
     transform: scale(1.2);
     border: 2px solid var(--color-text-accent);
+    box-shadow: 0 6px 20px rgba(212, 0, 115, 0.5);
 }
 
 .socialmedia img {
     width: 30px;
     height: 30px;
+    filter: brightness(0) invert(1);
 }
 
 /* ==================== */
@@ -479,6 +490,11 @@ footer p strong {
     main section:last-of-type h2 {
         font-size: 2.2rem;
     }
+
+    nav a {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.95rem;
+    }
 }
 
 /* TABLETS PEQUEÑAS - 768px */
@@ -502,6 +518,8 @@ footer p strong {
     nav a {
         padding: var(--space-sm) var(--space-md);
         font-size: 0.9rem;
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-primary);
     }
 
     .hero {
@@ -601,6 +619,8 @@ footer p strong {
     nav a {
         padding: var(--space-xs) var(--space-sm);
         font-size: 0.75rem;
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-primary);
     }
 
     .hero-article {
@@ -659,5 +679,10 @@ footer p strong {
     main section:first-of-type h2,
     main section:last-of-type h2 {
         font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: var(--space-xs) var(--space-xs);
+        font-size: 0.7rem;
     }
 }
