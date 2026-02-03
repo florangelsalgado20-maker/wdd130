@@ -1,7 +1,7 @@
-/* rafting.css - VERSIÓN OPTIMIZADA Y ESTANDARIZADA */
+/* rafting.css - VERSIÓN CORREGIDA Y OPTIMIZADA */
 
 /* ==================== */
-/* VARIABLES CSS EN :ROOT - TODOS LOS COLORES ESTÁNDAR */
+/* VARIABLES CSS EN :ROOT */
 /* ==================== */
 :root {
     --color-text: rgb(255, 255, 255);
@@ -11,7 +11,6 @@
     --color-instagram: rgb(193, 53, 132);
     --color-linkedin: rgb(0, 119, 181);
     --color-white: rgb(255, 255, 255);
-    --color-black: rgb(0, 0, 0);
     --nav-font: 'Calibri', 'Candara', 'Segoe UI', sans-serif;
 }
 
@@ -77,13 +76,8 @@ nav a {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    background-color: rgba(var(--color-accent-rgb), 0.9);
-    border: 2px solid var(--color-accent);
-}
-
-/* Necesitamos calcular los valores RGB para rgba */
-nav a {
     background-color: rgba(212, 0, 115, 0.9);
+    border: 2px solid var(--color-accent);
 }
 
 nav a:hover,
@@ -336,7 +330,7 @@ footer p {
 }
 
 /* ==================== */
-/* SOCIAL MEDIA - COLORES ORIGINALES */
+/* SOCIAL MEDIA */
 /* ==================== */
 .socialmedia {
     display: flex;
