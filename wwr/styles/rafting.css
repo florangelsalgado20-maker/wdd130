@@ -1,4 +1,4 @@
-/* rafting.css - VERSIÓN OPTIMIZADA */
+/* rafting.css - VERSIÓN OPTIMIZADA Y CORREGIDA */
 
 /* ==================== */
 /* VARIABLES CSS EN :ROOT */
@@ -184,7 +184,7 @@ main section:first-of-type {
     border: 2px solid var(--color-accent);
     font-family: var(--nav-font);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    overflow: hidden; /* Importante para clearfix */
+    overflow: hidden;
 }
 
 main section:first-of-type h2 {
@@ -217,7 +217,7 @@ main section:first-of-type p {
     color: var(--color-text);
     font-family: var(--nav-font);
     margin-bottom: 20px;
-    text-align: justify;
+    text-align: justify; /* SOLO UNA VEZ - CORREGIDO */
 }
 
 main section:first-of-type p:last-child {
@@ -478,8 +478,7 @@ footer p {
         height: auto;
     }
     
-    main section:first-of-type p,
-    main section:last-of-type p {
+    main section:first-of-type p {
         text-align: justify;
     }
     
@@ -506,7 +505,7 @@ footer p {
     }
     
     .hero article p,
-    main section p {
+    main section:first-of-type p {
         font-size: 1.1rem;
     }
     
