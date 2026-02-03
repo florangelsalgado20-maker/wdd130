@@ -1,4 +1,4 @@
-/* rafting.css */
+/* rafting.css - VERSIÓN OPTIMIZADA */
 
 /* ==================== */
 /* VARIABLES CSS EN :ROOT */
@@ -184,6 +184,7 @@ main section:first-of-type {
     border: 2px solid var(--color-accent);
     font-family: var(--nav-font);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* Importante para clearfix */
 }
 
 main section:first-of-type h2 {
@@ -214,7 +215,6 @@ main section:first-of-type p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--color-text);
-    text-align: left;
     font-family: var(--nav-font);
     margin-bottom: 20px;
     text-align: justify;
@@ -222,13 +222,6 @@ main section:first-of-type p {
 
 main section:first-of-type p:last-child {
     margin-bottom: 0;
-}
-
-/* Clearfix para contener float */
-main section:first-of-type:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* ==================== */
@@ -464,8 +457,16 @@ footer p {
         display: block;
     }
     
+    .adventure-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+    }
+    
     .adventure-gallery figure {
         min-width: 160px;
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
     }
     
     .history-img {
@@ -475,6 +476,11 @@ footer p {
         width: 100%;
         max-width: 300px;
         height: auto;
+    }
+    
+    main section:first-of-type p,
+    main section:last-of-type p {
+        text-align: justify;
     }
     
     footer {
@@ -494,7 +500,8 @@ footer p {
         padding: 15px;
     }
     
-    h2 {
+    main section:first-of-type h2,
+    main section:last-of-type h2 {
         font-size: 1.6rem;
     }
     
@@ -505,10 +512,22 @@ footer p {
     
     .adventure-gallery figure {
         min-width: 140px;
+        width: calc(50% - 15px);
     }
     
     nav a {
         padding: 8px 15px;
         font-size: 0.9rem;
+    }
+    
+    .hero article {
+        padding: 20px;
+    }
+    
+    .history-img,
+    .hero article img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 15px auto;
     }
 }
