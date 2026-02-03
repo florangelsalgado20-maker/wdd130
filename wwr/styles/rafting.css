@@ -1,4 +1,4 @@
-/* rafting.css - VERSIÓN OPTIMIZADA Y CORREGIDA */
+/* rafting.css - VERSIÓN OPTIMIZADA */
 
 /* ==================== */
 /* VARIABLES CSS EN :ROOT */
@@ -50,7 +50,6 @@ header {
     align-items: center;
     border-bottom: 3px solid var(--color-accent);
     margin-bottom: 30px;
-    flex-shrink: 0;
 }
 
 .logo {
@@ -94,7 +93,7 @@ main {
 }
 
 /* ==================== */
-/* HERO SECTION - REQUERIDO POR EL CURSO */
+/* HERO SECTION */
 /* ==================== */
 .hero {
     position: relative;
@@ -149,7 +148,6 @@ main {
     border: 2px solid var(--color-accent);
     font-family: var(--nav-font);
     min-height: 200px;
-    backdrop-filter: blur(3px);
 }
 
 .hero article img {
@@ -161,7 +159,6 @@ main {
     margin-bottom: 15px;
     border: 3px solid var(--color-accent);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero article p {
@@ -183,7 +180,6 @@ main section:first-of-type {
     border-radius: 12px;
     border: 2px solid var(--color-accent);
     font-family: var(--nav-font);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
@@ -197,7 +193,6 @@ main section:first-of-type h2 {
     text-align: center;
     border-bottom: 3px solid var(--color-accent);
     padding-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .history-img {
@@ -208,7 +203,6 @@ main section:first-of-type h2 {
     border-radius: 10px;
     margin: 0 0 25px 25px;
     float: right;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 main section:first-of-type p {
@@ -217,7 +211,7 @@ main section:first-of-type p {
     color: var(--color-text);
     font-family: var(--nav-font);
     margin-bottom: 20px;
-    text-align: justify; /* SOLO UNA VEZ - CORREGIDO */
+    text-align: justify;
 }
 
 main section:first-of-type p:last-child {
@@ -234,7 +228,6 @@ main section:last-of-type {
     color: var(--color-text);
     border-radius: 12px;
     border: 2px solid var(--color-accent);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 main section:last-of-type h2 {
@@ -249,7 +242,6 @@ main section:last-of-type h2 {
     background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid var(--color-accent);
     border-radius: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* GALERÍA EN HORIZONTAL */
@@ -262,7 +254,6 @@ main section:last-of-type h2 {
     overflow-x: auto;
     padding-bottom: 15px;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 .adventure-gallery figure {
@@ -280,7 +271,6 @@ main section:last-of-type h2 {
 .adventure-gallery figure:hover {
     transform: translateY(-10px);
     border-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(212, 0, 115, 0.3);
 }
 
 .adventure-gallery img {
@@ -290,7 +280,6 @@ main section:last-of-type h2 {
     border: 2px solid var(--color-accent);
     border-radius: 6px;
     filter: brightness(0.9) contrast(1.1);
-    transition: transform 0.3s ease;
 }
 
 .adventure-gallery figure:hover img {
@@ -307,7 +296,6 @@ main section:last-of-type h2 {
     background-color: rgba(212, 0, 115, 0.9);
     border-radius: 5px;
     border: 1px solid var(--color-accent);
-    transition: all 0.3s ease;
 }
 
 .adventure-gallery figure:hover figcaption {
@@ -327,7 +315,6 @@ footer {
     align-items: center;
     border-top: 3px solid var(--color-accent);
     margin-top: 40px;
-    flex-shrink: 0;
 }
 
 footer p {
@@ -356,15 +343,13 @@ footer p {
     background-color: rgba(212, 0, 115, 0.9);
     border-radius: 50%;
     transition: all 0.3s ease;
-    overflow: hidden;
     border: 1px solid var(--color-accent);
 }
 
 .socialmedia a:hover {
     background-color: rgba(212, 0, 115, 1);
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
     border: 1px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(212, 0, 115, 0.4);
 }
 
 .socialmedia img {
@@ -374,7 +359,7 @@ footer p {
 }
 
 /* ==================== */
-/* SCROLLBAR STYLING */
+/* SCROLLBAR */
 /* ==================== */
 .adventure-gallery::-webkit-scrollbar {
     height: 8px;
@@ -390,12 +375,8 @@ footer p {
     border-radius: 4px;
 }
 
-.adventure-gallery::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 0, 115, 0.8);
-}
-
 /* ==================== */
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 /* ==================== */
 @media (max-width: 1024px) {
     .container {
@@ -476,10 +457,6 @@ footer p {
         width: 100%;
         max-width: 300px;
         height: auto;
-    }
-    
-    main section:first-of-type p {
-        text-align: justify;
     }
     
     footer {
