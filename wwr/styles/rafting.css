@@ -87,7 +87,7 @@ main {
     min-height: 500px;
 }
 
-/* Hero Section */
+/* Hero Section - CORREGIDO */
 .hero {
     position: relative;
     margin: 30px 0;
@@ -128,30 +128,30 @@ main {
 
 .hero article {
     position: absolute;
-    bottom: 30px;
+    top: 50%; /* Centrado verticalmente */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); /* Centrado completo */
     background-color: rgba(0, 0, 0, 0.85);
     color: var(--white);
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
+    padding: 25px; /* Más padding */
+    width: 85%; /* Más ancho */
+    max-width: 850px; /* Más grande */
     border: 1px solid var(--border-color);
     z-index: 2;
 }
 
 .hero article img {
     float: right;
-    width: 200px;
-    height: 150px;
+    width: 220px; /* Más grande */
+    height: 165px; /* Más grande */
     border: 1px solid var(--gray);
     object-fit: cover;
-    margin-left: 20px;
+    margin-left: 25px; /* Más espacio */
     margin-bottom: 10px;
 }
 
 .hero article p {
-    font-size: 15px;
+    font-size: 16px; /* Más grande */
     font-weight: 600;
     line-height: 1.6;
     color: var(--white);
