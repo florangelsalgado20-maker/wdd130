@@ -4,112 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Flower Expeditions</title>
-    <link rel="stylesheet" href="rafting.css">
+    <meta name="description" content="Learn about Flower Expeditions, Caracas' premier eco-friendly rafting company since 2026. Discover our history, commitment to sustainable tourism, and exciting whitewater adventures in Venezuela.">
+    <meta name="author" content="Florangel Salgado">
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-
-<div class="container">
-    <!-- HEADER CON LOGO Y NAVEGACIÓN -->
     <header>
         <div class="logo-area">
-            <img src="images/logo.jpg" alt="Logo" class="logo-img">
-            <span class="logo-text">logo of the company</span>
+            <img src="images/logo.jpg" alt="Flower Expeditions Logo">
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="#">Trips</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO SECTION CON FONDO DE RAFTING -->
-    <section class="hero">
-        <div class="hero-content">
+    <main>
+        <div class="hero">
+            <img src="images/rafting2.jpg" alt="Whitewater rafting adventure">
             <h1>FLOWER EXPEDITIONS</h1>
-            <small>adventures</small>
+            <article>
+                <img src="images/rafting3.jpg" alt="Happy rafting group">
+                <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
+            </article>
         </div>
-    </section>
 
-    <!-- TEXTO SOBRE LA COMPAÑÍA -->
-    <section class="company-description">
-        <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
-    </section>
+        <section class="history-section">
+            <h2>History</h2>
+            <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains. What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
+        </section>
 
-    <!-- SECCIÓN HISTORY -->
-    <section class="history">
-        <h2>HISTORY</h2>
-        <div class="history-grid">
-            <div class="history-text">
-                <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.</p>
+        <section class="adventure-section">
+            <h2>Adventure Awaits You!</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/rafting1.jpg" alt="Caracas Rafting">
+                    <figcaption>Caracas Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.jpg" alt="Big Mallards">
+                    <figcaption>Big Mallards</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.jpg" alt="Morning Rafting">
+                    <figcaption>Morning Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting4.jpg" alt="Caracas Canyon">
+                    <figcaption>Caracas Canyon</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.jpg" alt="River in Caracas">
+                    <figcaption>River in Caracas</figcaption>
+                </figure>
             </div>
-            <div class="history-image">
-                <!-- Imagen se mostrará en CSS como fondo -->
-            </div>
-            <div class="history-text">
-                <p>What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- GALERÍA DE TRIPS -->
-    <section class="trips-gallery">
-        <div class="gallery-grid">
-            <!-- RAFTING 1 -->
-            <div class="gallery-item">
-                <div class="image-container">
-                    <img src="images/rafting1.jpg" alt="Caracas Rafting" class="gallery-img">
-                </div>
-                <p class="image-label">caracas rafting</p>
-            </div>
-
-            <!-- RAFTING 2 -->
-            <div class="gallery-item">
-                <div class="image-container">
-                    <img src="images/rafting2.jpg" alt="Big Mallards" class="gallery-img">
-                </div>
-                <p class="image-label">big mallards</p>
-                <button class="expedition-btn">MORNING EXPEDITIONS</button>
-            </div>
-
-            <!-- RAFTING 3 -->
-            <div class="gallery-item">
-                <div class="image-container">
-                    <img src="images/rafting3.jpg" alt="Morning Rafting" class="gallery-img">
-                </div>
-                <p class="image-label">morning rafting</p>
-            </div>
-
-            <!-- RAFTING 4 -->
-            <div class="gallery-item">
-                <div class="image-container">
-                    <img src="images/rafting4.jpg" alt="Caracas Canyon" class="gallery-img">
-                </div>
-                <p class="image-label">caracas canyon</p>
-                <button class="expedition-btn">CANYON RUN</button>
-            </div>
-
-            <!-- RAFTING 5 -->
-            <div class="gallery-item">
-                <div class="image-container">
-                    <img src="images/rafting5.jpg" alt="River in Caracas" class="gallery-img">
-                </div>
-                <p class="image-label">river in caracas</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
-            <div class="copyright">
-                © 2026 FLOWER EXPEDITIONS | WDD130 | Florangel Salgado
-            </div>
-        </div>
+        <p>© 2026 Flower Expeditions | Florangel Salgado</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+        </nav>
     </footer>
-</div>
-
 </body>
 </html>
