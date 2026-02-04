@@ -1,110 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact FLOWER EXPEDITIONS for white water rafting adventures in Caracas, Venezuela. Book your thrilling river experience today.">
+    <title>About Us | Flower Expeditions</title>
+    <meta name="description" content="Learn about Flower Expeditions, Caracas' premier eco-friendly rafting company since 2026. Discover our history, commitment to sustainable tourism, and exciting whitewater adventures in Venezuela.">
     <meta name="author" content="Florangel Salgado">
-    <title>Contact Us - FLOWER EXPEDITIONS</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="FLOWER EXPEDITIONS white water rafting logo">
+        <div class="logo-area">
+            <img src="images/logo.jpg" alt="Flower Expeditions Logo">
+        </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="active">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-        <h1>FLOWER EXPEDITIONS</h1>
+        <div class="hero">
+            <img src="images/rafting2.jpg" alt="Whitewater Rafting Adventure">
+            <h1>FLOWER EXPEDITIONS</h1>
+            <div class="hero-subtitle">adventures</div>
+            <article>
+                <img src="images/rafting3.jpg" alt="Family Rafting Experience">
+                <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
+            </article>
+        </div>
 
-        <section class="contact-info">
-            <h2>Get In Touch</h2>
-            <p class="address">123 Main River Street, Caracas, Venezuela</p>
-            <p class="phone">+1 999 999 9999</p>
-            <p class="email">info@flowerexpeditions.com</p>
-        </section>
-
-        <section class="contact-container">
-            <div class="map-section">
-                <img src="images/map.png" alt="Map showing FLOWER EXPEDITIONS location on the Caracas River">
-            </div>
-
-            <div class="form-section">
-                <form action="#" method="post">
-                    <fieldset>
-                        <legend>Contact Form</legend>
-
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <fieldset class="radio-fieldset">
-                            <legend>Message Purpose</legend>
-                            <label>
-                                <input type="radio" name="purpose" value="general" checked>
-                                General Inquiry
-                            </label>
-                            <label>
-                                <input type="radio" name="purpose" value="reservation">
-                                Reservation Question
-                            </label>
-                            <label>
-                                <input type="radio" name="purpose" value="suggestion">
-                                Website Suggestion
-                            </label>
-                        </fieldset>
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-
-                        <label>
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            Please subscribe me to the monthly newsletter
-                        </label>
-
-                        <button type="submit">Get in Touch!</button>
-                    </fieldset>
-                </form>
+        <section class="history">
+            <h2>HISTORY</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.</p>
+                </div>
+                <div class="history-image">
+                    <figure>
+                        <img src="images/rafting4.jpg" alt="Adventure in the City">
+                        <figcaption>Adventure in the city</figcaption>
+                    </figure>
+                </div>
+                <div class="history-text">
+                    <p>What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
+                </div>
             </div>
         </section>
 
-        <section class="employees-section">
-            <h2>We Are Here to Serve You</h2>
-            <div class="employees-grid">
-                <div class="employee-card">
-                    <img src="images/employee1.png" alt="Professional rafting guide with 10 years of experience on the Caracas River">
-                    <h3>Employee Profile</h3>
-                </div>
-                <div class="employee-card">
-                    <img src="images/employee2.png" alt="Certified safety instructor specializing in white water training and rescue">
-                    <h3>Employee Profile</h3>
-                </div>
-                <div class="employee-card">
-                    <img src="images/employee3.png" alt="Trip coordinator organizing rafting adventures and customer reservations">
-                    <h3>Employee Profile</h3>
-                </div>
+        <section class="adventure">
+            <h2>Adventure Awaits You!</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/rafting1.jpg" alt="Caracas Rafting">
+                    <figcaption>caracas rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.jpg" alt="Big Mallards">
+                    <figcaption>big mallards</figcaption>
+                    <div class="expedition-label">MORNING EXPEDITIONS</div>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.jpg" alt="Morning Rafting">
+                    <figcaption>morning rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting4.jpg" alt="Caracas Canyon">
+                    <figcaption>caracas canyon</figcaption>
+                    <div class="expedition-label">CANYON RUN</div>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.jpg" alt="River in Caracas">
+                    <figcaption>river in caracas</figcaption>
+                </figure>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 FLOWER EXPEDITIONS | Florangel Salgado</p>
+        <p>&copy; 2026 FLOWER EXPEDITIONS | WDD130 | Florangel Salgado</p>
         <nav class="socialmedia">
             <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.svg" alt="Visit FLOWER EXPEDITIONS on Facebook">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.svg" alt="Follow FLOWER EXPEDITIONS on Instagram">
+                <img src="images/facebook.svg" alt="Facebook">
             </a>
             <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin.svg" alt="Connect with FLOWER EXPEDITIONS on LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram">
             </a>
         </nav>
     </footer>
