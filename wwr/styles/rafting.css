@@ -1,76 +1,317 @@
 /* --- ESTILOS GLOBALES --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #ffffff; color: #333; }
-.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #ffffff; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
 
 /* --- HEADER --- */
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-.logo-area { text-align: center; }
-.logo-img { width: 90px; height: 90px; border-radius: 50%; border: 1px solid #000; object-fit: cover; margin-bottom: 5px; }
-.logo-text { display: block; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 0; 
+    border-bottom: 1px solid #ddd;
+}
 
-nav ul { display: flex; list-style: none; gap: 12px; }
-nav ul li a { text-decoration: none; color: #000; font-weight: bold; font-size: 18px; padding: 10px 20px; border: 1px solid #000; border-radius: 12px; transition: 0.3s; }
-nav ul li a.active { background-color: #000; color: #fff; }
-nav ul li a:hover:not(.active) { background-color: #f0f0f0; }
+.logo-area { 
+    text-align: center; 
+}
 
-/* --- SECCIÓN HERO --- */
-.hero { 
-    /* Aquí se usa la imagen de fondo rafting2.jpg */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/rafting2.jpg');
+.logo-img { 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    border: 1px solid #000; 
+    object-fit: cover; 
+    margin-bottom: 5px; 
+}
+
+.logo-text { 
+    display: block; 
+    font-size: 11px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 20px; 
+}
+
+nav ul li a { 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: 600; 
+    font-size: 16px; 
+    padding: 8px 16px; 
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active { 
+    background-color: #000; 
+    color: #fff; 
+    border-radius: 4px;
+}
+
+nav ul li a:hover:not(.active) { 
+    color: #0077cc; 
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background-image: url('images/rafting2.jpg');
     background-size: cover;
     background-position: center;
-    background-color: #8e8e8e; /* Color de respaldo */
-    padding: 60px 20px; 
-    text-align: center; 
-    margin-bottom: 30px; 
-    color: #fff; /* Texto en blanco para que resalte sobre la foto */
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hero h1 { font-size: 48px; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-.hero small { font-size: 16px; letter-spacing: 3px; display: block; margin-top: 5px; }
 
-.hero-box { 
-    background-color: rgba(255,255,255,0.95); 
-    border: 1px solid #333; 
-    display: flex; 
-    padding: 30px; 
-    gap: 30px; 
-    align-items: center; 
-    text-align: left; 
-    max-width: 900px; 
-    margin: 40px auto 0;
-    color: #000;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-.hero-box p { flex: 2; font-size: 15px; font-weight: 600; line-height: 1.6; }
-.hero-box-img { flex: 1; border: 1px solid #666; width: 100%; height: 180px; object-fit: cover; }
 
-/* --- SECCIÓN HISTORY --- */
-.history { border: 1px solid #bbb; padding: 40px; margin-bottom: 30px; background: #fff; }
-.history h2 { text-align: center; font-size: 36px; margin-bottom: 30px; text-transform: uppercase; }
-.history-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: start; }
-.history-text { font-size: 14px; font-weight: 600; text-align: justify; line-height: 1.6; }
-.history-img-center { text-align: center; }
-.history-img-center span { font-size: 13px; font-weight: bold; display: block; margin-bottom: 8px; }
-.history-main-img { border: 1px solid #000; width: 100%; height: 220px; object-fit: cover; }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
 
-/* --- SECCIÓN TRIPS (Galería inferior) --- */
-.trips-container { border: 1px solid #bbb; padding: 25px; margin-bottom: 30px; background: #fff; }
-.trips-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
-.trip-card { text-align: center; }
-.trip-photo { width: 100%; height: 110px; border: 1px solid #ddd; object-fit: cover; margin-bottom: 10px; }
-.trip-label { font-size: 11px; margin-bottom: 15px; height: 30px; font-weight: bold; text-transform: lowercase; }
-.trip-btn { border: 1px solid #000; background: #fff; border-radius: 20px; padding: 8px 5px; width: 100%; font-size: 11px; font-weight: bold; cursor: pointer; text-transform: uppercase; transition: 0.2s; }
-.trip-btn:hover { background: #000; color: #fff; }
+.hero h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero small {
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    text-transform: lowercase;
+    display: block;
+}
+
+/* --- COMPANY DESCRIPTION --- */
+.company-description {
+    padding: 40px 0;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.company-description p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    font-weight: 500;
+}
+
+/* --- HISTORY SECTION --- */
+.history {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    margin: 40px 0;
+}
+
+.history h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.history-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.history-text p {
+    margin-bottom: 15px;
+}
+
+.history-image {
+    background-image: url('images/rafting4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TRIPS GALLERY --- */
+.trips-gallery {
+    padding: 40px 0;
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.image-container {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.image-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.expedition-btn {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.expedition-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
 
 /* --- FOOTER --- */
-footer { border-top: 2px solid #000; padding: 25px 0; display: flex; justify-content: space-between; align-items: center; }
-.copy { font-size: 13px; font-weight: bold; }
-.socials { display: flex; gap: 12px; }
-.social-link { border: 1px solid #000; border-radius: 25px; padding: 10px 18px; font-size: 12px; text-decoration: none; color: #000; font-weight: bold; }
+footer {
+    border-top: 2px solid #000;
+    padding: 30px 0;
+    margin-top: 40px;
+}
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .history-grid, .trips-grid { grid-template-columns: 1fr; }
-    .hero-box { flex-direction: column; }
-    header { flex-direction: column; gap: 20px; }
+.footer-content {
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .history-image {
+        height: 200px;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .company-description p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero small {
+        font-size: 14px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
