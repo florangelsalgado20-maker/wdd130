@@ -1,95 +1,383 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Flower Expeditions</title>
-    <meta name="description" content="Learn about Flower Expeditions, Caracas' premier eco-friendly rafting company since 2026. Discover our history, commitment to sustainable tourism, and exciting whitewater adventures in Venezuela.">
-    <meta name="author" content="Florangel Salgado">
-    <link rel="stylesheet" href="styles/rafting.css">
-</head>
-<body>
-    <header>
-        <div class="logo-area">
-            <img src="images/logo.jpg" alt="Flower Expeditions Logo">
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+/* CSS Variables */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #666666;
+    --text-color: #333333;
+    --light-color: #f5f5f5;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #888888;
+    --font-family: 'Arial', 'Segoe UI', sans-serif;
+    --border-color: #000000;
+}
 
-    <main>
-        <div class="hero">
-            <img src="images/rafting2.jpg" alt="Whitewater Rafting Adventure">
-            <h1>FLOWER EXPEDITIONS</h1>
-            <div class="hero-subtitle">adventures</div>
-            <article>
-                <img src="images/rafting3.jpg" alt="Family Rafting Experience">
-                <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature. Discover local wonders with us!</p>
-            </article>
-        </div>
+/* Universal Selector Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <section class="history">
-            <h2>HISTORY</h2>
-            <div class="history-content">
-                <div class="history-text">
-                    <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.</p>
-                </div>
-                <div class="history-image">
-                    <img src="images/rafting4.jpg" alt="Adventure in the City">
-                    <p class="image-caption">Adventure in the city</p>
-                </div>
-                <div class="history-text">
-                    <p>What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
-                </div>
-            </div>
-        </section>
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <section class="adventure">
-            <h2>Adventure Awaits You!</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/rafting1.jpg" alt="Caracas Rafting">
-                    <figcaption>caracas rafting</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting2.jpg" alt="Big Mallards">
-                    <figcaption>big mallards</figcaption>
-                    <div class="expedition-label">MORNING EXPEDITIONS</div>
-                </figure>
-                <figure>
-                    <img src="images/rafting3.jpg" alt="Morning Rafting">
-                    <figcaption>morning rafting</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting4.jpg" alt="Caracas Canyon">
-                    <figcaption>caracas canyon</figcaption>
-                    <div class="expedition-label">CANYON RUN</div>
-                </figure>
-                <figure>
-                    <img src="images/rafting5.jpg" alt="River in Caracas">
-                    <figcaption>river in caracas</figcaption>
-                </figure>
-            </div>
-        </section>
-    </main>
+/* Header - Box Design */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--border-color);
+}
 
-    <footer>
-        <p>&copy; 2026 FLOWER EXPEDITIONS | WDD130 | Florangel Salgado</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.svg" alt="Facebook">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
-        </nav>
-    </footer>
-</body>
-</html>
+.logo-box {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px;
+    background-color: var(--white);
+}
+
+.logo-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Boxes */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--light-color);
+}
+
+nav a.active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Main Content */
+main {
+    min-height: 500px;
+}
+
+/* Hero Section with Box */
+.hero {
+    position: relative;
+    margin: 30px 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Company Box */
+.company-box {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 2;
+}
+
+.company-box img {
+    float: right;
+    width: 200px;
+    height: 150px;
+    border: 1px solid var(--gray);
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.company-box p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* History Section Box */
+.history-section {
+    margin: 30px 0;
+}
+
+.history-box {
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    background-color: var(--white);
+}
+
+.history-box h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.history-text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.history-image-box {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: var(--white);
+}
+
+.history-image-box img {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Adventures Section */
+.adventures-section {
+    margin: 30px 0;
+}
+
+.adventures-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    background-color: var(--white);
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border: 1px solid var(--gray);
+    margin-bottom: 10px;
+}
+
+.gallery-label {
+    font-size: 11px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: lowercase;
+    height: 30px;
+}
+
+.expedition-box {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.expedition-box:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Footer Box */
+footer {
+    margin-top: 40px;
+}
+
+.footer-box {
+    border-top: 2px solid var(--border-color);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-box p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Social Media Box */
+.social-box {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Social Media Colors */
+.facebook img {
+    filter: brightness(0) invert(0.3);
+}
+
+.linkedin img {
+    filter: brightness(0) invert(0.6);
+}
+
+.instagram img {
+    filter: brightness(0) invert(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .history-image-box {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+        top: 30px;
+    }
+    
+    .company-box {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .company-box img {
+        float: none;
+        margin: 0 auto 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .gallery-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-box {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .history-box h2,
+    .adventures-section h2 {
+        font-size: 28px;
+    }
+    
+    .gallery-box {
+        grid-template-columns: 1fr;
+    }
+}
