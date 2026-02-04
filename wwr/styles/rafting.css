@@ -3,14 +3,14 @@
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
-    --text-color: #333;
+    --text-color: #333333;
     --light-color: #f8f9fa;
     --dark-color: #2c3e50;
     --font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Reset */
-* {
+/* Universal Selector Reset */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--light-color);
+    background-color: #ffffff;
 }
 
 .container {
@@ -35,7 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     background-color: white;
     border-bottom: 2px solid var(--primary-color);
 }
@@ -61,11 +61,12 @@ nav a {
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     background-color: var(--light-color);
+    color: var(--secondary-color);
 }
 
 nav a.active {
@@ -73,18 +74,25 @@ nav a.active {
     color: white;
 }
 
+/* Main Content */
+main {
+    min-height: 500px;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     height: 500px;
-    margin: 20px 0;
+    margin: 20px auto;
     overflow: hidden;
+    max-width: 1200px;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
@@ -97,16 +105,18 @@ nav a.active {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
     width: 100%;
+    z-index: 2;
 }
 
 .hero article {
     position: absolute;
     bottom: 30px;
-    left: 30px;
     right: 30px;
+    left: 30px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
+    z-index: 2;
 }
 
 .hero article img {
@@ -121,21 +131,25 @@ nav a.active {
 .hero article p {
     font-size: 16px;
     line-height: 1.8;
+    color: var(--text-color);
 }
 
 /* History Section */
-.history-section {
-    padding: 50px 0;
+.history {
+    padding: 50px 20px;
     text-align: center;
+    background-color: var(--light-color);
+    margin: 40px 0;
 }
 
-.history-section h2 {
+.history h2 {
     font-size: 36px;
     margin-bottom: 30px;
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
-.history-section p {
+.history p {
     max-width: 800px;
     margin: 0 auto;
     font-size: 18px;
@@ -143,16 +157,16 @@ nav a.active {
 }
 
 /* Adventure Section */
-.adventure-section {
-    padding: 50px 0;
-    background-color: var(--light-color);
+.adventure {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.adventure-section h2 {
-    text-align: center;
+.adventure h2 {
     font-size: 36px;
     margin-bottom: 40px;
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 .gallery {
@@ -165,6 +179,10 @@ nav a.active {
 
 figure {
     text-align: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .gallery img {
@@ -172,7 +190,7 @@ figure {
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
@@ -183,22 +201,25 @@ figcaption {
     margin-top: 10px;
     font-weight: 600;
     color: var(--dark-color);
+    font-size: 16px;
 }
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 30px 0;
+    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 
 footer p {
     font-size: 16px;
 }
 
+/* Social Media Navigation */
 .socialmedia {
     display: flex;
     gap: 20px;
@@ -206,7 +227,12 @@ footer p {
 
 .socialmedia a {
     text-decoration: none;
-    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-3px);
 }
 
 .socialmedia img {
@@ -236,12 +262,16 @@ footer p {
     .hero article {
         position: static;
         margin: 20px;
+        overflow: auto;
     }
     
     .hero article img {
         float: none;
         display: block;
         margin: 0 auto 20px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
     
     .gallery {
@@ -253,6 +283,10 @@ footer p {
         gap: 20px;
         text-align: center;
     }
+    
+    .socialmedia {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -260,8 +294,16 @@ footer p {
         font-size: 28px;
     }
     
-    .history-section h2,
-    .adventure-section h2 {
+    .history h2,
+    .adventure h2 {
         font-size: 28px;
+    }
+    
+    .history p {
+        font-size: 16px;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
     }
 }
