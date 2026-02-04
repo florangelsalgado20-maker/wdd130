@@ -1,208 +1,429 @@
-/* Estilos Generales */
-body {
-    font-family: Arial, sans-serif;
+/* rafting.css */
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
     color: #333;
+    background-color: #f9f9f9;
 }
 
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
-/* Header y Navegación */
-.main-header {
+/* Header */
+header {
+    background-color: #0a3d62;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
 }
 
-.logo-container .logo-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    object-fit: cover;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-btn {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.nav-btn.active {
-    background-color: #f0f0f0;
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #888; /* Fondo gris como la imagen */
-    background-image: url('RAFTING2.jpg'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    padding: 60px 0;
-    text-align: center;
-    color: black;
-}
-
-.main-title {
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.subtitle {
-    font-size: 1rem;
-    margin-bottom: 30px;
-}
-
-.intro-box {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid #555;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.intro-text {
-    flex: 2;
-    text-align: left;
-    font-size: 1.1rem;
-    line-height: 1.4;
-}
-
-.intro-image img {
-    width: 150px;
-    height: 150px;
-    border: 1px solid #333;
-    object-fit: cover;
-}
-
-/* History Section */
-.history-section {
-    padding: 50px 0;
-    border: 1px solid #ccc;
-    margin: 40px 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.history-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 40px;
-}
-
-.history-col {
-    flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.history-mid {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.history-img-box {
-    border: 1px solid #aaa;
-    padding: 10px;
-    text-align: center;
-}
-
-.img-caption {
-    font-size: 0.8rem;
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
-.history-img-box img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
-/* Gallery Section */
-.trips-gallery {
-    border: 1px solid #ccc;
-    margin: 40px 20px;
-    padding: 30px;
-}
-
-.gallery-container {
+nav ul {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    list-style: none;
 }
 
-.trip-card {
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 10px;
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav a:hover {
+    color: #4cd137;
+}
+
+nav a.active {
+    color: #4cd137;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4cd137;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.7)), 
+                url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
     text-align: center;
 }
 
-.card-img img {
+.hero-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #0a3d62;
+    margin-bottom: 15px;
+}
+
+.underline {
+    width: 100px;
+    height: 4px;
+    background-color: #4cd137;
+    margin: 0 auto;
+}
+
+/* History Section */
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.history-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.history-image img {
     width: 100%;
-    height: 120px;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.history-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Values Section */
+.values {
+    background-color: #f0f7ff;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    background-color: #e8f6e8;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #4cd137;
+    font-size: 1.8rem;
+}
+
+.value-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0a3d62;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid #0a3d62;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
-.card-subtext {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
+.team-member h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #0a3d62;
+    margin-bottom: 5px;
 }
 
-.trip-btn {
-    width: 100%;
-    background: white;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 5px 0;
-    font-size: 0.8rem;
-    cursor: pointer;
-    font-weight: bold;
+.member-role {
+    color: #4cd137;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(to right, #0a3d62, #1e5799);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4cd137;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid #4cd137;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #4cd137;
 }
 
 /* Footer */
-.main-footer {
-    border-top: 2px solid black;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
+footer {
+    background-color: #0a3d62;
+    color: white;
+    padding: 50px 0 20px;
 }
 
-.social-links {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+    max-width: 300px;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: #4cd137;
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
 }
 
-.social-links img {
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #4cd137;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .history-content {
+        flex-direction: column;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
+    nav li {
+        margin: 0 10px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content, .footer-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 70px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
 }
