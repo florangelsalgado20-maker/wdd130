@@ -10,9 +10,6 @@
     --gray: #888888;
     --font-family: 'Arial', 'Segoe UI', sans-serif;
     --border-color: #000000;
-    --facebook-blue: #1877F2;
-    --linkedin-blue: #0077B5;
-    --instagram-pink: #E4405F;
 }
 
 /* Universal Selector Reset */
@@ -204,7 +201,7 @@ main {
     border-radius: 4px;
 }
 
-/* Adventures Section - Horizontal */
+/* Adventures Section - Horizontal y MAYÚSCULAS */
 .adventures-section {
     margin: 30px 0;
 }
@@ -246,34 +243,15 @@ main {
 }
 
 .adventure-label {
-    font-size: 11px;
-    margin-bottom: 10px;
+    font-size: 12px;
     font-weight: bold;
-    text-transform: lowercase;
+    text-transform: uppercase;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--black);
-}
-
-.expedition-btn {
-    font-size: 11px;
-    font-weight: bold;
-    padding: 8px 5px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    text-transform: uppercase;
-    background-color: var(--white);
-    color: var(--black);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 5px;
-}
-
-.expedition-btn:hover {
-    background-color: var(--black);
-    color: var(--white);
+    letter-spacing: 1px;
 }
 
 /* Footer */
@@ -295,7 +273,7 @@ footer {
     color: var(--black);
 }
 
-/* Social Media con colores VISIBLES */
+/* Social Media - Colores REALES de los iconos */
 .social-nav {
     display: flex;
     gap: 15px;
@@ -304,46 +282,28 @@ footer {
 .social-btn {
     text-decoration: none;
     border-radius: 50%;
-    padding: 12px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
 }
 
 .social-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-color);
 }
 
 .social-btn img {
     width: 24px;
     height: 24px;
     display: block;
-    filter: brightness(0) invert(1); /* Hace los íconos blancos */
-}
-
-/* Colores para redes sociales */
-.facebook-btn {
-    background-color: var(--facebook-blue);
-    border: 2px solid var(--facebook-blue);
-}
-
-.linkedin-btn {
-    background-color: var(--linkedin-blue);
-    border: 2px solid var(--linkedin-blue);
-}
-
-.instagram-btn {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    border: 2px solid #d6249f;
-}
-
-/* Para mantener los colores de Instagram en hover */
-.instagram-btn:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    /* SIN FILTER - para mostrar los colores reales */
 }
 
 /* Responsive Design */
@@ -426,9 +386,9 @@ footer {
     }
     
     .social-btn {
-        width: 45px;
-        height: 45px;
-        padding: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
     }
     
     .social-btn img {
