@@ -3,31 +3,26 @@
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
-    --text-color: #333333;
+    --text-color: #333;
     --light-color: #f8f9fa;
     --dark-color: #2c3e50;
     --font-family: 'Segoe UI', Arial, sans-serif;
+    --white: #ffffff;
+    --hero-bg: rgba(0, 0, 0, 0.5);
 }
 
-/* Universal Selector Reset */
+/* Reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base Styles */
 body {
     font-family: var(--font-family);
-    color: var(--text-color);
     line-height: 1.6;
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    color: var(--text-color);
+    background-color: var(--white);
 }
 
 /* Header */
@@ -35,207 +30,203 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: white;
+    padding: 1rem;
+    background-color: var(--white);
     border-bottom: 2px solid var(--primary-color);
 }
 
-.logo-area img {
+header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/* Navigation */
-nav ul {
+header nav {
     display: flex;
-    list-style: none;
-    gap: 30px;
+    gap: 1.5rem;
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     color: var(--primary-color);
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
     background-color: var(--light-color);
-    color: var(--secondary-color);
 }
 
-nav a.active {
+header nav a.active {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
 }
 
-/* Main Content */
+/* Main */
 main {
-    min-height: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 500px;
-    margin: 20px auto;
+    margin-bottom: 2rem;
     overflow: hidden;
-    max-width: 1200px;
 }
 
 .hero img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     display: block;
 }
 
 .hero h1 {
     position: absolute;
-    top: 50px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 3rem;
     text-align: center;
     width: 100%;
-    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: var(--hero-bg);
+    padding: 1rem;
 }
 
 .hero article {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    left: 30px;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 2;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 .hero article img {
     float: right;
     width: 200px;
     height: 150px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
 }
 
 .hero article p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* History Section */
 .history {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 2rem;
     background-color: var(--light-color);
-    margin: 40px 0;
+    margin-bottom: 2rem;
+    border-radius: 8px;
 }
 
 .history h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
     color: var(--primary-color);
-    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .history p {
+    font-size: 1.1rem;
+    line-height: 1.7;
     max-width: 800px;
     margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
 }
 
 /* Adventure Section */
 .adventure {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 .adventure h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
     color: var(--primary-color);
-    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 1rem;
+    justify-content: center;
 }
 
 figure {
     text-align: center;
-    background-color: white;
-    padding: 15px;
+    background-color: var(--light-color);
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+figure:hover {
+    transform: translateY(-5px);
 }
 
 .gallery img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
 }
 
 figcaption {
-    margin-top: 10px;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--dark-color);
-    font-size: 16px;
 }
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: white;
-    padding: 30px 20px;
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    gap: 1.5rem;
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
-/* Social Media Navigation */
-.socialmedia {
+.sociallinks {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-.socialmedia a {
+.sociallinks a {
     text-decoration: none;
+    transition: transform 0.3s;
     display: inline-block;
-    transition: transform 0.3s ease;
 }
 
-.socialmedia a:hover {
-    transform: translateY(-3px);
+.sociallinks a:hover {
+    transform: scale(1.1);
 }
 
-.socialmedia img {
+.sociallinks img {
     width: 30px;
     height: 30px;
     filter: brightness(0) invert(1);
@@ -245,62 +236,46 @@ footer p {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 20px;
+        gap: 1rem;
     }
     
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero h1 {
-        font-size: 36px;
-        top: 30px;
+        font-size: 2rem;
+        padding: 0.5rem;
     }
     
     .hero article {
         position: static;
-        margin: 20px;
+        margin-top: 1rem;
         overflow: auto;
     }
     
     .hero article img {
         float: none;
         display: block;
-        margin: 0 auto 20px;
+        margin: 0 auto 1rem;
         width: 100%;
         max-width: 300px;
-        height: auto;
     }
     
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .socialmedia {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 28px;
+        font-size: 1.5rem;
     }
     
     .history h2,
     .adventure h2 {
-        font-size: 28px;
-    }
-    
-    .history p {
-        font-size: 16px;
+        font-size: 1.5rem;
     }
     
     .gallery {
