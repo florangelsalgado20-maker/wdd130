@@ -273,7 +273,7 @@ footer {
     color: var(--black);
 }
 
-/* Social Media - Colores REALES de los iconos */
+/* Social Media - SIN FILTROS, colores originales */
 .social-nav {
     display: flex;
     gap: 15px;
@@ -303,7 +303,7 @@ footer {
     width: 24px;
     height: 24px;
     display: block;
-    /* SIN FILTER - para mostrar los colores reales */
+    /* SIN FILTRO - para mostrar los colores originales del SVG */
 }
 
 /* Responsive Design */
