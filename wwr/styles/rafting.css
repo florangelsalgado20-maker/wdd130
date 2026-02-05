@@ -130,9 +130,10 @@ nav a:last-child {
     margin-bottom: 30px;
 }
 
+/* MÁS ALTO - IGUAL QUE EL FORMULARIO */
 .map-side {
     flex: 1;
-    height: 380px;
+    height: 480px; /* Aumentado de 380px a 480px */
     background-color: #f0f0f0;
     border: 1px solid #999;
     position: relative;
@@ -177,10 +178,13 @@ nav a:last-child {
     left: 6px;
 }
 
-/* Formulario */
+/* Formulario - AHORA MÁS ALTO */
 .form-side {
     flex: 1;
     padding: 15px 0 0 0;
+    height: 480px; /* Añadido para igualar altura */
+    display: flex;
+    flex-direction: column;
 }
 
 .form-title {
@@ -190,6 +194,13 @@ nav a:last-child {
     border-bottom: 2px solid #D1C4E9;
     padding-bottom: 8px;
     font-weight: 600;
+}
+
+/* Contenedor del formulario para ocupar toda la altura */
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .field {
@@ -273,7 +284,7 @@ nav a:last-child {
     margin-right: 8px;
 }
 
-/* Botón de envío */
+/* Botón de envío - POSICIONADO AL FINAL */
 .btn-submit {
     width: 100%;
     background-color: #6a5acd;
@@ -285,7 +296,7 @@ nav a:last-child {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 8px;
+    margin-top: auto; /* Empuja el botón hacia abajo */
 }
 
 .btn-submit:hover {
@@ -402,10 +413,20 @@ footer {
     .map-side,
     .form-side {
         width: 100%;
+        height: auto; /* En móvil, altura automática */
     }
     
     .map-side {
-        height: 300px;
+        height: 350px; /* Un poco más bajo en móvil */
+    }
+    
+    .form-side {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .btn-submit {
+        margin-top: 20px; /* Espacio normal en móvil */
     }
     
     /* GPS en móvil también más a la izquierda */
@@ -484,5 +505,9 @@ footer {
     .gps-pin {
         left: 10px;
         bottom: 40px;
+    }
+    
+    .map-side {
+        height: 320px;
     }
 }
