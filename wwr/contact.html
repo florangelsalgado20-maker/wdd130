@@ -1,182 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - RiverRush Adventures</title>
-    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Contact Us - White Water Rafting Company</title>
+    <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">🌊 RiverRush Adventures</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+
+    <header class="main-header">
+        <div class="logo-box">
+            <!-- Representación del icono del logo -->
+            <svg viewBox="0 0 100 100" width="60" height="60">
+                <circle cx="70" cy="30" r="8" fill="#888" />
+                <path d="M20 80 L50 30 L80 80 Z" fill="#888" />
+            </svg>
         </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">About Us</a>
+            <a href="#" class="nav-item">Trips</a>
+            <a href="#" class="nav-item">Contact Us</a>
+        </nav>
     </header>
 
-    <section class="hero-section">
-        <h1>Get In Touch With Us</h1>
-        <p>Have questions about our rafting adventures? We're here to help!</p>
-    </section>
-
     <main class="container">
-        <section class="contact-info-section">
-            <div class="info-card">
-                <div class="info-card-icon">📍</div>
-                <h3>Address</h3>
-                <p>1234 River Road</p>
-                <p>Mountain Valley, CO 80000</p>
-                <p>USA</p>
+        <section class="company-header">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street</p>
+            <p>Kolob, California</p>
+            <p>+1 999 999 9999</p>
+            <p>info@whitewater.com</p>
+        </section>
+
+        <!-- Sección de Mapa y Formulario dividida 50/50 -->
+        <section class="contact-container">
+            <div class="map-half">
+                <div class="map-lines"></div>
+                <div class="map-pin">📍</div>
             </div>
 
-            <div class="info-card">
-                <div class="info-card-icon">📞</div>
-                <h3>Phone</h3>
-                <p><a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
-                <p>Monday - Friday: 8am - 6pm</p>
-                <p>Saturday - Sunday: 9am - 5pm</p>
-            </div>
+            <div class="form-half">
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Placeholder">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Placeholder">
+                    </div>
+                    
+                    <div class="purpose-group">
+                        <p>Message Purpose</p>
+                        <label><input type="radio" name="purpose" checked> General Inquiry</label>
+                        <label><input type="radio" name="purpose"> Reservation Question</label>
+                        <label><input type="radio" name="purpose"> Website Suggestion</label>
+                    </div>
 
-            <div class="info-card">
-                <div class="info-card-icon">✉️</div>
-                <h3>Email</h3>
-                <p><a href="mailto:info@riverrush.com">info@riverrush.com</a></p>
-                <p><a href="mailto:reservations@riverrush.com">reservations@riverrush.com</a></p>
-                <p>Typically respond within 2 hours</p>
+                    <div class="message-group">
+                        <label>Message</label>
+                        <textarea placeholder="Type here"></textarea>
+                    </div>
+
+                    <div class="newsletter-group">
+                        <input type="checkbox" id="news">
+                        <label for="news">Please Subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <button type="button" class="submit-btn">Get in Touch!</button>
+                </form>
             </div>
         </section>
 
-        <section class="map-section">
-            <h2>Find Us On The Map</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.5621450255656!2d-105.27044!3d39.73915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80bb5d5555ab%3A0x1234567890abcdef!2s1234%20River%20Road%2C%20Mountain%20Valley%2C%20CO!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
-        <section class="employees-section">
-            <h2>Meet Our Team</h2>
-            <div class="employees-grid">
-                <div class="employee-card">
-                    <div class="employee-image">👨‍💼</div>
-                    <div class="employee-info">
-                        <h3>Marcus Johnson</h3>
-                        <p>Founder & Lead Guide</p>
-                        <p class="bio">With 15 years of whitewater rafting experience, Marcus founded RiverRush Adventures to share his passion for the mountains and rivers.</p>
-                    </div>
+        <section class="team-box">
+            <h2>We Are Here to Serve You</h2>
+            <div class="team-grid">
+                <div class="employee">
+                    <div class="profile-pic">👤</div>
+                    <p>Employee Profile</p>
                 </div>
-
-                <div class="employee-card">
-                    <div class="employee-image">👩‍💼</div>
-                    <div class="employee-info">
-                        <h3>Sarah Martinez</h3>
-                        <p>Operations Manager</p>
-                        <p class="bio">Sarah ensures every expedition runs smoothly. She manages scheduling, safety protocols, and customer satisfaction with precision and care.</p>
-                    </div>
+                <div class="employee">
+                    <div class="profile-pic">👤</div>
+                    <p>Employee Profile</p>
                 </div>
-
-                <div class="employee-card">
-                    <div class="employee-image">👨‍🔧</div>
-                    <div class="employee-info">
-                        <h3>David Chen</h3>
-                        <p>Safety Director & Senior Guide</p>
-                        <p class="bio">David is certified in advanced wilderness safety. He maintains all equipment and leads specialized courses for experienced rafters.</p>
-                    </div>
-                </div>
-
-                <div class="employee-card">
-                    <div class="employee-image">👩‍🎓</div>
-                    <div class="employee-info">
-                        <h3>Emma Thompson</h3>
-                        <p>Customer Services Lead</p>
-                        <p class="bio">Emma is your first point of contact. She's passionate about creating unforgettable experiences and answering all your questions.</p>
-                    </div>
+                <div class="employee">
+                    <div class="profile-pic">👤</div>
+                    <p>Employee Profile</p>
                 </div>
             </div>
-        </section>
-
-        <section class="contact-form-section">
-            <h2>Send Us A Message</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Message Purpose *</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="purpose" value="general-inquiry" required>
-                            General Inquiry
-                        </label>
-                        <label>
-                            <input type="radio" name="purpose" value="reservation-question">
-                            Reservation Question
-                        </label>
-                        <label>
-                            <input type="radio" name="purpose" value="website-suggestion">
-                            Website Suggestion
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter">Subscribe to our newsletter for exclusive deals and updates</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 RiverRush Adventures. All rights reserved.</p>
-        <p>Safety. Adventure. Memories.</p>
+    <footer class="main-footer">
+        <p>Footer Content including Social Media Icons/Links</p>
+        <div class="social-icons">
+            <div class="icon-box">X</div>
+            <div class="icon-box">X</div>
+            <div class="icon-box">X</div>
+        </div>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const purpose = document.querySelector('input[name="purpose"]:checked').value;
-            const message = document.getElementById('message').value;
-            const newsletter = document.getElementById('newsletter').checked;
-            
-            console.log('Form submitted:', {
-                name,
-                email,
-                purpose,
-                message,
-                newsletter
-            });
-            
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
