@@ -1,105 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - White Water Rafting Company</title>
-    <link rel="stylesheet" href="rafting.css">
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <nav>
+                <a href="#">Home</a><a href="#">About Us</a><a href="#">Trips</a><a href="#">Contact Us</a>
+            </nav>
+        </header>
 
-    <header class="main-header">
-        <div class="logo-box">
-            <!-- Representación del icono del logo -->
-            <svg viewBox="0 0 100 100" width="60" height="60">
-                <circle cx="70" cy="30" r="8" fill="#888" />
-                <path d="M20 80 L50 30 L80 80 Z" fill="#888" />
-            </svg>
-        </div>
-        <nav class="nav-menu">
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item">About Us</a>
-            <a href="#" class="nav-item">Trips</a>
-            <a href="#" class="nav-item">Contact Us</a>
-        </nav>
-    </header>
-
-    <main class="container">
-        <section class="company-header">
+        <div class="info">
             <h1>White Water Rafting Company</h1>
             <p>123 Main River Street</p>
             <p>Kolob, California</p>
             <p>+1 999 999 9999</p>
             <p>info@whitewater.com</p>
-        </section>
-
-        <!-- Sección de Mapa y Formulario dividida 50/50 -->
-        <section class="contact-container">
-            <div class="map-half">
-                <div class="map-lines"></div>
-                <div class="map-pin">📍</div>
-            </div>
-
-            <div class="form-half">
-                <form>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" placeholder="Placeholder">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="Placeholder">
-                    </div>
-                    
-                    <div class="purpose-group">
-                        <p>Message Purpose</p>
-                        <label><input type="radio" name="purpose" checked> General Inquiry</label>
-                        <label><input type="radio" name="purpose"> Reservation Question</label>
-                        <label><input type="radio" name="purpose"> Website Suggestion</label>
-                    </div>
-
-                    <div class="message-group">
-                        <label>Message</label>
-                        <textarea placeholder="Type here"></textarea>
-                    </div>
-
-                    <div class="newsletter-group">
-                        <input type="checkbox" id="news">
-                        <label for="news">Please Subscribe me to the monthly newsletter</label>
-                    </div>
-
-                    <button type="button" class="submit-btn">Get in Touch!</button>
-                </form>
-            </div>
-        </section>
-
-        <section class="team-box">
-            <h2>We Are Here to Serve You</h2>
-            <div class="team-grid">
-                <div class="employee">
-                    <div class="profile-pic">👤</div>
-                    <p>Employee Profile</p>
-                </div>
-                <div class="employee">
-                    <div class="profile-pic">👤</div>
-                    <p>Employee Profile</p>
-                </div>
-                <div class="employee">
-                    <div class="profile-pic">👤</div>
-                    <p>Employee Profile</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <p>Footer Content including Social Media Icons/Links</p>
-        <div class="social-icons">
-            <div class="icon-box">X</div>
-            <div class="icon-box">X</div>
-            <div class="icon-box">X</div>
         </div>
-    </footer>
 
+        <!-- GPS A LA IZQUIERDA Y FORMULARIO A LA DERECHA -->
+        <div class="content-wrapper">
+            <div class="map-side">
+                <div class="gps-pin"></div>
+            </div>
+
+            <div class="form-side">
+                <div class="field"><label>Name</label><input type="text" placeholder="Placeholder"></div>
+                <div class="field"><label>Email</label><input type="text" placeholder="Placeholder"></div>
+                
+                <div class="radio-group">
+                    <p style="margin:0 0 5px -70px; font-weight:bold;">Message Purpose</p>
+                    <label style="display:block"><input type="radio" name="p" checked> General Inquiry</label>
+                    <label style="display:block"><input type="radio" name="p"> Reservation Question</label>
+                    <label style="display:block"><input type="radio" name="p"> Website Suggestion</label>
+                </div>
+
+                <label>Message</label>
+                <textarea placeholder="Type here"></textarea>
+                
+                <div style="margin-top:5px; font-size:11px;">
+                    <input type="checkbox" checked> Please Subscribe me to the monthly newsletter
+                </div>
+                <button class="btn-submit">Get in Touch!</button>
+            </div>
+        </div>
+
+        <div class="team-box">
+            <h3>We Are Here to Serve You</h3>
+            <div class="team-grid">
+                <div class="member"><div class="profile-img"></div><p>Employee Profile</p></div>
+                <div class="member"><div class="profile-img"></div><p>Employee Profile</p></div>
+                <div class="member"><div class="profile-img"></div><p>Employee Profile</p></div>
+            </div>
+        </div>
+
+        <footer>
+            <div style="font-size: 11px;">Footer Content including Social Media Icons/Links</div>
+            <div class="socials">
+                <div class="x-box">X</div><div class="x-box">X</div><div class="x-box">X</div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
