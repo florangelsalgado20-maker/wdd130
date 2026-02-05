@@ -320,7 +320,7 @@ nav a:last-child {
     background-color: #5a4bc4;
 }
 
-/* Sección del equipo - CENTRADA Y CON MÁS ESPACIO ARRIBA */
+/* Sección del equipo - MUCHO MÁS ABAJO (aproximadamente 3cm) */
 .team-box {
     border: 1px solid #ddd;
     padding: 25px;
@@ -329,7 +329,7 @@ nav a:last-child {
     background-color: #f9f9f9;
     width: 100%;
     max-width: 900px;
-    margin: 40px 0 20px 0; /* Aumentado el margen superior a 40px */
+    margin: 100px 0 40px 0; /* Aumentado a ~3cm (100px) arriba y 40px abajo */
 }
 
 .team-box h3 {
@@ -454,9 +454,9 @@ footer {
         margin-top: 20px;
     }
     
-    /* Sección del equipo en móvil con más espacio */
+    /* Sección del equipo en móvil con espacio proporcional */
     .team-box {
-        margin: 30px 0 20px 0;
+        margin: 60px 0 30px 0; /* Reducido proporcionalmente para móvil */
         padding: 20px;
     }
     
@@ -550,7 +550,7 @@ footer {
     }
     
     .team-box {
-        margin: 25px 0 15px 0;
+        margin: 50px 0 25px 0; /* Aún más reducido para móvil pequeño */
         padding: 15px;
     }
 }
