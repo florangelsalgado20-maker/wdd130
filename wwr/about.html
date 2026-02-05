@@ -1,85 +1,125 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Flower Expeditions</title>
-    <meta name="description" content="Learn about Flower Expeditions, Caracas' premier eco-friendly rafting company since 2026.">
-    <meta name="author" content="Florangel Salgado">
+    <title>White Water Rafting Company - Contact Us</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
     <header>
-        <div class="logo-box">
-            <img src="images/logo.jpg" alt="Flower Expeditions">
+        <div class="header-container">
+            <div class="logo">🏔️</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
     </header>
 
-    <main>
-        <div class="hero">
-            <img src="images/rafting2.jpg" alt="Whitewater rafting adventure">
-            <h1>Flower Expeditions</h1>
-            <article>
-                <img src="images/rafting3.jpg" alt="Happy rafting group">
-                <p>Caracas' premier eco-friendly rafting adventure since 2026. We reconnect people with Venezuela's wild beauty through safe, sustainable whitewater experiences. Expert guides, environmental conservation, and unforgettable family adventures in the heart of nature.</p>
-            </article>
-        </div>
+    <main class="container">
+        <section class="company-info-section">
+            <div class="info-content">
+                <h1>White Water Rafting Company</h1>
+                <p class="address">123 Main River Street</p>
+                <p class="address">Kolob, California</p>
+                <p class="phone">+1 999 999 9999</p>
+                <p class="email">info@whitewater.com</p>
+            </div>
 
-        <section>
-            <h2>History</h2>
-            <div class="history-content">
-                <p>Flower Expeditions was founded in 2026, during a time when people were rediscovering the beauty of their local surroundings. The pandemic shifted perspectives, and we saw an opportunity to create safe, exciting adventures right here in the Caracas mountains.</p>
-                <img src="images/rafting4.jpg" alt="Mountain adventure">
-                <p>What began as a small family operation has grown into Caracas' premier whitewater rafting company. We remain committed to our eco-friendly roots, practicing sustainable tourism and educating our guests about preserving Venezuela's beautiful natural waterways.</p>
+            <div class="map-contact-wrapper">
+                <div class="map-section">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5621450255656!2d-109.5!3d37.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80cae5e5e5e5e5ed%3A0x1234567890abcdef!2s123%20Main%20River%20Street!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Placeholder" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message Purpose</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="purpose" value="general-inquiry" required>
+                                    General Inquiry
+                                </label>
+                                <label>
+                                    <input type="radio" name="purpose" value="reservation-question">
+                                    Reservation Question
+                                </label>
+                                <label>
+                                    <input type="radio" name="purpose" value="website-suggestion">
+                                    Website Suggestion
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Type here" required></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Please Subscribe me to the monthly newsletter</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Get in Touch!</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>Adventure Awaits You!</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/rafting1.jpg" alt="Caracas rafting">
-                    <figcaption>Caracas Rafting</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting2.jpg" alt="Big mallards">
-                    <figcaption>Big Mallards</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting3.jpg" alt="Morning rafting">
-                    <figcaption>Morning Rafting</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting4.jpg" alt="Caracas canyon">
-                    <figcaption>Caracas Canyon</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting5.jpg" alt="River in Caracas">
-                    <figcaption>River in Caracas</figcaption>
-                </figure>
+        <section class="employees-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employees-grid">
+                <div class="employee-card">
+                    <div class="employee-image">👨‍💼</div>
+                    <h3>Employee Profile</h3>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-image">👩‍💼</div>
+                    <h3>Employee Profile</h3>
+                </div>
+
+                <div class="employee-card">
+                    <div class="employee-image">👨‍🔧</div>
+                    <h3>Employee Profile</h3>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Flower Expeditions | WDD130 | Florangel Salgado</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook">
-            </a>
-            <a href="https://linkedin.com">
-                <img src="images/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
-        </nav>
+        <p>Footer Content including Social Media Icons/Links</p>
+        <div class="social-icons">
+            <a href="#">✉️</a>
+            <a href="#">✉️</a>
+            <a href="#">✉️</a>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
