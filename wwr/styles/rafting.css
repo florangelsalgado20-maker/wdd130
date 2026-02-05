@@ -82,44 +82,39 @@ nav a:last-child {
     padding: 20px;
 }
 
-/* Información de la empresa - CENTRADA */
-.company-info {
+/* Información de la empresa - VERTICAL Y CENTRADA */
+.company-info-vertical {
     text-align: center;
-    padding: 15px 20px 10px;
+    padding: 20px 30px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 30px;
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .company-title {
-    margin: 0 0 12px 0;
+    margin: 0 0 20px 0;
     color: #2c3e50;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
-.contact-details {
+.vertical-contact-details {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-.contact-item {
-    text-align: center;
-}
-
-.address-line,
-.contact-line {
-    margin: 3px 0;
+.vertical-line {
+    margin: 0;
     color: #555;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.5;
     font-weight: 400;
 }
 
@@ -412,9 +407,13 @@ footer {
         height: 300px;
     }
     
-    .contact-details {
-        flex-direction: column;
-        gap: 10px;
+    .company-info-vertical {
+        max-width: 90%;
+        padding: 15px 20px;
+    }
+    
+    .vertical-contact-details {
+        gap: 6px;
     }
     
     .team-grid {
@@ -454,21 +453,15 @@ footer {
     .main-content {
         padding: 15px;
     }
-    
-    .company-info {
-        padding: 12px 15px 8px;
-        margin-bottom: 20px;
-    }
 }
 
 @media (max-width: 480px) {
     .company-title {
-        font-size: 18px;
+        font-size: 20px;
     }
     
-    .address-line,
-    .contact-line {
-        font-size: 12px;
+    .vertical-line {
+        font-size: 13px;
     }
     
     nav a {
