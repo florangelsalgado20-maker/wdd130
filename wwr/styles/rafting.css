@@ -1,89 +1,390 @@
-/* REPLICA TOTAL: GPS IZQUIERDA, FORMULARIO DERECHA */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 .container {
-    max-width: 950px;
+    max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
 }
 
-/* Header Lavanda */
+/* Header con logo y navegación */
 header {
     background-color: #D1C4E9;
-    padding: 30px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #999;
 }
 
-.logo { width: 120px; height: 100px; background: #E0E0E0; border: 1px solid black; }
+.logo {
+    width: 120px;
+    height: 100px;
+}
 
-nav { display: flex; }
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 0;
+}
+
 nav a {
-    background: white; border: 1px solid black;
-    padding: 10px 20px; text-decoration: none; color: black;
+    background-color: white;
+    border: 1px solid #999;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
     margin-left: -1px;
+    transition: all 0.3s ease;
 }
 
-/* Info Central */
-.info { text-align: center; padding: 20px; }
+nav a:hover {
+    background-color: #f0f0f0;
+    color: #6a5acd;
+}
 
-/* --- EL PROBLEMA ESTABA AQUÍ: GPS Y FORMULARIO ALINEADOS --- */
+nav a:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+nav a:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Información principal */
+.info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.info h1 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.info p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Contenido principal: Mapa y formulario */
 .content-wrapper {
-    display: flex; /* Obliga a estar uno al lado del otro */
-    padding: 20px;
-    gap: 20px;
-    align-items: flex-start;
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    min-height: 500px;
 }
 
 .map-side {
-    width: 50%; /* Ocupa exactamente la mitad izquierda */
-    height: 350px;
-    background-color: #E0E0E0;
-    border: 1px solid black;
+    flex: 1;
+    height: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
     position: relative;
-    background-image: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, #ddd 1px, transparent 1px),
+        linear-gradient(to bottom, #ddd 1px, transparent 1px);
     background-size: 30px 30px;
 }
 
-/* El Pin del GPS en el lado izquierdo inferior */
 .gps-pin {
     position: absolute;
     bottom: 60px;
     left: 40px;
-    width: 20px;
-    height: 20px;
-    background: black;
+    width: 24px;
+    height: 24px;
+    background: #ff3b30;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
+.gps-pin::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+}
+
+/* Formulario */
 .form-side {
-    width: 50%; /* Ocupa exactamente la mitad derecha */
-    font-size: 13px;
+    flex: 1;
+    padding: 20px 0;
 }
 
-.field { display: flex; margin-bottom: 10px; }
-.field label { width: 70px; }
-.field input { flex: 1; border: 1px solid black; padding: 4px; }
+.form-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 2px solid #D1C4E9;
+    padding-bottom: 10px;
+}
 
-.radio-group { margin: 10px 0; padding-left: 70px; }
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
 
-textarea { width: 100%; height: 80px; border: 1px solid black; }
+.field label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px;
+}
 
-.btn-submit { width: 100%; background: #E0E0E0; border: 1px solid black; padding: 10px; margin-top: 10px; font-weight: bold; }
+.field input,
+.field textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
 
-/* Seccion Equipo */
-.team-box { border: 1px solid black; margin: 20px; padding: 20px; text-align: center; }
-.team-grid { display: flex; justify-content: space-around; margin-top: 20px; }
-.profile-img { width: 90px; height: 90px; background: #E0E0E0; border: 1px solid black; margin-bottom: 5px; }
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #6a5acd;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Grupo de radio buttons */
+.radio-group {
+    margin: 20px 0;
+}
+
+.radio-group p {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 14px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-option span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin: 20px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #5a4bc4;
+}
+
+/* Sección del equipo */
+.team-box {
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.team-box h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    max-width: 150px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid #D1C4E9;
+    background-color: #e0e0e0;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member p {
+    color: #555;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+}
 
 /* Footer */
-footer { background: #D1C4E9; border-top: 1px solid black; padding: 15px 30px; display: flex; justify-content: space-between; }
-.socials { display: flex; gap: 5px; }
-.x-box { width: 30px; height: 30px; border: 1px solid black; background: white; display: flex; align-items: center; justify-content: center; }
+footer {
+    background-color: #D1C4E9;
+    border-top: 1px solid #999;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #999;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #6a5acd;
+    color: white;
+    border-color: #6a5acd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .map-side,
+    .form-side {
+        width: 100%;
+    }
+    
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
