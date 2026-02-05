@@ -3,123 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Water Rafting Company - Contact Us</title>
+    <title>About Us - White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">🏔️</div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="White Water Rafting Logo">
+            </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact Us</a>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <section class="company-info-section">
-            <div class="info-content">
+        <main>
+            <div class="info">
                 <h1>White Water Rafting Company</h1>
-                <p class="address">123 Main River Street</p>
-                <p class="address">Kolob, California</p>
-                <p class="phone">+1 999 999 9999</p>
-                <p class="email">info@whitewater.com</p>
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p>+1 999 999 9999</p>
+                <p>info@whitewater.com</p>
             </div>
 
-            <div class="map-contact-wrapper">
-                <div class="map-section">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5621450255656!2d-109.5!3d37.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80cae5e5e5e5e5ed%3A0x1234567890abcdef!2s123%20Main%20River%20Street!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="content-wrapper">
+                <div class="map-side">
+                    <div class="map-grid"></div>
+                    <div class="gps-pin"></div>
+                </div>
+
+                <div class="form-side">
+                    <h2 class="form-title">Contact Us</h2>
+                    
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your full name">
+                    </div>
+                    
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="radio-group">
+                        <p>Message Purpose</p>
+                        <label class="radio-option">
+                            <input type="radio" name="purpose" value="general" checked>
+                            <span>General Inquiry</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="purpose" value="reservation">
+                            <span>Reservation Question</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="purpose" value="suggestion">
+                            <span>Website Suggestion</span>
+                        </label>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Type your message here..." rows="5"></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" checked>
+                            <span>Please Subscribe me to the monthly newsletter</span>
+                        </label>
+                    </div>
+                    
+                    <button class="btn-submit">Get in Touch!</button>
+                </div>
+            </div>
+
+            <div class="team-box">
+                <h3>We Are Here to Serve You</h3>
+                <div class="team-grid">
+                    <div class="member">
+                        <div class="profile-img">
+                            <img src="images/employee1.jpg" alt="Employee Profile">
+                        </div>
+                        <p>Employee Profile</p>
+                    </div>
+                    <div class="member">
+                        <div class="profile-img">
+                            <img src="images/employee2.jpg" alt="Employee Profile">
+                        </div>
+                        <p>Employee Profile</p>
+                    </div>
+                    <div class="member">
+                        <div class="profile-img">
+                            <img src="images/employee3.jpg" alt="Employee Profile">
+                        </div>
+                        <p>Employee Profile</p>
                     </div>
                 </div>
-
-                <div class="contact-form-section">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Placeholder" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Placeholder" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Message Purpose</label>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="purpose" value="general-inquiry" required>
-                                    General Inquiry
-                                </label>
-                                <label>
-                                    <input type="radio" name="purpose" value="reservation-question">
-                                    Reservation Question
-                                </label>
-                                <label>
-                                    <input type="radio" name="purpose" value="website-suggestion">
-                                    Website Suggestion
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Type here" required></textarea>
-                        </div>
-
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <label for="newsletter">Please Subscribe me to the monthly newsletter</label>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Get in Touch!</button>
-                    </form>
-                </div>
             </div>
-        </section>
+        </main>
 
-        <section class="employees-section">
-            <h2>We Are Here to Serve You</h2>
-            <div class="employees-grid">
-                <div class="employee-card">
-                    <div class="employee-image">👨‍💼</div>
-                    <h3>Employee Profile</h3>
-                </div>
-
-                <div class="employee-card">
-                    <div class="employee-image">👩‍💼</div>
-                    <h3>Employee Profile</h3>
-                </div>
-
-                <div class="employee-card">
-                    <div class="employee-image">👨‍🔧</div>
-                    <h3>Employee Profile</h3>
-                </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2023 White Water Rafting Company. All rights reserved.</p>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Footer Content including Social Media Icons/Links</p>
-        <div class="social-icons">
-            <a href="#">✉️</a>
-            <a href="#">✉️</a>
-            <a href="#">✉️</a>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for contacting us! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
+            <div class="socials">
+                <a href="#" class="social-icon">f</a>
+                <a href="#" class="social-icon">t</a>
+                <a href="#" class="social-icon">in</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
