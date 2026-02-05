@@ -178,11 +178,11 @@ nav a:last-child {
     left: 6px;
 }
 
-/* Formulario - AHORA MÁS ALTO Y COMPLETO */
+/* Formulario - COMPLETO Y BIEN ESTRUCTURADO */
 .form-side {
     flex: 1;
-    padding: 0; /* Cambiado de 15px 0 0 0 a 0 */
-    height: 480px; /* Añadido para igualar altura */
+    padding: 0;
+    height: 480px;
     display: flex;
     flex-direction: column;
 }
@@ -201,13 +201,12 @@ nav a:last-child {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-top: 15px; /* Añadido para separar del título */
+    gap: 15px; /* Espacio uniforme entre elementos */
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
 }
 
 .field label {
@@ -225,6 +224,8 @@ nav a:last-child {
     font-size: 14px;
     font-family: inherit;
     transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .field input:focus,
@@ -236,16 +237,13 @@ nav a:last-child {
 
 .field textarea {
     resize: vertical;
-    min-height: 90px;
-    flex: 1; /* Hace que el textarea ocupe más espacio */
+    min-height: 100px;
+    flex: 1; /* Ocupa espacio disponible */
 }
 
-/* Grupo de radio buttons */
+/* Grupo de radio buttons - MEJOR VISIBLE */
 .radio-group {
-    margin: 18px 0;
-    padding: 10px 0; /* Añadido padding */
-    border-top: 1px solid #eee; /* Separador visual */
-    border-bottom: 1px solid #eee;
+    margin: 5px 0;
 }
 
 .radio-title {
@@ -255,16 +253,24 @@ nav a:last-child {
     font-size: 13px;
 }
 
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 5px;
+}
+
 .radio-option {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
     cursor: pointer;
-    padding: 6px 0;
+    padding: 4px 0;
 }
 
 .radio-option input[type="radio"] {
-    margin-right: 8px;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
 }
 
 .radio-option span {
@@ -272,11 +278,12 @@ nav a:last-child {
     color: #555;
 }
 
-/* Checkbox */
+/* Checkbox - MEJOR VISIBLE */
 .checkbox-group {
-    margin: 18px 0;
-    padding: 10px 0; /* Añadido padding */
-    border-top: 1px solid #eee; /* Separador visual */
+    margin: 10px 0;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .checkbox-group label {
@@ -285,13 +292,16 @@ nav a:last-child {
     cursor: pointer;
     font-size: 13px;
     color: #555;
+    padding: 5px 0;
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
 }
 
-/* Botón de envío - POSICIONADO AL FINAL */
+/* Botón de envío - BIEN POSICIONADO */
 .btn-submit {
     width: 100%;
     background-color: #6a5acd;
@@ -304,7 +314,6 @@ nav a:last-child {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: auto; /* Empuja el botón hacia abajo */
-    margin-bottom: 0;
 }
 
 .btn-submit:hover {
@@ -421,30 +430,28 @@ footer {
     .map-side,
     .form-side {
         width: 100%;
-        height: auto; /* En móvil, altura automática */
+        height: auto;
     }
     
     .map-side {
-        height: 350px; /* Un poco más bajo en móvil */
+        height: 350px;
     }
     
     .form-side {
         height: auto;
-        padding-bottom: 20px;
+        min-height: 500px;
     }
     
     .form-container {
-        padding-top: 10px;
+        gap: 12px;
+    }
+    
+    .field textarea {
+        min-height: 120px;
     }
     
     .btn-submit {
-        margin-top: 20px; /* Espacio normal en móvil */
-    }
-    
-    .radio-group,
-    .checkbox-group {
-        margin: 15px 0;
-        padding: 8px 0;
+        margin-top: 20px;
     }
     
     /* GPS en móvil también más a la izquierda */
@@ -529,13 +536,14 @@ footer {
         height: 320px;
     }
     
-    .field {
-        margin-bottom: 12px;
-    }
-    
     .field input,
     .field textarea {
         padding: 8px;
         font-size: 13px;
+    }
+    
+    .radio-option span,
+    .checkbox-group label {
+        font-size: 12px;
     }
 }
