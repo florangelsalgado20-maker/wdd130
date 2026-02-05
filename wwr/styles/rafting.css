@@ -320,7 +320,7 @@ nav a:last-child {
     background-color: #5a4bc4;
 }
 
-/* Sección del equipo - CENTRADA */
+/* Sección del equipo - CENTRADA Y CON MÁS ESPACIO ARRIBA */
 .team-box {
     border: 1px solid #ddd;
     padding: 25px;
@@ -329,7 +329,7 @@ nav a:last-child {
     background-color: #f9f9f9;
     width: 100%;
     max-width: 900px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0; /* Aumentado el margen superior a 40px */
 }
 
 .team-box h3 {
@@ -454,6 +454,12 @@ footer {
         margin-top: 20px;
     }
     
+    /* Sección del equipo en móvil con más espacio */
+    .team-box {
+        margin: 30px 0 20px 0;
+        padding: 20px;
+    }
+    
     /* GPS en móvil también más a la izquierda */
     .gps-pin {
         left: 15px;
@@ -499,10 +505,6 @@ footer {
         padding: 15px 20px;
     }
     
-    .team-box {
-        padding: 20px;
-    }
-    
     .main-content {
         padding: 15px;
     }
@@ -545,5 +547,10 @@ footer {
     .radio-option span,
     .checkbox-group label {
         font-size: 12px;
+    }
+    
+    .team-box {
+        margin: 25px 0 15px 0;
+        padding: 15px;
     }
 }
