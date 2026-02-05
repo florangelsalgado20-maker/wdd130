@@ -21,91 +21,93 @@
         </header>
 
         <main>
-            <div class="company-info">
-                <h1 class="company-title">White Water Rafting Company</h1>
-                <div class="contact-details">
-                    <div class="address-section">
-                        <p class="address-line">123 Main River Street</p>
-                        <p class="address-line">Kolob, California</p>
-                    </div>
-                    <div class="contact-section">
-                        <p class="contact-line">+1 999 999 9999</p>
-                        <p class="contact-line">info@whitewater.com</p>
+            <div class="main-content">
+                <div class="company-info">
+                    <h1 class="company-title">White Water Rafting Company</h1>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <p class="address-line">123 Main River Street</p>
+                            <p class="address-line">Kolob, California</p>
+                        </div>
+                        <div class="contact-item">
+                            <p class="contact-line">+1 999 999 9999</p>
+                            <p class="contact-line">info@whitewater.com</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="content-wrapper">
-                <div class="map-side">
-                    <div class="map-grid"></div>
-                    <div class="gps-pin"></div>
+                <div class="content-wrapper">
+                    <div class="map-side">
+                        <div class="map-grid"></div>
+                        <div class="gps-pin"></div>
+                    </div>
+
+                    <div class="form-side">
+                        <h2 class="form-title">Contact Us</h2>
+                        
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="radio-group">
+                            <p class="radio-title">Message Purpose</p>
+                            <label class="radio-option">
+                                <input type="radio" name="purpose" value="general" checked>
+                                <span>General Inquiry</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="purpose" value="reservation">
+                                <span>Reservation Question</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="purpose" value="suggestion">
+                                <span>Website Suggestion</span>
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Type your message here..." rows="5"></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Please Subscribe me to the monthly newsletter</span>
+                            </label>
+                        </div>
+                        
+                        <button class="btn-submit">Get in Touch!</button>
+                    </div>
                 </div>
 
-                <div class="form-side">
-                    <h2 class="form-title">Contact Us</h2>
-                    
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your full name">
-                    </div>
-                    
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="your.email@example.com">
-                    </div>
-                    
-                    <div class="radio-group">
-                        <p class="radio-title">Message Purpose</p>
-                        <label class="radio-option">
-                            <input type="radio" name="purpose" value="general" checked>
-                            <span>General Inquiry</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="purpose" value="reservation">
-                            <span>Reservation Question</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="purpose" value="suggestion">
-                            <span>Website Suggestion</span>
-                        </label>
-                    </div>
-
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Type your message here..." rows="5"></textarea>
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" checked>
-                            <span>Please Subscribe me to the monthly newsletter</span>
-                        </label>
-                    </div>
-                    
-                    <button class="btn-submit">Get in Touch!</button>
-                </div>
-            </div>
-
-            <div class="team-box">
-                <h3>We Are Here to Serve You</h3>
-                <div class="team-grid">
-                    <div class="member">
-                        <div class="profile-img">
-                            <img src="images/employee1.jpg" alt="Employee Profile">
+                <div class="team-box">
+                    <h3>We Are Here to Serve You</h3>
+                    <div class="team-grid">
+                        <div class="member">
+                            <div class="profile-img">
+                                <img src="images/employee1.jpg" alt="Employee Profile">
+                            </div>
+                            <p>Employee Profile</p>
                         </div>
-                        <p>Employee Profile</p>
-                    </div>
-                    <div class="member">
-                        <div class="profile-img">
-                            <img src="images/employee2.jpg" alt="Employee Profile">
+                        <div class="member">
+                            <div class="profile-img">
+                                <img src="images/employee2.jpg" alt="Employee Profile">
+                            </div>
+                            <p>Employee Profile</p>
                         </div>
-                        <p>Employee Profile</p>
-                    </div>
-                    <div class="member">
-                        <div class="profile-img">
-                            <img src="images/employee3.jpg" alt="Employee Profile">
+                        <div class="member">
+                            <div class="profile-img">
+                                <img src="images/employee3.jpg" alt="Employee Profile">
+                            </div>
+                            <p>Employee Profile</p>
                         </div>
-                        <p>Employee Profile</p>
                     </div>
                 </div>
             </div>
