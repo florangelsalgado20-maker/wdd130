@@ -1,231 +1,89 @@
-/* Estilos Generales */
+/* REPLICA TOTAL: GPS IZQUIERDA, FORMULARIO DERECHA */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.4;
+    padding: 20px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 950px;
     margin: 0 auto;
-    padding: 20px;
+    border: 1px solid black;
 }
 
-/* Cabecera Púrpura */
-.main-header {
+/* Header Lavanda */
+header {
     background-color: #D1C4E9;
-    border: 1px solid #000;
-    margin: 10px;
-    padding: 20px 50px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
-.logo-box {
-    width: 80px;
-    height: 80px;
-    background-color: #E0E0E0;
-    border: 1px solid #999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.logo { width: 120px; height: 100px; background: #E0E0E0; border: 1px solid black; }
 
-.nav-menu {
-    display: flex;
-}
-
-.nav-item {
-    background: #fff;
-    border: 1px solid #000;
-    padding: 8px 20px;
-    text-decoration: none;
-    color: #000;
+nav { display: flex; }
+nav a {
+    background: white; border: 1px solid black;
+    padding: 10px 20px; text-decoration: none; color: black;
     margin-left: -1px;
-    font-size: 14px;
 }
 
-/* Información Central */
-.company-header {
-    text-align: center;
-    margin: 20px 0 40px 0;
-}
+/* Info Central */
+.info { text-align: center; padding: 20px; }
 
-.company-header h1 {
-    font-size: 26px;
-    margin-bottom: 5px;
-    font-weight: normal;
-}
-
-.company-header p {
-    margin: 2px 0;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* Sección 50/50: Mapa y Formulario */
-.contact-container {
-    display: flex; /* Alineación horizontal */
-    width: 100%;
-    gap: 0; /* Sin espacio entre ellos como en la imagen */
-    margin-bottom: 40px;
-}
-
-.map-half {
-    width: 50%; /* Ocupa la mitad exacta */
-    height: 400px;
-    border: 1px solid #000;
-    background-color: #F5F5F5;
-    position: relative;
-    /* Dibujo de líneas de mapa */
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, #ddd 41px);
-}
-
-.map-pin {
-    position: absolute;
-    bottom: 30%;
-    left: 20%;
-    font-size: 30px;
-}
-
-.form-half {
-    width: 50%; /* Ocupa la otra mitad */
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Elementos del Formulario */
-.form-group {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.form-group label {
-    width: 80px;
-    font-size: 14px;
-}
-
-.form-group input {
-    flex: 1;
-    border: 1px solid #000;
-    padding: 5px;
-}
-
-.purpose-group {
-    margin: 15px 0;
-    padding-left: 80px; /* Alineado con los inputs */
-}
-
-.purpose-group p {
-    margin: 0 0 5px -80px;
-    font-size: 14px;
-}
-
-.purpose-group label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-
-.message-group {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.message-group label {
-    width: 80px;
-    font-size: 14px;
-}
-
-.message-group textarea {
-    flex: 1;
-    height: 100px;
-    border: 1px solid #000;
-    padding: 5px;
-    resize: none;
-}
-
-.newsletter-group {
-    margin-left: 80px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.submit-btn {
-    background-color: #E0E0E0;
-    border: 1px solid #000;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* Sección de Equipo */
-.team-box {
-    border: 1px solid #000;
+/* --- EL PROBLEMA ESTABA AQUÍ: GPS Y FORMULARIO ALINEADOS --- */
+.content-wrapper {
+    display: flex; /* Obliga a estar uno al lado del otro */
     padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.team-box h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.team-grid {
-    display: flex;
-    justify-content: space-around;
-}
-
-.employee {
-    text-align: center;
-}
-
-.profile-pic {
-    width: 100px;
-    height: 100px;
+.map-side {
+    width: 50%; /* Ocupa exactamente la mitad izquierda */
+    height: 350px;
     background-color: #E0E0E0;
-    border: 1px solid #999;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
+    border: 1px solid black;
+    position: relative;
+    background-image: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
-/* Pie de Página */
-.main-footer {
-    background-color: #D1C4E9;
-    border: 1px solid #000;
-    margin: 10px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* El Pin del GPS en el lado izquierdo inferior */
+.gps-pin {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+}
+
+.form-side {
+    width: 50%; /* Ocupa exactamente la mitad derecha */
     font-size: 13px;
 }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
+.field { display: flex; margin-bottom: 10px; }
+.field label { width: 70px; }
+.field input { flex: 1; border: 1px solid black; padding: 4px; }
 
-.icon-box {
-    width: 35px;
-    height: 35px;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-}
+.radio-group { margin: 10px 0; padding-left: 70px; }
+
+textarea { width: 100%; height: 80px; border: 1px solid black; }
+
+.btn-submit { width: 100%; background: #E0E0E0; border: 1px solid black; padding: 10px; margin-top: 10px; font-weight: bold; }
+
+/* Seccion Equipo */
+.team-box { border: 1px solid black; margin: 20px; padding: 20px; text-align: center; }
+.team-grid { display: flex; justify-content: space-around; margin-top: 20px; }
+.profile-img { width: 90px; height: 90px; background: #E0E0E0; border: 1px solid black; margin-bottom: 5px; }
+
+/* Footer */
+footer { background: #D1C4E9; border-top: 1px solid black; padding: 15px 30px; display: flex; justify-content: space-between; }
+.socials { display: flex; gap: 5px; }
+.x-box { width: 30px; height: 30px; border: 1px solid black; background: white; display: flex; align-items: center; justify-content: center; }
