@@ -152,10 +152,11 @@ nav a:last-child {
     background-size: 30px 30px;
 }
 
+/* GPS MÁS A LA IZQUIERDA - POSICIÓN CAMBIADA */
 .gps-pin {
     position: absolute;
     bottom: 60px;
-    left: 40px;
+    left: 20px; /* Cambiado de 40px a 20px para estar más a la izquierda */
     width: 20px;
     height: 20px;
     background: #ff3b30;
@@ -407,6 +408,12 @@ footer {
         height: 300px;
     }
     
+    /* GPS en móvil también más a la izquierda */
+    .gps-pin {
+        left: 15px;
+        bottom: 50px;
+    }
+    
     .company-info-vertical {
         max-width: 90%;
         padding: 15px 20px;
@@ -472,5 +479,10 @@ footer {
     .form-title,
     .team-box h3 {
         font-size: 18px;
+    }
+    
+    .gps-pin {
+        left: 10px;
+        bottom: 40px;
     }
 }
