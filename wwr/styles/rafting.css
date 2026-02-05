@@ -18,7 +18,7 @@ body {
 /* Header con logo y navegación */
 header {
     background-color: #D1C4E9;
-    padding: 20px 40px;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,12 +46,13 @@ nav {
 nav a {
     background-color: white;
     border: 1px solid #999;
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
     margin-left: -1px;
     transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 nav a:hover {
@@ -69,44 +70,62 @@ nav a:last-child {
     border-bottom-right-radius: 4px;
 }
 
-/* Información principal */
-.info {
+/* Información de la empresa - MEJORADA */
+.company-info {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px 15px;
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
-.info h1 {
-    margin: 0 0 20px 0;
+.company-title {
+    margin: 0 0 12px 0;
     color: #2c3e50;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-.info p {
-    margin: 8px 0;
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.address-section,
+.contact-section {
+    text-align: left;
+}
+
+.address-line,
+.contact-line {
+    margin: 4px 0;
     color: #555;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
 }
 
 /* Contenido principal: Mapa y formulario */
 .content-wrapper {
     display: flex;
-    padding: 40px;
+    padding: 20px 40px 40px;
     gap: 40px;
-    min-height: 500px;
+    min-height: 420px;
+    align-items: flex-start;
 }
 
 .map-side {
     flex: 1;
-    height: 400px;
+    height: 380px;
     background-color: #f0f0f0;
     border: 1px solid #999;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
+    margin-top: 0;
 }
 
 .map-grid {
@@ -125,20 +144,20 @@ nav a:last-child {
     position: absolute;
     bottom: 60px;
     left: 40px;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: #ff3b30;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
     z-index: 10;
 }
 
 .gps-pin::after {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: white;
     border-radius: 50%;
     top: 6px;
@@ -148,36 +167,37 @@ nav a:last-child {
 /* Formulario */
 .form-side {
     flex: 1;
-    padding: 20px 0;
+    padding: 15px 0 0 0;
 }
 
 .form-title {
-    font-size: 24px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
     color: #2c3e50;
     border-bottom: 2px solid #D1C4E9;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    font-weight: 600;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .field label {
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: 600;
+    margin-bottom: 6px;
     color: #444;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .field input,
 .field textarea {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: inherit;
     transition: border-color 0.3s;
 }
@@ -186,58 +206,58 @@ nav a:last-child {
 .field textarea:focus {
     outline: none;
     border-color: #6a5acd;
-    box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+    box-shadow: 0 0 4px rgba(106, 90, 205, 0.2);
 }
 
 .field textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 90px;
 }
 
 /* Grupo de radio buttons */
 .radio-group {
-    margin: 20px 0;
+    margin: 18px 0;
 }
 
-.radio-group p {
-    font-weight: bold;
-    margin-bottom: 15px;
+.radio-title {
+    font-weight: 600;
+    margin-bottom: 12px;
     color: #444;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .radio-option {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     cursor: pointer;
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 .radio-option input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 .radio-option span {
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
 }
 
 /* Checkbox */
 .checkbox-group {
-    margin: 20px 0;
+    margin: 18px 0;
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 /* Botón de envío */
@@ -246,13 +266,13 @@ nav a:last-child {
     background-color: #6a5acd;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .btn-submit:hover {
@@ -262,8 +282,8 @@ nav a:last-child {
 /* Sección del equipo */
 .team-box {
     border: 1px solid #ddd;
-    margin: 20px;
-    padding: 30px;
+    margin: 20px 40px 30px;
+    padding: 25px;
     text-align: center;
     border-radius: 8px;
     background-color: #f9f9f9;
@@ -271,31 +291,31 @@ nav a:last-child {
 
 .team-box h3 {
     color: #2c3e50;
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 
 .team-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 35px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 
 .member {
     text-align: center;
-    max-width: 150px;
+    max-width: 140px;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 15px;
-    border: 3px solid #D1C4E9;
+    margin: 0 auto 12px;
+    border: 2px solid #D1C4E9;
     background-color: #e0e0e0;
 }
 
@@ -307,8 +327,8 @@ nav a:last-child {
 
 .member p {
     color: #555;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 13px;
+    margin-top: 8px;
     font-weight: 500;
 }
 
@@ -316,27 +336,27 @@ nav a:last-child {
 footer {
     background-color: #D1C4E9;
     border-top: 1px solid #999;
-    padding: 20px 40px;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .footer-content p {
     margin: 0;
     color: #444;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .socials {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .social-icon {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border: 1px solid #999;
     background-color: white;
     display: flex;
@@ -347,6 +367,7 @@ footer {
     font-weight: bold;
     border-radius: 4px;
     transition: all 0.3s;
+    font-size: 13px;
 }
 
 .social-icon:hover {
@@ -367,24 +388,68 @@ footer {
         width: 100%;
     }
     
+    .map-side {
+        height: 300px;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .address-section,
+    .contact-section {
+        text-align: center;
+    }
+    
     .team-grid {
         flex-direction: column;
         align-items: center;
+        gap: 25px;
     }
     
     header {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+        padding: 15px 20px;
     }
     
     nav {
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        padding: 8px 16px;
+        font-size: 13px;
     }
     
     footer {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         text-align: center;
+        padding: 15px 20px;
+    }
+    
+    .team-box {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-title {
+        font-size: 18px;
+    }
+    
+    .address-line,
+    .contact-line {
+        font-size: 12px;
+    }
+    
+    nav a {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
