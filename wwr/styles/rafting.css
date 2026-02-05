@@ -13,6 +13,8 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header con logo y navegación */
@@ -23,6 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #999;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -70,13 +73,26 @@ nav a:last-child {
     border-bottom-right-radius: 4px;
 }
 
-/* Información de la empresa - MEJORADA */
+/* Contenido principal - CENTRADO */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Información de la empresa - CENTRADA */
 .company-info {
     text-align: center;
-    padding: 20px 20px 15px;
+    padding: 15px 20px 10px;
     background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .company-title {
@@ -94,14 +110,13 @@ nav a:last-child {
     flex-wrap: wrap;
 }
 
-.address-section,
-.contact-section {
-    text-align: left;
+.contact-item {
+    text-align: center;
 }
 
 .address-line,
 .contact-line {
-    margin: 4px 0;
+    margin: 3px 0;
     color: #555;
     font-size: 13px;
     line-height: 1.4;
@@ -111,10 +126,13 @@ nav a:last-child {
 /* Contenido principal: Mapa y formulario */
 .content-wrapper {
     display: flex;
-    padding: 20px 40px 40px;
+    padding: 0;
     gap: 40px;
-    min-height: 420px;
+    min-height: 380px;
     align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 30px;
 }
 
 .map-side {
@@ -125,7 +143,6 @@ nav a:last-child {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    margin-top: 0;
 }
 
 .map-grid {
@@ -279,14 +296,16 @@ nav a:last-child {
     background-color: #5a4bc4;
 }
 
-/* Sección del equipo */
+/* Sección del equipo - CENTRADA */
 .team-box {
     border: 1px solid #ddd;
-    margin: 20px 40px 30px;
     padding: 25px;
     text-align: center;
     border-radius: 8px;
     background-color: #f9f9f9;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
 }
 
 .team-box h3 {
@@ -340,7 +359,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .footer-content p {
@@ -380,7 +400,7 @@ footer {
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
-        padding: 20px;
+        gap: 30px;
     }
     
     .map-side,
@@ -395,11 +415,6 @@ footer {
     .contact-details {
         flex-direction: column;
         gap: 10px;
-    }
-    
-    .address-section,
-    .contact-section {
-        text-align: center;
     }
     
     .team-grid {
@@ -433,8 +448,16 @@ footer {
     }
     
     .team-box {
-        margin: 20px;
         padding: 20px;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    .company-info {
+        padding: 12px 15px 8px;
+        margin-bottom: 20px;
     }
 }
 
@@ -451,5 +474,10 @@ footer {
     nav a {
         padding: 6px 12px;
         font-size: 12px;
+    }
+    
+    .form-title,
+    .team-box h3 {
+        font-size: 18px;
     }
 }
