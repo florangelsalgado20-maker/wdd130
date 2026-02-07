@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US - FLOWER EXPEDITIONS</title>
+    <meta name="description" content="Contact FLOWER EXPEDITIONS for white water rafting adventures, reservations, and inquiries. We're here to serve you with experienced guides and excellent service.">
+    <meta name="author" content="Florangel Salgado">
+    <title>Contact Us - FLOWER EXPEDITIONS</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
@@ -40,7 +42,6 @@
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0489612812157!2d-66.87712482573187!3d10.496806664290702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a591e648e257b%3A0x6f8f2fc129ed149e!2sMaracaibo%20Av.%20Libertador%2C%20Caracas%201050%2C%20Distrito%20Capital!5e0!3m2!1ses-419!2sve!4v1770458683160!5m2!1ses-419!2sve" 
                             width="100%" 
                             height="100%" 
-                            style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
@@ -51,47 +52,49 @@
                     <div class="form-side">
                         <h2 class="form-title">Contact Us</h2>
                         
-                        <div class="form-container">
+                        <form class="form-container" action="#" method="post">
                             <div class="field">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Your full name">
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
                             </div>
                             
                             <div class="field">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="your.email@example.com">
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                             </div>
                             
                             <div class="radio-group">
                                 <p class="radio-title">Message Purpose</p>
-                                <label class="radio-option">
-                                    <input type="radio" name="purpose" value="general" checked>
-                                    <span>General Inquiry</span>
-                                </label>
-                                <label class="radio-option">
-                                    <input type="radio" name="purpose" value="reservation">
-                                    <span>Reservation Question</span>
-                                </label>
-                                <label class="radio-option">
-                                    <input type="radio" name="purpose" value="suggestion">
-                                    <span>Website Suggestion</span>
-                                </label>
+                                <div class="radio-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="purpose" id="general" value="general" checked>
+                                        <span>General Inquiry</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="purpose" id="reservation" value="reservation">
+                                        <span>Reservation Question</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="purpose" id="suggestion" value="suggestion">
+                                        <span>Website Suggestion</span>
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="field">
                                 <label for="message">Message</label>
-                                <textarea id="message" placeholder="Type your message here..." rows="5"></textarea>
+                                <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
                             </div>
                             
                             <div class="checkbox-group">
                                 <label>
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="newsletter" id="newsletter" checked>
                                     <span>Please Subscribe me to the monthly newsletter</span>
                                 </label>
                             </div>
                             
-                            <button class="btn-submit">Get in Touch!</button>
-                        </div>
+                            <button type="submit" class="btn-submit">Get in Touch!</button>
+                        </form>
                     </div>
                 </div>
 
@@ -137,20 +140,20 @@
 
         <footer>
             <div class="footer-content">
-                <p>&copy; 2026 FLOWER EXPEDITIONS by Florangel Salgado All rights reserved.</p>
+                <p>&copy; 2026 FLOWER EXPEDITIONS by Florangel Salgado. All rights reserved.</p>
             </div>
-            <div class="socials">
-                <a href="#" class="social-icon">
-                    <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+            <nav class="socialmedia">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <img src="images/facebook.svg" alt="Visit our Facebook page" width="24" height="24">
                 </a>
-                <a href="#" class="social-icon">
-                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <img src="images/instagram.svg" alt="Follow us on Instagram" width="24" height="24">
                 </a>
-                <a href="#" class="social-icon">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <img src="images/linkedin.svg" alt="Connect with us on LinkedIn" width="24" height="24">
                 </a>
-            </div>
+            </nav>
         </footer>
-    </div>
+    </div> 
 </body>
 </html>
