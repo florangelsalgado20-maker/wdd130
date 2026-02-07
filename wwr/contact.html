@@ -9,151 +9,140 @@
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="images/logo.jpg" alt="FLOWER EXPEDITIONS Logo">
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="FLOWER EXPEDITIONS White Water Rafting Company Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="company-info-vertical">
+            <h1>FLOWER EXPEDITIONS</h1>
+            <div class="vertical-contact-details">
+                <p>Caracas 15th Road 12th Avenue.</p>
+                <p>Caracas, Venezuela</p>
+                <p>+58 999 524 6399</p>
+                <p>info@flowerexpeditions.com</p>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
+        </div>
 
-        <main>
-            <div class="main-content">
-                <!-- Información vertical -->
-                <div class="company-info-vertical">
-                    <h1>FLOWER EXPEDITIONS COMPANY</h1>
-                    <div class="vertical-contact-details">
-                        <p>Caracas 15th Road 12th Avenue.</p>
-                        <p>Caracas, Venezuela</p>
-                        <p>+58 999 524 6399</p>
-                        <p>info@flowerexpeditions.com</p>
+        <div class="content-wrapper">
+            <div class="map-side">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0489612812157!2d-66.87712482573187!3d10.496806664290702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a591e648e257b%3A0x6f8f2fc129ed149e!2sMaracaibo%20Av.%20Libertador%2C%20Caracas%201050%2C%20Distrito%20Capital!5e0!3m2!1ses-419!2sve!4v1770458683160!5m2!1ses-419!2sve" 
+                    width="600" 
+                    height="450" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="FLOWER EXPEDITIONS Location in Caracas, Venezuela">
+                </iframe>
+            </div>
+
+            <div class="form-side">
+                <h2>Contact Us</h2>
+                
+                <form id="contact-form" action="submit-form.html" method="post">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <p class="radio-title">Message Purpose</p>
+                        <div class="radio-options">
+                            <label class="radio-option">
+                                <input type="radio" id="general" name="purpose" value="general" checked>
+                                <span>General Inquiry</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" id="reservation" name="purpose" value="reservation">
+                                <span>Reservation Question</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                                <span>Website Suggestion</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
+                            <span>Please Subscribe me to the monthly newsletter</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Get in Touch!</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="team-box">
+            <h3>We Are Here to Serve You</h3>
+            <div class="team-grid">
+                <div class="member">
+                    <div class="profile-img">
+                        <img src="images/professional1.jpg" alt="Ben Lopez, Tour Guide at FLOWER EXPEDITIONS">
+                    </div>
+                    <div class="member-info">
+                        <p class="member-name">Ben Lopez</p>
+                        <p class="member-role">Tour Guide</p>
                     </div>
                 </div>
-
-                <div class="content-wrapper">
-                    <div class="map-side">
-                        <!-- Mapa de Google Maps real - Ubicación Caracas -->
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0489612812157!2d-66.87712482573187!3d10.496806664290702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a591e648e257b%3A0x6f8f2fc129ed149e!2sMaracaibo%20Av.%20Libertador%2C%20Caracas%201050%2C%20Distrito%20Capital!5e0!3m2!1ses-419!2sve!4v1770458683160!5m2!1ses-419!2sve" 
-                            width="600" 
-                            height="450" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="FLOWER EXPEDITIONS Location - Caracas">
-                        </iframe>
+                
+                <div class="member">
+                    <div class="profile-img">
+                        <img src="images/professional2.jpg" alt="Maria Lopez, Planning & Logistics Coordinator at FLOWER EXPEDITIONS">
                     </div>
-
-                    <div class="form-side">
-                        <h2>Contact Us</h2>
-                        
-                        <form class="form-container" action="submit-form.html" method="post">
-                            <div class="field">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your full name" required>
-                            </div>
-                            
-                            <div class="field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                            </div>
-                            
-                            <div class="radio-group">
-                                <p class="radio-title">Message Purpose</p>
-                                <div class="radio-options">
-                                    <label class="radio-option">
-                                        <input type="radio" id="general" name="purpose" value="general" checked>
-                                        <span>General Inquiry</span>
-                                    </label>
-                                    <label class="radio-option">
-                                        <input type="radio" id="reservation" name="purpose" value="reservation">
-                                        <span>Reservation Question</span>
-                                    </label>
-                                    <label class="radio-option">
-                                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                                        <span>Website Suggestion</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
-                            </div>
-                            
-                            <div class="checkbox-group">
-                                <label>
-                                    <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
-                                    <span>Please Subscribe me to the monthly newsletter</span>
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn-submit">Get in Touch!</button>
-                        </form>
+                    <div class="member-info">
+                        <p class="member-name">Maria Lopez</p>
+                        <p class="member-role">Planning & Logistics Coordinator</p>
                     </div>
                 </div>
-
-                <div class="team-box">
-                    <h3>We Are Here to Serve You</h3>
-                    <div class="team-grid">
-                        <!-- Primer círculo - Ben Lopez -->
-                        <div class="member">
-                            <div class="profile-img">
-                                <img src="images/professional1.jpg" alt="Ben Lopez - Tour Guide">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Ben Lopez</p>
-                                <p class="member-role">Tour Guide</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Segundo círculo - Maria Lopez -->
-                        <div class="member">
-                            <div class="profile-img">
-                                <img src="images/professional2.jpg" alt="Maria Lopez - Planning & Logistics Coordinator">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Maria Lopez</p>
-                                <p class="member-role">Planning & Logistics Coordinator</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Tercer círculo - Vanessa Lopez -->
-                        <div class="member">
-                            <div class="profile-img">
-                                <img src="images/professional3.jpg" alt="Vanessa Lopez - Founder">
-                            </div>
-                            <div class="member-info">
-                                <p class="member-name">Vanessa Lopez</p>
-                                <p class="member-role">Founder</p>
-                            </div>
-                        </div>
+                
+                <div class="member">
+                    <div class="profile-img">
+                        <img src="images/professional3.jpg" alt="Vanessa Lopez, Founder of FLOWER EXPEDITIONS">
+                    </div>
+                    <div class="member-info">
+                        <p class="member-name">Vanessa Lopez</p>
+                        <p class="member-role">Founder</p>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2026 FLOWER EXPEDITIONS by Florangel Salgado. All rights reserved.</p>
-            </div>
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
-                </a>
-                <a href="https://linkedin.com" target="_blank">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
-                </a>
-            </nav>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2026 FLOWER EXPEDITIONS by Florangel Salgado. All rights reserved.</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.svg" alt="Visit FLOWER EXPEDITIONS on Facebook" width="24" height="24">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/instagram.svg" alt="Follow FLOWER EXPEDITIONS on Instagram" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="images/linkedin.svg" alt="Connect with FLOWER EXPEDITIONS on LinkedIn" width="24" height="24">
+            </a>
+        </nav>
+    </footer>
 </body>
 </html>
