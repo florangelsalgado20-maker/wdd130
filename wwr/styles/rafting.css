@@ -1,543 +1,260 @@
-/* Estilos generales */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header con logo y navegación */
-header {
-    background-color: #D1C4E9;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #999;
-    flex-shrink: 0;
-}
-
-.logo {
-    width: 120px;
-    height: 100px;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 1px solid #999;
-    border-radius: 4px;
-}
-
-nav {
-    display: flex;
-    gap: 0;
-}
-
-nav a {
-    background-color: white;
-    border: 1px solid #999;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    margin-left: -1px;
-    transition: all 0.3s ease;
-    font-size: 14px;
-}
-
-nav a:hover {
-    background-color: #f0f0f0;
-    color: #6a5acd;
-}
-
-nav a:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-
-nav a:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-/* Contenido principal - CENTRADO */
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Información de la empresa - VERTICAL Y CENTRADA */
-.company-info-vertical {
-    text-align: center;
-    padding: 20px 30px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.company-info-vertical h1 {
-    margin: 0 0 20px 0;
-    color: #2c3e50;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.vertical-contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.vertical-contact-details p {
-    margin: 0;
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-/* Contenido principal: Mapa y formulario */
-.content-wrapper {
-    display: flex;
-    padding: 0;
-    gap: 40px;
-    min-height: 380px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 30px;
-}
-
-/* Mapa */
-.map-side {
-    flex: 1;
-    height: 450px;
-    background-color: #f0f0f0;
-    border: 1px solid #999;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.map-side iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* Formulario */
-.form-side {
-    flex: 1;
-    padding: 0;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-side h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 2px solid #D1C4E9;
-    padding-bottom: 8px;
-    font-weight: 600;
-}
-
-/* Contenedor del formulario para ocupar toda la altura */
-.form-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.field {
-    display: flex;
-    flex-direction: column;
-}
-
-.field label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #444;
-    font-size: 13px;
-}
-
-.field input,
-.field textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: inherit;
-    transition: border-color 0.3s;
-    width: 100%;
     box-sizing: border-box;
 }
 
-.field input:focus,
-.field textarea:focus {
-    outline: none;
-    border-color: #6a5acd;
-    box-shadow: 0 0 4px rgba(106, 90, 205, 0.2);
-}
-
-.field textarea {
-    resize: vertical;
-    min-height: 100px;
-    flex: 1;
-}
-
-/* Grupo de radio buttons */
-.radio-group {
-    margin: 5px 0;
-}
-
-.radio-title {
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: #444;
-    font-size: 13px;
-}
-
-.radio-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-left: 5px;
-}
-
-.radio-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 4px 0;
-}
-
-.radio-option input[type="radio"] {
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-}
-
-.radio-option span {
-    font-size: 13px;
-    color: #555;
-}
-
-/* Checkbox */
-.checkbox-group {
-    margin: 10px 0;
-    padding: 8px 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 13px;
-    color: #555;
-    padding: 5px 0;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-}
-
-/* Botón de envío */
-.btn-submit {
-    width: 100%;
-    background-color: #6a5acd;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: auto;
-}
-
-.btn-submit:hover {
-    background-color: #5a4bc4;
-}
-
-/* Sección del equipo */
-.team-box {
-    border: 1px solid #ddd;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    width: 100%;
-    max-width: 900px;
-    margin: 280px 0 80px 0;
-}
-
-.team-box h3 {
-    color: #2c3e50;
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-.team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-.member {
-    text-align: center;
-    max-width: 140px;
-}
-
-.profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 12px;
-    border: 2px solid #D1C4E9;
-    background-color: #e0e0e0;
-}
-
-.profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.member-info {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.member-name {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
     color: #333;
 }
 
-.member-role {
-    font-size: 14px;
+/* Header y Navegación */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2C5F2D;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #264653;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2C5F2D;
+}
+
+/* Banner Principal */
+.banner {
+    background: linear-gradient(rgba(44, 95, 45, 0.6), rgba(38, 70, 83, 0.6)), url('https://placehold.co/1200x600') center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background-color: #2C5F2D;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #559CAD;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sección de Actividades */
+.activities {
+    background-color: #F5F1E9;
+    padding: 4rem 2rem;
+}
+
+.activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.activity-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.activity-content h3 {
+    color: #2C5F2D;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.activity-content p {
     color: #666;
-    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Sección Inferior */
+.join-section {
+    background-color: white;
+    padding: 4rem 2rem;
+}
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.join-content h2 {
+    color: #2C5F2D;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.join-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.join-section img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Footer */
 footer {
-    background-color: #D1C4E9;
-    border-top: 1px solid #999;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    flex-shrink: 0;
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
 }
 
-.footer-content p {
-    margin: 0;
-    color: #444;
-    font-size: 13px;
-}
-
-/* Navegación social en el footer */
-nav.socialmedia {
-    display: flex;
-    gap: 12px;
-}
-
-nav.socialmedia a {
-    width: 32px;
-    height: 32px;
-    border: 1px solid #999;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s;
-}
-
-nav.socialmedia a:hover {
-    background-color: #6a5acd;
-    border-color: #6a5acd;
-}
-
-nav.socialmedia a:hover img {
-    filter: brightness(0) invert(1);
-}
-
-nav.socialmedia a img {
-    width: 20px;
-    height: 20px;
-    transition: filter 0.3s;
-}
-
-/* Responsive */
+/* Responsivo */
 @media (max-width: 768px) {
-    .content-wrapper {
+    .header-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 1rem;
     }
-    
-    .map-side,
-    .form-side {
-        width: 100%;
-        height: auto;
-    }
-    
-    .map-side {
-        height: 350px;
-    }
-    
-    .form-side {
-        height: auto;
-        min-height: 500px;
-    }
-    
-    .form-container {
-        gap: 12px;
-    }
-    
-    .field textarea {
-        min-height: 120px;
-    }
-    
-    .btn-submit {
-        margin-top: 20px;
-    }
-    
-    .team-box {
-        margin: 150px 0 60px 0;
-        padding: 20px;
-    }
-    
-    .company-info-vertical {
-        max-width: 90%;
-        padding: 15px 20px;
-    }
-    
-    .vertical-contact-details {
-        gap: 6px;
-    }
-    
-    .team-grid {
+
+    nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    
-    nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    nav a {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
-    
-    footer {
-        flex-direction: column;
-        gap: 15px;
+        gap: 1rem;
         text-align: center;
-        padding: 15px 20px;
     }
-    
-    nav.socialmedia {
-        justify-content: center;
+
+    .banner-content h1 {
+        font-size: 2.2rem;
     }
-    
-    .main-content {
-        padding: 15px;
+
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+
+    .join-container {
+        grid-template-columns: 1fr;
+    }
+
+    .join-content h2 {
+        font-size: 2rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .company-info-vertical h1 {
-        font-size: 20px;
+    .banner-content h1 {
+        font-size: 1.8rem;
     }
-    
-    .vertical-contact-details p {
-        font-size: 13px;
+
+    .banner-content p {
+        font-size: 0.95rem;
     }
-    
-    nav a {
-        padding: 6px 12px;
-        font-size: 12px;
+
+    nav ul {
+        gap: 0.5rem;
+        font-size: 0.85rem;
     }
-    
-    .form-side h2,
-    .team-box h3 {
-        font-size: 18px;
-    }
-    
-    .map-side {
-        height: 320px;
-    }
-    
-    .field input,
-    .field textarea {
-        padding: 8px;
-        font-size: 13px;
-    }
-    
-    .radio-option span,
-    .checkbox-group label {
-        font-size: 12px;
-    }
-    
-    .team-box {
-        margin: 120px 0 40px 0;
-        padding: 15px;
-    }
-    
-    .member-name {
-        font-size: 15px;
-    }
-    
-    .member-role {
-        font-size: 13px;
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
     }
 }
