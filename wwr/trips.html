@@ -1,121 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience thrilling white water rafting adventures with Dry Oar. Join us for unforgettable trips on the best rivers.">
-    <meta name="keywords" content="rafting, adventure, white water, camping, outdoor activities">
-    <title>Dry Oar | Adventure Awaits</title>
-    <link rel="stylesheet" href="rafting.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Trips - Rafting Adventures</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">DRY OAR</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#rivers">Rivers</a></li>
-            <li><a href="#camping">Camping</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="website-container">
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <nav class="main-nav">
+                <div class="logo">LOGO</div>
+                <div class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="trips.html" class="active">Page2</a>
+                    <a href="site-plan.html">Site Plan</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <img src="https://images.unsplash.com/photo-1603219113640-1381688a5c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-             alt="Exciting white water rafting adventure" 
-             class="hero-img">
-        <div class="hero-content">
-            <h1>HAVE AN ADVENTURE</h1>
-            <button class="btn-primary" onclick="scrollToBooking()">Book Now</button>
-        </div>
-    </header>
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Sección del título grande -->
+            <section class="hero-title-section">
+                <h1 class="main-title">HAVEANADVENTUZE</h1>
+            </section>
 
-    <!-- Features Section -->
-    <section class="features" id="rivers">
-        <div class="feature-item">
-            <div class="icon-circle">
-                <i class="fas fa-water fa-2x"></i>
-            </div>
-            <h3>Rivers</h3>
-            <p>Explore the most breathtaking rivers with expert guides. From calm waters to thrilling rapids.</p>
-        </div>
-        <div class="feature-item" id="camping">
-            <div class="icon-circle">
-                <i class="fas fa-campground fa-2x"></i>
-            </div>
-            <h3>Camping</h3>
-            <p>Sleep under the stars at our premium campsites located near the best rafting spots.</p>
-        </div>
-        <div class="feature-item">
-            <div class="icon-circle">
-                <i class="fas fa-bolt fa-2x"></i>
-            </div>
-            <h3>Rapids</h3>
-            <p>Experience the thrill of Class III-V rapids with our certified safety instructors.</p>
-        </div>
-    </section>
+            <!-- Sección de tres columnas -->
+            <section class="features-section">
+                <div class="feature-item">
+                    <div class="feature-icon">R</div>
+                    <h2>Rivers</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">C</div>
+                    <h2>Camping</h2>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">R</div>
+                    <h2>Rapids</h2>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
 
-    <!-- Scenic Section -->
-    <section class="bottom-scenic" id="contact">
-        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" 
-             alt="Beautiful mountain scenery" 
-             class="scenic-img">
-        <div class="overlay-box">
-            <h2>More Than Just The Thrill</h2>
-            <p>We believe that white water rafting is about more than just the adrenaline. It's about connecting with nature, building teamwork, and witnessing breathtaking mountain vistas that will stay with you forever.</p>
-            <button class="btn-primary" onclick="scrollToBooking()">Join Us</button>
-        </div>
-    </section>
+            <!-- Sección inferior -->
+            <section class="bottom-section">
+                <h2 class="bottom-title">MoreThanJustTheThrill</h2>
+                <p class="bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </section>
+        </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Dry Oar Rafting Adventures. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p>Contact us: info@dryoar.com | (555) 123-4567</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Function for booking button
-        function scrollToBooking() {
-            // In a real application, this would link to a booking form
-            alert("Booking system would open here! For now, please contact us at info@dryoar.com");
-            // Alternatively, scroll to contact section:
-            // document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
-        }
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.backgroundColor = 'rgba(61, 77, 68, 0.95)';
-            } else {
-                nav.style.backgroundColor = 'var(--dark-green)';
-            }
-        });
-    </script>
+        <!-- Footer simple -->
+        <footer class="main-footer">
+            <p>&copy; 2024 Rafting Adventures. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
