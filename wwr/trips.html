@@ -1,83 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outdoor Adventure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Dry Oar - Have An Adventure</title>
+    <!-- Fuentes: Roboto para texto y una fuente cursiva para el estilo del título -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-wrapper">
-            <div class="logo">OA</div>
-            <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#page2">Page 2</a>
-                <a href="#siteplan">Site Plan</a>
-                <a href="#contact">Contact Us</a>
+
+    <!-- HEADER TRANSPARENTE -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/logo.png" alt="Dry Oar Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Site Plan</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- BANNER -->
-    <section class="banner" id="home">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1 class="banner-title">HAVE AN ADVENTURE</h1>
-            <p class="banner-subtitle">Make Memories with Our</p>
-            <button class="btn btn-primary">Book Now</button>
+    <!-- HERO SECTION (BANNER) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Have An Adventure</h1>
+            <p class="hero-subtitle">Make Memories with Dry Oar</p>
+            <a href="#" class="btn-book">Book Now</a>
+        </div>
+        <!-- Imagen del bote con el efecto de desvanecimiento inferior -->
+        <div class="hero-image-container">
+            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/hero.png" alt="Rafting Adventure" class="hero-img">
         </div>
     </section>
 
-    <!-- ACTIVITIES SECTION -->
+    <!-- SECCIÓN DE ACTIVIDADES -->
     <section class="activities">
-        <div class="activities-wrapper">
-            <!-- Card 1: Rivers -->
-            <div class="activity-card">
-                <div class="activity-image-box">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=350&fit=crop" alt="Rivers">
-                </div>
-                <div class="activity-icon">🏞️</div>
-                <h3 class="activity-title">Rivers</h3>
-                <p class="activity-desc">Experience pristine waters and navigate through breathtaking landscapes</p>
+        <div class="activity-card">
+            <div class="img-frame">
+                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/river.jpg" alt="Rivers">
             </div>
+            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/river_icon.png" alt="" class="icon">
+            <h3>Rivers</h3>
+        </div>
 
-            <!-- Card 2: Camping -->
-            <div class="activity-card">
-                <div class="activity-image-box">
-                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=350&h=350&fit=crop" alt="Camping">
-                </div>
-                <div class="activity-icon">⛺</div>
-                <h3 class="activity-title">Camping</h3>
-                <p class="activity-desc">Immerse yourself in nature and enjoy memorable outdoor experiences</p>
+        <div class="activity-card">
+            <div class="img-frame">
+                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/camping.jpg" alt="Camping">
             </div>
+            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/camping_icon.png" alt="" class="icon">
+            <h3>Camping</h3>
+        </div>
 
-            <!-- Card 3: Rapids -->
-            <div class="activity-card">
-                <div class="activity-image-box">
-                    <img src="https://images.unsplash.com/photo-1533904153972-618a66486522?w=350&h=350&fit=crop" alt="Rapids">
-                </div>
-                <div class="activity-icon">🌊</div>
-                <h3 class="activity-title">Rapids</h3>
-                <p class="activity-desc">Challenge yourself with exhilarating whitewater adventures</p>
+        <div class="activity-card">
+            <div class="img-frame">
+                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/rapids.jpg" alt="Rapids">
+            </div>
+            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/rapids_icon.png" alt="" class="icon">
+            <h3>Rapids</h3>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INFERIOR (MÁS QUE EMOCIÓN) -->
+    <section class="more-than-thrill">
+        <div class="thrill-container">
+            <div class="thrill-image">
+                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/mountains.jpg" alt="Mountains">
+            </div>
+            <div class="thrill-box">
+                <h2>More Than Just The Thrill</h2>
+                <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors.</p>
+                <a href="#" class="btn-join">Join Us</a>
             </div>
         </div>
     </section>
 
-    <!-- LOWER SECTION -->
-    <section class="lower-section">
-        <div class="lower-wrapper">
-            <div class="lower-image-box">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=450&h=450&fit=crop" alt="Mountain Landscape">
-            </div>
-            <div class="lower-content-box">
-                <h2 class="lower-title">More Than Just The Thrill</h2>
-                <p class="lower-text">Easy the transformative journey that only nature can offer. High ideals: it's way more than just the thrill. It's a great day to get away from it all and make enough of life.</p>
-                <button class="btn btn-secondary">Join Us</button>
-            </div>
-        </div>
-    </section>
 </body>
 </html>
