@@ -1,85 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dry Oar - Have An Adventure</title>
-    <!-- Fuentes: Roboto para texto y una fuente cursiva para el estilo del título -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="rafting.css">
-</head>
-<body>
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- HEADER TRANSPARENTE -->
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/logo.png" alt="Dry Oar Logo">
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Site Plan</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
 
-    <!-- HERO SECTION (BANNER) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Have An Adventure</h1>
-            <p class="hero-subtitle">Make Memories with Dry Oar</p>
-            <a href="#" class="btn-book">Book Now</a>
-        </div>
-        <!-- Imagen del bote con el efecto de desvanecimiento inferior -->
-        <div class="hero-image-container">
-            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/hero.png" alt="Rafting Adventure" class="hero-img">
-        </div>
-    </section>
+/* HEADER */
+.main-header {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Sutil fondo oscuro para legibilidad */
+}
 
-    <!-- SECCIÓN DE ACTIVIDADES -->
-    <section class="activities">
-        <div class="activity-card">
-            <div class="img-frame">
-                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/river.jpg" alt="Rivers">
-            </div>
-            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/river_icon.png" alt="" class="icon">
-            <h3>Rivers</h3>
-        </div>
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-        <div class="activity-card">
-            <div class="img-frame">
-                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/camping.jpg" alt="Camping">
-            </div>
-            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/camping_icon.png" alt="" class="icon">
-            <h3>Camping</h3>
-        </div>
+.logo img {
+    height: 60px;
+}
 
-        <div class="activity-card">
-            <div class="img-frame">
-                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/rapids.jpg" alt="Rapids">
-            </div>
-            <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/rapids_icon.png" alt="" class="icon">
-            <h3>Rapids</h3>
-        </div>
-    </section>
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
 
-    <!-- SECCIÓN INFERIOR (MÁS QUE EMOCIÓN) -->
-    <section class="more-than-thrill">
-        <div class="thrill-container">
-            <div class="thrill-image">
-                <img src="https://byui-wdd.github.io/wdd130/ice/dryoar/images/mountains.jpg" alt="Mountains">
-            </div>
-            <div class="thrill-box">
-                <h2>More Than Just The Thrill</h2>
-                <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors.</p>
-                <a href="#" class="btn-join">Join Us</a>
-            </div>
-        </div>
-    </section>
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
 
-</body>
-</html>
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO / BANNER */
+.hero {
+    background-color: #1a2421; /* Fondo oscuro detrás de la imagen */
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-family: 'Caveat', cursive; /* Fuente similar a la imagen */
+    color: #e6cfad;
+    font-size: 4.5rem;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-book {
+    background-color: #e6cfad;
+    color: #333;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.hero-image-container {
+    width: 100%;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+    /* Efecto de desvanecido hacia blanco en la parte inferior */
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* ACTIVIDADES */
+.activities {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    text-align: center;
+    flex: 1;
+}
+
+.img-frame {
+    border: 8px solid #e6cfad; /* Marco color crema */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    line-height: 0;
+}
+
+.img-frame img {
+    width: 100%;
+    height: auto;
+}
+
+.icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.activity-card h3 {
+    color: #333;
+    font-weight: 400;
+}
+
+/* SECCIÓN INFERIOR */
+.more-than-thrill {
+    background-color: #e6cfad; /* Fondo crema de la sección */
+    padding: 100px 0;
+}
+
+.thrill-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.thrill-image {
+    width: 60%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.thrill-image img {
+    width: 100%;
+    display: block;
+}
+
+.thrill-box {
+    background-color: #6f7364; /* Verde oliva oscuro */
+    color: white;
+    padding: 40px;
+    width: 50%;
+    margin-left: -10%; /* Superposición sobre la imagen */
+    z-index: 2;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.thrill-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.thrill-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-join {
+    background-color: #e6cfad;
+    color: #333;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* RESPONSIVO BÁSICO */
+@media (max-width: 768px) {
+    .activities { flex-direction: column; }
+    .thrill-container { flex-direction: column; }
+    .thrill-image, .thrill-box { width: 90%; margin: 0 auto; }
+    .thrill-box { margin-top: -30px; }
+}
