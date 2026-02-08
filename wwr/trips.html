@@ -1,90 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dry Oar | Trips</title>
+    <title>Dry Oar | Adventure Awaits</title>
     <link rel="stylesheet" href="rafting.css">
-    <!-- Fuentes necesarias -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="logo">DRY OAR</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rivers</a></li>
+            <li><a href="#">Camping</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <div class="logo">
-            <img src="https://byui-wdd.github.io/wdd130/rafting_images/dryoar-logo.png" alt="Dry Oar Logo">
+    <header class="hero">
+        <img src="rafting-hero.jpg" alt="Rafting" class="hero-img">
+        <div class="hero-content">
+            <h1>HAVE AN ADVENTURE</h1>
+            <button class="btn-primary">Book Now</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="trips.html">Page 2</a></li>
-                <li><a href="site-plan.html">Site Plan</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-img-container">
-                <img src="https://images.unsplash.com/photo-1530866495547-0840404682ba?q=80&w=2000" alt="Rafting" class="main-rafting-img">
-                <div class="hero-text">
-                    <h1>Have An Adventurze</h1>
-                    <p>Make Memories with Dry Oar</p>
-                    <a href="#" class="book-now-btn">Book Now</a>
-                </div>
-                <!-- Efecto de salpicadura/corte irregular blanco -->
-                <div class="white-splash"></div>
-            </div>
-        </section>
+    <section class="features">
+        <div class="feature-item">
+            <div class="icon-circle"><img src="river-icon.svg" alt="Rivers"></div>
+            <h3>Rivers</h3>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle"><img src="camping-icon.svg" alt="Camping"></div>
+            <h3>Camping</h3>
+        </div>
+        <div class="feature-item">
+            <div class="icon-circle"><img src="rapids-icon.svg" alt="Rapids"></div>
+            <h3>Rapids</h3>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="card">
-                <div class="img-border">
-                    <img src="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=600" alt="Rivers">
-                </div>
-                <div class="label">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2902/2902761.png" alt="icon" class="icon">
-                    <span>Rivers</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img-border">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600" alt="Camping">
-                </div>
-                <div class="label">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2822/2822391.png" alt="icon" class="icon">
-                    <span>Camping</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img-border">
-                    <img src="https://images.unsplash.com/photo-1530866495547-0840404682ba?q=80&w=600" alt="Rapids">
-                </div>
-                <div class="label">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1012/1012642.png" alt="icon" class="icon">
-                    <span>Rapids</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="bottom-banner">
-            <div class="mountain-img">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200" alt="Mountains">
-            </div>
-            <div class="green-box">
-                <h2>More Than Just The Thrill</h2>
-                <p>
-                    Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; 
-                    it's way more than just the rapids. It's a great way to get away from it all 
-                    and relax amongst all the beauty of the great outdoors.
-                </p>
-                <a href="#" class="join-us-btn">Join Us</a>
-            </div>
-        </section>
-    </main>
-
+    <section class="bottom-scenic">
+        <img src="mountains.jpg" alt="Scenery" class="scenic-img">
+        <div class="overlay-box">
+            <h2>More Than Just The Thrill</h2>
+            <p>We believe that white water rafting is about more than just the adrenaline. It's about connecting with nature and witnessing breathtaking mountain vistas.</p>
+            <button class="btn-primary">Join Us</button>
+        </div>
+    </section>
 </body>
 </html>
