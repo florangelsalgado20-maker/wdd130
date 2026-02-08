@@ -1,63 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trips - Rafting Adventures</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Adventure Tourism - Have An Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
-    <div class="website-container">
-        <!-- Header con navegación -->
-        <header class="main-header">
-            <nav class="main-nav">
-                <div class="logo">LOGO</div>
-                <div class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="trips.html" class="active">Page2</a>
-                    <a href="site-plan.html">Site Plan</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-            </nav>
-        </header>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Adventure</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#page2">Page 2</a></li>
+                <li><a href="#siteplan">Site Plan</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Contenido principal -->
-        <main class="main-content">
-            <!-- Sección del título grande -->
-            <section class="hero-title-section">
-                <h1 class="main-title">HAVEANADVENTUZE</h1>
-            </section>
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>Have An Adventure</h1>
+            <p>Make Memories with Day Out</p>
+            <button class="btn-primary">Book Now</button>
+        </div>
+    </section>
 
-            <!-- Sección de tres columnas -->
-            <section class="features-section">
-                <div class="feature-item">
-                    <div class="feature-icon">R</div>
-                    <h2>Rivers</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- Activities Section -->
+    <section class="activities-section">
+        <div class="activities-grid">
+            <!-- Rivers Card -->
+            <article class="activity-card">
+                <img src="https://placehold.co/400x250/a89f91/ffffff" alt="Rivers" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="activity-icon">🌊</div>
+                    <h3>Rivers</h3>
+                    <p>Experience the thrilling rush of white-water rafting down pristine river valleys with expert guides.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">C</div>
-                    <h2>Camping</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">R</div>
-                    <h2>Rapids</h2>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-            </section>
+            </article>
 
-            <!-- Sección inferior -->
-            <section class="bottom-section">
-                <h2 class="bottom-title">MoreThanJustTheThrill</h2>
-                <p class="bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </section>
-        </main>
+            <!-- Camping Card -->
+            <article class="activity-card">
+                <img src="https://placehold.co/400x250/a89f91/ffffff" alt="Camping" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="activity-icon">⛺</div>
+                    <h3>Camping</h3>
+                    <p>Disconnect from the city and reconnect with nature under the stars in our exclusive camping sites.</p>
+                </div>
+            </article>
 
-        <!-- Footer simple -->
-        <footer class="main-footer">
-            <p>&copy; 2024 Rafting Adventures. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+            <!-- Rapids Card -->
+            <article class="activity-card">
+                <img src="https://placehold.co/400x250/a89f91/ffffff" alt="Rapids" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="activity-icon">🏄</div>
+                    <h3>Rapids</h3>
+                    <p>Challenge yourself with intense rapid descents and adrenaline-pumping water adventures for thrill-seekers.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- More Than Just The Thrill Section -->
+    <section class="thrill-section" id="siteplan">
+        <div class="thrill-overlay">
+            <h2>More Than Just The Thrill</h2>
+            <p>Our adventure experiences combine heart-pounding excitement with breathtaking natural landscapes, creating unforgettable memories that last a lifetime. Every moment is designed to push your limits while ensuring your safety and comfort.</p>
+            <button class="btn-primary">Explore More</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 Adventure Tourism. All rights reserved.</p>
+        <p>Contact Us: info@adventuretourism.com | Phone: +1-800-ADVENTURE</p>
+        <p>Follow us on social media for exclusive deals and adventure stories.</p>
+    </footer>
 </body>
 </html>
