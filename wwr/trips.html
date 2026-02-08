@@ -3,114 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventuras al Aire Libre</title>
-    <link rel="stylesheet" href="wwr/styles/rafting.css">
+    <title>Dry Oar | Trips</title>
+    <link rel="stylesheet" href="rafting.css">
+    <!-- Fuentes necesarias -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header completamente horizontal en una línea -->
+
     <header>
-        <div class="header-container">
-            <!-- Logo -->
-            <div class="logo-container">
-                <img src="images/logo.jpg" alt="Adventure Co. Logo" class="logo">
-            </div>
-            
-            <!-- Menú completo en una línea -->
-            <nav class="horizontal-menu">
-                <!-- Home -->
-                <div class="menu-item home-item">
-                    <a href="#home" class="menu-link">Home</a>
-                </div>
-                
-                <!-- Page 2 -->
-                <div class="menu-item page2-item">
-                    <a href="#page2" class="menu-link">Page 2</a>
-                </div>
-                
-                <!-- Site Plan -->
-                <div class="menu-item siteplan-item">
-                    <a href="#sitemap" class="menu-link">Site Plan</a>
-                </div>
-                
-                <!-- Contact Us -->
-                <div class="menu-item contact-item">
-                    <a href="#contact" class="menu-link">Contact Us</a>
-                </div>
-            </nav>
+        <div class="logo">
+            <img src="https://byui-wdd.github.io/wdd130/rafting_images/dryoar-logo.png" alt="Dry Oar Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trips.html">Page 2</a></li>
+                <li><a href="site-plan.html">Site Plan</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Banner Principal -->
-    <section class="banner" id="home">
-        <div class="banner-content">
-            <h1>HAVE AN ADVENTURE</h1>
-            <p>Make Memories with Our Outdoor Experiences</p>
-            <button class="btn">Book Now</button>
-        </div>
-    </section>
-
-    <!-- Sección de Actividades -->
-    <section class="activities" id="page2">
-        <div class="activities-container">
-            <h2 style="text-align: center; color: #2C5F2D; font-size: 2.2rem; text-transform: uppercase;">Our Activities</h2>
-            <div class="activities-grid">
-                <!-- Rafting -->
-                <div class="activity-card">
-                    <img src="https://placehold.co/400x250" alt="Rivers">
-                    <div class="activity-content">
-                        <div class="activity-icon">🌊</div>
-                        <h3>Rivers</h3>
-                        <p>Experience the thrill of white-water rafting down pristine river canyons with expert guides.</p>
-                    </div>
+    <main>
+        <section class="hero">
+            <div class="hero-img-container">
+                <img src="https://images.unsplash.com/photo-1530866495547-0840404682ba?q=80&w=2000" alt="Rafting" class="main-rafting-img">
+                <div class="hero-text">
+                    <h1>Have An Adventurze</h1>
+                    <p>Make Memories with Dry Oar</p>
+                    <a href="#" class="book-now-btn">Book Now</a>
                 </div>
+                <!-- Efecto de salpicadura/corte irregular blanco -->
+                <div class="white-splash"></div>
+            </div>
+        </section>
 
-                <!-- Camping -->
-                <div class="activity-card">
-                    <img src="https://placehold.co/400x250" alt="Camping">
-                    <div class="activity-content">
-                        <div class="activity-icon">⛺</div>
-                        <h3>Camping</h3>
-                        <p>Sleep under the stars and reconnect with nature in our carefully selected camping locations.</p>
-                    </div>
+        <section class="features">
+            <div class="card">
+                <div class="img-border">
+                    <img src="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=600" alt="Rivers">
                 </div>
-
-                <!-- Rapids -->
-                <div class="activity-card">
-                    <img src="https://placehold.co/400x250" alt="Rapids">
-                    <div class="activity-content">
-                        <div class="activity-icon">⚡</div>
-                        <h3>Rapids</h3>
-                        <p>Challenge yourself with intense rapid adventures designed for the adrenaline seekers.</p>
-                    </div>
+                <div class="label">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2902/2902761.png" alt="icon" class="icon">
+                    <span>Rivers</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Sección Inferior -->
-    <section class="join-section" id="sitemap">
-        <div class="join-container">
-            <div class="join-content">
+            <div class="card">
+                <div class="img-border">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600" alt="Camping">
+                </div>
+                <div class="label">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2822/2822391.png" alt="icon" class="icon">
+                    <span>Camping</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-border">
+                    <img src="https://images.unsplash.com/photo-1530866495547-0840404682ba?q=80&w=600" alt="Rapids">
+                </div>
+                <div class="label">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1012/1012642.png" alt="icon" class="icon">
+                    <span>Rapids</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-banner">
+            <div class="mountain-img">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200" alt="Mountains">
+            </div>
+            <div class="green-box">
                 <h2>More Than Just The Thrill</h2>
                 <p>
-                    At Adventure Co., we believe that outdoor experiences are about more than just the adrenaline rush. 
-                    It's about creating unforgettable memories, connecting with nature, and discovering your inner strength. 
-                    Our expert guides and world-class facilities ensure that every adventure is safe, enjoyable, and transformative.
+                    Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; 
+                    it's way more than just the rapids. It's a great way to get away from it all 
+                    and relax amongst all the beauty of the great outdoors.
                 </p>
-                <p>
-                    Join thousands of adventurers who have trusted us to lead them on their greatest journeys.
-                </p>
-                <button class="btn">Join Us</button>
+                <a href="#" class="join-us-btn">Join Us</a>
             </div>
-            <div>
-                <img src="https://placehold.co/500x400" alt="Mountain">
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2024 Adventure Co. All rights reserved. | Contact: info@adventureco.com | Phone: +1 (555) 123-4567</p>
-    </footer>
 </body>
 </html>
