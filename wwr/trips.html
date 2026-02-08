@@ -3,50 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience thrilling white water rafting adventures with Dry Oar. Join us for unforgettable trips on the best rivers.">
+    <meta name="keywords" content="rafting, adventure, white water, camping, outdoor activities">
     <title>Dry Oar | Adventure Awaits</title>
     <link rel="stylesheet" href="rafting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="logo">DRY OAR</div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Rivers</a></li>
-            <li><a href="#">Camping</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rivers">Rivers</a></li>
+            <li><a href="#camping">Camping</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
-        <img src="rafting-hero.jpg" alt="Rafting" class="hero-img">
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <img src="https://images.unsplash.com/photo-1603219113640-1381688a5c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+             alt="Exciting white water rafting adventure" 
+             class="hero-img">
         <div class="hero-content">
             <h1>HAVE AN ADVENTURE</h1>
-            <button class="btn-primary">Book Now</button>
+            <button class="btn-primary" onclick="scrollToBooking()">Book Now</button>
         </div>
     </header>
 
-    <section class="features">
+    <!-- Features Section -->
+    <section class="features" id="rivers">
         <div class="feature-item">
-            <div class="icon-circle"><img src="river-icon.svg" alt="Rivers"></div>
+            <div class="icon-circle">
+                <i class="fas fa-water fa-2x"></i>
+            </div>
             <h3>Rivers</h3>
+            <p>Explore the most breathtaking rivers with expert guides. From calm waters to thrilling rapids.</p>
         </div>
-        <div class="feature-item">
-            <div class="icon-circle"><img src="camping-icon.svg" alt="Camping"></div>
+        <div class="feature-item" id="camping">
+            <div class="icon-circle">
+                <i class="fas fa-campground fa-2x"></i>
+            </div>
             <h3>Camping</h3>
+            <p>Sleep under the stars at our premium campsites located near the best rafting spots.</p>
         </div>
         <div class="feature-item">
-            <div class="icon-circle"><img src="rapids-icon.svg" alt="Rapids"></div>
+            <div class="icon-circle">
+                <i class="fas fa-bolt fa-2x"></i>
+            </div>
             <h3>Rapids</h3>
+            <p>Experience the thrill of Class III-V rapids with our certified safety instructors.</p>
         </div>
     </section>
 
-    <section class="bottom-scenic">
-        <img src="mountains.jpg" alt="Scenery" class="scenic-img">
+    <!-- Scenic Section -->
+    <section class="bottom-scenic" id="contact">
+        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" 
+             alt="Beautiful mountain scenery" 
+             class="scenic-img">
         <div class="overlay-box">
             <h2>More Than Just The Thrill</h2>
-            <p>We believe that white water rafting is about more than just the adrenaline. It's about connecting with nature and witnessing breathtaking mountain vistas.</p>
-            <button class="btn-primary">Join Us</button>
+            <p>We believe that white water rafting is about more than just the adrenaline. It's about connecting with nature, building teamwork, and witnessing breathtaking mountain vistas that will stay with you forever.</p>
+            <button class="btn-primary" onclick="scrollToBooking()">Join Us</button>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dry Oar Rafting Adventures. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Contact us: info@dryoar.com | (555) 123-4567</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Function for booking button
+        function scrollToBooking() {
+            // In a real application, this would link to a booking form
+            alert("Booking system would open here! For now, please contact us at info@dryoar.com");
+            // Alternatively, scroll to contact section:
+            // document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = 'rgba(61, 77, 68, 0.95)';
+            } else {
+                nav.style.backgroundColor = 'var(--dark-green)';
+            }
+        });
+    </script>
 </body>
 </html>
