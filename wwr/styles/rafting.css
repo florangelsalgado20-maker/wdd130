@@ -29,21 +29,21 @@ nav {
     padding: 1rem 2rem;
 }
 
-/* LOGO CAMBIADO A IMAGEN - ÚNICO CAMBIO */
-.logo {
-    font-size: 0; /* Ocultar el texto "Adventure" */
-}
-
+/* LOGO CAMBIADO A IMAGEN */
 .logo img {
     height: 50px;
     width: auto;
     object-fit: contain;
 }
 
-/* EL MENÚ YA ESTÁ HORIZONTAL - ESTO ESTÁ BIEN */
+.logo {
+    font-size: 0; /* Ocultar texto "Adventure" */
+}
+
+/* ESTO ES LO QUE FALTA: MENÚ HORIZONTAL PARA ESCRITORIO */
 nav ul {
     list-style: none;
-    display: flex; /* Esto hace que sea horizontal */
+    display: flex; /* Esto hace el menú horizontal */
     gap: 3rem;
 }
 
@@ -236,7 +236,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
-        gap: 1.5rem;
+        gap: 1.5rem; /* Menú sigue horizontal en tablets */
     }
 
     nav a {
@@ -271,6 +271,7 @@ footer p {
         gap: 1rem;
     }
 
+    /* En móviles el menú es vertical */
     nav ul {
         flex-direction: column;
         gap: 1rem;
@@ -302,7 +303,7 @@ footer p {
         height: 400px;
     }
     
-    /* Responsive para logo */
+    /* Logo más pequeño en móviles */
     .logo img {
         height: 40px;
     }
