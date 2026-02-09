@@ -80,9 +80,13 @@ footer a {
    ESTILOS ESPECÍFICOS SOLO PARA TRIPS.HTML
    =========================================== */
 
-/* Hero Section - SOLO PARA TRIPS */
+/* Hero Section - SOLO PARA TRIPS CON IMAGEN DE FONDO */
 .trips-page .hero {
-    background-color: #e67e22;
+    background-color: #e67e22; /* Color de respaldo por si no carga la imagen */
+    background-image: url('images/rafting2.jpg'); /* IMAGEN DE FONDO COMPLETA */
+    background-size: cover; /* Cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
     height: 500px;
     display: flex;
     justify-content: center;
@@ -91,34 +95,60 @@ footer a {
     color: white;
     border: 2px solid black;
     margin: 10px;
+    position: relative;
+}
+
+/* Capa semitransparente para mejor contraste del texto */
+.trips-page .hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Capa oscura semitransparente */
+    z-index: 1;
+}
+
+.trips-page .hero-content {
+    z-index: 2; /* Poner el contenido sobre la capa oscura */
+    position: relative;
 }
 
 .trips-page .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .trips-page .hero h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .trips-page .book-button {
     display: inline-block;
     padding: 20px 40px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.85); /* Blanco semitransparente */
     border: 3px solid black;
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reducido porque ya no está el cuadro marrón */
+    transition: all 0.3s ease;
 }
 
+.trips-page .book-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* ELIMINADO: El cuadro marrón con el texto de background picture */
 .trips-page .bg-label {
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: none; /* Oculta completamente el cuadro marrón */
 }
 
 /* Gallery - SOLO PARA TRIPS */
