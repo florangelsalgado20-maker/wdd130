@@ -80,13 +80,13 @@ footer a {
    ESTILOS ESPECÍFICOS SOLO PARA TRIPS.HTML
    =========================================== */
 
-/* Hero Section - SOLO PARA TRIPS CON IMAGEN DE FONDO */
+/* Hero Section - CAMBIADO A RAFTING4.JPG */
 .trips-page .hero {
-    background-color: #e67e22; /* Color de respaldo por si no carga la imagen */
-    background-image: url('images/rafting2.jpg'); /* IMAGEN DE FONDO COMPLETA */
-    background-size: cover; /* Cubre todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repetir la imagen */
+    background-color: #e67e22; /* Color de respaldo */
+    background-image: url('images/rafting4.jpg'); /* CAMBIO AQUÍ: rafting4.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -131,13 +131,13 @@ footer a {
 .trips-page .book-button {
     display: inline-block;
     padding: 20px 40px;
-    background-color: rgba(255, 255, 255, 0.85); /* Blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.85);
     border: 3px solid black;
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
-    margin-bottom: 20px; /* Reducido porque ya no está el cuadro marrón */
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
