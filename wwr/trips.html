@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flower Expeditions - Enjoy Caracas with eco-conscious Gen Z adventure tours">
+    <meta name="author" content="Florangel Salgado">
     <title>Flower Expeditions - Enjoy Caracas</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -10,9 +12,9 @@
 
     <header>
         <div class="logo-container">
-            <img src="images/logo.jpg" alt="Down the River Logo" class="logo">
+            <img src="images/logo.jpg" alt="Down the River Logo - Flower Expeditions" class="logo">
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Page2</a></li>
@@ -24,50 +26,41 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-label="Main banner">
             <div class="hero-content">
                 <h1>ENJOY CARACAS</h1>
                 <h2>Make Memories with <br>FLOWER EXPEDITIONS</h2>
-                <a href="#" class="book-button">BOOK NOW</a>
+                <a href="#" class="book-button" aria-label="Book your adventure now">BOOK NOW</a>
             </div>
         </section>
 
-        <!-- Gallery Section SOLO CON TÍTULOS -->
-        <section class="gallery">
+        <!-- Gallery Section -->
+        <section class="gallery" aria-label="Adventure categories">
             <div class="gallery-item">
-                <!-- CUADRO CON IMAGEN rafting3.jpg -->
-                <div class="image-placeholder" style="background-image: url('images/rafting3.jpg');">
-                    <!-- La imagen se mostrará como fondo -->
+                <div class="image-placeholder" style="background-image: url('images/rafting3.jpg');" 
+                     role="img" aria-label="Rafting adventure in Caracas">
                 </div>
-                <!-- SOLO EL TÍTULO -->
                 <h3>CARACAS</h3>
-                <!-- ELIMINADAS las sub-imágenes -->
             </div>
             <div class="gallery-item">
-                <!-- CUADRO CON IMAGEN rafting1.jpg -->
-                <div class="image-placeholder" style="background-image: url('images/rafting1.jpg');">
-                    <!-- La imagen se mostrará como fondo -->
+                <div class="image-placeholder" style="background-image: url('images/rafting1.jpg');" 
+                     role="img" aria-label="Camping adventure">
                 </div>
-                <!-- SOLO EL TÍTULO -->
                 <h3>CAMPING</h3>
-                <!-- ELIMINADAS las sub-imágenes -->
             </div>
             <div class="gallery-item">
-                <!-- CUADRO CON IMAGEN rafting4.jpg -->
-                <div class="image-placeholder" style="background-image: url('images/rafting4.jpg');">
-                    <!-- La imagen se mostrará como fondo -->
+                <div class="image-placeholder" style="background-image: url('images/rafting4.jpg');" 
+                     role="img" aria-label="River adventures">
                 </div>
-                <!-- SOLO EL TÍTULO -->
                 <h3>RIVERS</h3>
-                <!-- ELIMINADAS las sub-imágenes -->
             </div>
         </section>
 
         <!-- Mission Section -->
-        <section class="mission-container">
+        <section class="mission-container" aria-label="Our mission">
             <div class="mission-content">
-                <div class="mission-image" style="background-image: url('images/rafting5.jpg');">
-                    <!-- IMAGES/RAFTING5.JPG como imagen de fondo -->
+                <div class="mission-image" style="background-image: url('images/rafting5.jpg');" 
+                     role="img" aria-label="Our expedition team">
                 </div>
                 <div class="mission-text">
                     <h3>MORE THAN JUST AN EXPERIENCE !!</h3>
@@ -82,13 +75,13 @@
             FLOWER EXPEDITIONS ©2026 Florangel Salgado
         </div>
         <div class="footer-center">
-            <a href="#">Site Plan</a>
-            <a href="contactus.html">Contact Us</a>
+            <a href="#" aria-label="View site plan">Site Plan</a>
+            <a href="contactus.html" aria-label="Contact us">Contact Us</a>
         </div>
         <div class="footer-right">
-            <span class="social-icon">facebook.svg</span>
-            <span class="social-icon">linkedin.svg</span>
-            <span class="social-icon">Instagram.svg</span>
+            <span class="social-icon" aria-label="Facebook">facebook.svg</span>
+            <span class="social-icon" aria-label="LinkedIn">linkedin.svg</span>
+            <span class="social-icon" aria-label="Instagram">Instagram.svg</span>
         </div>
     </footer>
 
