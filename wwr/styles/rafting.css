@@ -29,21 +29,21 @@ nav {
     padding: 1rem 2rem;
 }
 
-/* LOGO CAMBIADO A IMAGEN (solo esto cambió) */
+/* LOGO CAMBIADO A IMAGEN - ÚNICO CAMBIO */
+.logo {
+    font-size: 0; /* Ocultar el texto "Adventure" */
+}
+
 .logo img {
     height: 50px;
     width: auto;
     object-fit: contain;
 }
 
-/* Ocultar el texto original del logo */
-.logo {
-    font-size: 0;
-}
-
+/* EL MENÚ YA ESTÁ HORIZONTAL - ESTO ESTÁ BIEN */
 nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Esto hace que sea horizontal */
     gap: 3rem;
 }
 
@@ -233,32 +233,6 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* NUEVO: Estilos para el menú horizontal de contacto */
-.contact-horizontal-menu {
-    background-color: #4a6b55;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 2rem 0;
-}
-
-.contact-horizontal-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.contact-horizontal-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -288,13 +262,6 @@ footer p {
 
     .thrill-overlay h2 {
         font-size: 24px;
-    }
-    
-    /* Responsive para menú horizontal de contacto */
-    .contact-horizontal-menu {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
     }
 }
 
@@ -335,7 +302,7 @@ footer p {
         height: 400px;
     }
     
-    /* Logo responsive */
+    /* Responsive para logo */
     .logo img {
         height: 40px;
     }
