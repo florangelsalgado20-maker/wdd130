@@ -1,4 +1,1010 @@
 /* ===========================================
+   RAFTING.CSS - TODOS LOS ESTILOS DEL PROYECTO
+   Archivo: wrr/styles/rafting.css
+   Cada CSS está completamente separado y original
+   =========================================== */
+
+/* ===========================================
+   CSS #1 - ESTILOS PRINCIPALES (about.html)
+   =========================================== */
+/* CSS Variables - TODAS UTILIZADAS */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #666666;
+    --text-color: #333333;
+    --light-color: #f5f5f5;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #888888;
+    --font-family: 'Arial', 'Segoe UI', sans-serif;
+    --border-color: #000000;
+}
+
+/* Universal Selector Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo-box {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px;
+    background-color: var(--white);
+}
+
+.logo-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--light-color);
+}
+
+nav a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Main Content */
+main {
+    min-height: 500px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin: 30px 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid var(--border-color);
+    z-index: 2;
+}
+
+.hero article img {
+    float: right;
+    width: 200px;
+    height: 150px;
+    border: 1px solid var(--gray);
+    object-fit: cover;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.hero article p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* History Section */
+section:nth-of-type(1) {
+    margin: 30px 0;
+    border: 2px solid var(--border-color);
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+section:nth-of-type(1) h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.history-content p {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+.history-content img {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Adventure Section */
+section:nth-of-type(2) {
+    margin: 30px 0;
+}
+
+section:nth-of-type(2) h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    border: 2px solid var(--border-color);
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+figure {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    background-color: var(--light-color);
+}
+
+.gallery img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+figcaption {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid var(--primary-color);
+    padding: 25px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-color);
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .history-content img {
+        order: -1;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+        top: 30px;
+    }
+    
+    .hero article {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    footer p {
+        margin-bottom: 0;
+    }
+    
+    .socialmedia {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    section h2 {
+        font-size: 28px;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================================
+   CSS #2 - ESTILOS DE CONTACT US (contact.html)
+   =========================================== */
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header con logo y navegación */
+header {
+    background-color: #D1C4E9;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #999;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 120px;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 0;
+}
+
+nav a {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin-left: -1px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+    color: #6a5acd;
+}
+
+nav a:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+nav a:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Contenido principal - CENTRADO */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Información de la empresa - VERTICAL Y CENTRADA */
+.company-info-vertical {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.company-info-vertical h1 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.vertical-contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.vertical-contact-details p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Contenido principal: Mapa y formulario */
+.content-wrapper {
+    display: flex;
+    padding: 0;
+    gap: 40px;
+    min-height: 380px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+/* Mapa */
+.map-side {
+    flex: 1;
+    height: 450px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-side iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Formulario */
+.form-side {
+    flex: 1;
+    padding: 0;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-side h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #D1C4E9;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Contenedor del formulario para ocupar toda la altura */
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 13px;
+}
+
+.field input,
+.field textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #6a5acd;
+    box-shadow: 0 0 4px rgba(106, 90, 205, 0.2);
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 100px;
+    flex: 1;
+}
+
+/* Grupo de radio buttons */
+.radio-group {
+    margin: 5px 0;
+}
+
+.radio-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 13px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 5px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+
+.radio-option span {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin: 10px 0;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: #555;
+    padding: 5px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.btn-submit:hover {
+    background-color: #5a4bc4;
+}
+
+/* Sección del equipo */
+.team-box {
+    border: 1px solid #ddd;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 900px;
+    margin: 280px 0 80px 0;
+}
+
+.team-box h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    max-width: 140px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border: 2px solid #D1C4E9;
+    background-color: #e0e0e0;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.member-role {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #D1C4E9;
+    border-top: 1px solid #999;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #444;
+    font-size: 13px;
+}
+
+/* Navegación social en el footer */
+nav.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+nav.socialmedia a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #999;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+nav.socialmedia a:hover {
+    background-color: #6a5acd;
+    border-color: #6a5acd;
+}
+
+nav.socialmedia a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+nav.socialmedia a img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .map-side,
+    .form-side {
+        width: 100%;
+        height: auto;
+    }
+    
+    .map-side {
+        height: 350px;
+    }
+    
+    .form-side {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .form-container {
+        gap: 12px;
+    }
+    
+    .field textarea {
+        min-height: 120px;
+    }
+    
+    .btn-submit {
+        margin-top: 20px;
+    }
+    
+    .team-box {
+        margin: 150px 0 60px 0;
+        padding: 20px;
+    }
+    
+    .company-info-vertical {
+        max-width: 90%;
+        padding: 15px 20px;
+    }
+    
+    .vertical-contact-details {
+        gap: 6px;
+    }
+    
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    nav.socialmedia {
+        justify-content: center;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-info-vertical h1 {
+        font-size: 20px;
+    }
+    
+    .vertical-contact-details p {
+        font-size: 13px;
+    }
+    
+    nav a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .form-side h2,
+    .team-box h3 {
+        font-size: 18px;
+    }
+    
+    .map-side {
+        height: 320px;
+    }
+    
+    .field input,
+    .field textarea {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .radio-option span,
+    .checkbox-group label {
+        font-size: 12px;
+    }
+    
+    .team-box {
+        margin: 120px 0 40px 0;
+        padding: 15px;
+    }
+    
+    .member-name {
+        font-size: 15px;
+    }
+    
+    .member-role {
+        font-size: 13px;
+    }
+}
+
+/* ===========================================
+   CSS #3 - ESTILOS DE HOME (index.html)
+   =========================================== */
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #27ae60;
+    text-align: center;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 5px solid #27ae60;
+    padding: 5px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Paragraph adjustment */
+p {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* Aside Styles */
+aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #2c3e50;
+    padding: 15px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    border-top: 2px solid #2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===========================================
+   CSS #4 - ESTILOS DE TRIPS (trips.html)
+   =========================================== */
+/* ===========================================
    ESTILOS GENERALES PARA TODAS LAS PÁGINAS
    =========================================== */
 
@@ -88,7 +1094,7 @@ footer a:hover {
 .social-icon {
     width: 30px;
     height: 30px;
-    filter: brightness(0) invert(1); /* Hace los iconos blancos */
+    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
 
@@ -102,10 +1108,10 @@ footer a:hover {
 
 /* Hero Section - CON RAFTING1.JPG REPETIDO */
 .trips-page .hero {
-    background-color: #e67e22; /* Naranja de respaldo */
+    background-color: #e67e22;
     background-image: url('images/rafting1.jpg');
-    background-size: 300px; /* Tamaño pequeño para que se repita */
-    background-repeat: repeat; /* Repetir la imagen */
+    background-size: 300px;
+    background-repeat: repeat;
     background-position: center;
     height: 500px;
     display: flex;
@@ -126,7 +1132,7 @@ footer a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -140,7 +1146,7 @@ footer a:hover {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.8);
     display: inline-block;
     padding: 15px 30px;
     border-radius: 5px;
@@ -153,7 +1159,7 @@ footer a:hover {
     margin-bottom: 30px;
     line-height: 1.4;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.8);
     display: inline-block;
     padding: 15px 30px;
     border-radius: 5px;
@@ -164,9 +1170,9 @@ footer a:hover {
 .trips-page .book-button {
     display: inline-block;
     padding: 20px 40px;
-    background-color: #000000; /* Fondo negro */
-    border: 3px solid #ffffff; /* Borde blanco */
-    color: #ffffff; /* Letras blancas */
+    background-color: #000000;
+    border: 3px solid #ffffff;
+    color: #ffffff;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
@@ -177,7 +1183,7 @@ footer a:hover {
 }
 
 .trips-page .book-button:hover {
-    background-color: #333333; /* Gris oscuro al hover */
+    background-color: #333333;
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
